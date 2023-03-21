@@ -13,10 +13,9 @@
     {
       "firstName": "Muhaimin",
       "lastName": "Jamal E.N",
-      "img": "https://c4.wallpaperflare.com/wallpaper/379/128/837/cillian-murphy-dark-haired-actor-face-wallpaper-preview.jpg",
-      "content": "I've always loved the Victorian period in English literature. Even as a kid, Dickens captured my imagination more thoroughly than the Harry Potter stories or anything else. As an undergraduate at Northwestern University, I studied English with a concentration on Victorian fiction. Now, I hope to continue exploring this fundamentally important literary period as a graduate student.",
       "email": "muhaimin123@gmail.com",
       "password": "Muhaimin@123",
+      "img": "https://c4.wallpaperflare.com/wallpaper/379/128/837/cillian-murphy-dark-haired-actor-face-wallpaper-preview.jpg",
       "id": 2
     },
     {
@@ -31,10 +30,9 @@
     {
       "firstName": "Ana de",
       "lastName": "Armas",
-      "img": "https://wallpaperaccess.com/full/1907859.jpg",
-      "content": "I am graduated at oxford university for My bachelor degree in Architectural survey and librarian modules and thus along side my interest is to Read and learn more books.",
       "email": "armas07@gmail.com",
       "password": "Armas@07",
+      "img": "https://hips.hearstapps.com/hmg-prod/images/ana-de-armas-1626771511.jpg?crop=0.695xw:1.00xh;0.153xw,0&resize=1200:*",
       "id": 4
     },
     {
@@ -42,7 +40,7 @@
       "lastName": "Daddario",
       "email": "alexa007@gmail.com",
       "password": "Alexa@007",
-      "img": "https://static.toiimg.com/thumb/msid-65146267,imgsize-151589,width-800,height-600,resizemode-75/65146267.jpg",
+      "img": "http://t2.gstatic.com/licensed-image?q=tbn:ANd9GcSNc1uAlJZZuO289G_ZRp8Wigfs8mWS69G9xdfn6_ZATlKfpOziAjlg1RHlSiM6WX5O9KGiLhopQD0RkUI",
       "id": 5
     }
   ],

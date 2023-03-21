@@ -1,24 +1,20 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import AddBooks from "../components/admin/pages/books/AddBooks";
+import AddBooks from "../components/admin/books/AddBooks";
 import Login from "../components/mainComponents/login/Login";
 import Register from "../components/mainComponents/register/Register";
-import Home from "../components/user/home";
-import EditBooks from "../components/admin/pages/books/EditBooks";
-import Admin from "../components/admin/Admin";
+import Home from "../components/homePage/home";
+import EditBooks from "../components/admin/books/EditBooks";
 import Rent from "../components/user/pages/rentList/Rent";
 import RentList from "../components/user/pages/rentList/RentList";
 import NoMatch from "../components/mainComponents/NoMatch";
 import Homepage from "../components/layouts/footer/Homepage";
-import User from "../components/admin/pages/user/User";
+import User from "../components/admin/user/User";
 import Feedback from "../components/user/pages/feedBack/Feedback";
-import EditUser from "../components/admin/pages/user/EditUser";
+import EditUser from "../components/admin/user/EditUser";
 import EditMyProfile from "../components/user/pages/myProfile/EditMyProfile";
 import Myprofile from "../components/user/pages/myProfile/Myprofile";
-import BookList from "../components/admin/pages/bookList/BookList";
-import UBook from "../components/user/pages/bookList/UBook";
-import Category from "../components/category/Category";
-import Books from "../components/category/Books";
+import UBook from "../components/bookList/UBook";
 const Routing = () => {
   const isUserLoggedin = sessionStorage.getItem("isUserLoggedin")
     ? sessionStorage.getItem("isUserLoggedin")
@@ -41,7 +37,7 @@ const Routing = () => {
           <Route path="/profile" element={<Myprofile />}></Route>
         )}
         <Route path="/home" element={<Home />}></Route>
-        <Route path="/admin" element={<Admin />}></Route>
+      
         {isUserLoggedin && isAdmin && (
           <Route path="/editBooks" element={<EditBooks />}></Route>
         )}
@@ -68,19 +64,8 @@ const Routing = () => {
         {isUserLoggedin && !isAdmin && (
           <Route path="/EditMyProfile/:id" element={<EditMyProfile />}></Route>
         )}
-        {isUserLoggedin && isAdmin && (
-          <Route path="/BookList/:id" element={<BookList />}></Route>
-        )}
-        {isUserLoggedin && !isAdmin && (
-          <Route path="/UBook/:id" element={<UBook />}></Route>
-        )}
-
         {isUserLoggedin && (
-          <Route path="/Category" element={<Category />}></Route>
-        )}
-
-        {isUserLoggedin && (
-          <Route path="/books/:category" element={<Books />}></Route>
+          <Route path="/booklist/:id" element={<UBook />}></Route>
         )}
       </Routes>
     </div>

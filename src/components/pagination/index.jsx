@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
-import APosts from "../admin/pages/bookList/APosts";
-import Posts from "../user/pages/bookList/UPosts";
+import Posts from "../bookList/UPosts";
 import Pagination from "./Pagination";
 import { getAllBooks } from "./../../services/book/book.service";
 
@@ -38,12 +37,8 @@ const BookList = () => {
   return (
     <div className="container">
       <h1 className="text-primary"></h1>
-      {isUserLoggedin && isAdmin && (
-        <APosts posts={currentPosts} loading={loading} />
-      )}
-      {isUserLoggedin && !isAdmin && (
-        <Posts posts={currentPosts} loading={loading} />
-      )}
+
+      {isUserLoggedin && <Posts posts={currentPosts} loading={loading} />}
 
       <Pagination
         postsPerPage={postsPerPage}

@@ -2,10 +2,10 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { toast } from "react-toastify";
-import showPwdImg from "../../../../assets/icons/show-password.svg";
-import hidePwdImg from "../../../../assets/icons/hide-password.svg";
+import showPwdImg from "../../../assets/icons/show-password.svg";
+import hidePwdImg from "../../../assets/icons/hide-password.svg";
 import { Form, Button , TextArea } from "semantic-ui-react";
-import { getUser, editUser } from "../../../../services/user/user.service";
+import { getUser, editUser } from "../../../services/user/user.service";
 
 const EditUser = () => {
   const navigate = useNavigate();
@@ -50,7 +50,7 @@ const EditUser = () => {
         console.log(res.data);
         get();
         toast("Updated Sucessfully");
-        navigate("/Admin");
+        navigate("/home");
       })
       .catch((err) => {
         console.log(err.data);

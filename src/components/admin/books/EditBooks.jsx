@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { toast } from "react-toastify";
 import { TextArea, Form, Button } from "semantic-ui-react";
-import { editBooks, getBooks } from "../../../../services/book/book.service";
+import { editBooks, getBooks } from "../../../services/book/book.service";
 
 const EditBooks = () => {
   const navigate = useNavigate();
@@ -10,14 +10,14 @@ const EditBooks = () => {
   const [authorName, setAuthorName] = useState("");
   const [description, setDescription] = useState("");
   const [quantity, setQuantity] = useState("");
-  const [img ,setImg] = useState("")
+  const [img, setImg] = useState("");
   const [price, setPrice] = useState("");
 
   const { id } = useParams();
 
   useEffect(() => {
     get();
-  },[]);
+  }, []);
 
   const get = () => {
     getBooks(id)
@@ -27,7 +27,7 @@ const EditBooks = () => {
           setAuthorName(resp.data.AuthorName),
           setDescription(resp.data.Description),
           setQuantity(resp.data.Quantity),
-          setPrice(resp.data.price) ,
+          setPrice(resp.data.price),
           setImg(resp.data.Image)
         );
       })
@@ -42,7 +42,7 @@ const EditBooks = () => {
       AuthorName: authorName,
       Quantity: quantity,
       price,
-      Image : img
+      Image: img,
     };
 
     editBooks(id, book)
@@ -50,7 +50,7 @@ const EditBooks = () => {
         console.log(resp.data);
         get();
         toast("Updated successfully");
-        navigate("/Admin");
+        navigate("/home");
       })
       .catch((err) => {
         console.log(err.data);
@@ -108,12 +108,14 @@ const EditBooks = () => {
             />
           </Form.Field>
           <Form.Field>
-                    <label>Profile Image</label>
-                    <input type='text' value={img} 
-                       placeholder = 'profile image'
-                       onChange={(e)=>setImg(e.target.value)}
-                    />
-                </Form.Field>
+            <label>Profile Image</label>
+            <input
+              type="text"
+              value={img}
+              placeholder="profile image"
+              onChange={(e) => setImg(e.target.value)}
+            />
+          </Form.Field>
           <Form.Field>
             <label htmlFor="quantity">Book Quantity</label>
             <input

@@ -6,7 +6,7 @@ const List = ({ posts, loading }) => {
   const navigate = useNavigate();
  
   const handleClick = (id) => {
-    navigate("/UBook/" + id);
+    navigate("/booklist/" + id);
   };
 
   if (loading) {

@@ -43,12 +43,12 @@ const Navigation = () => {
               <i className="home icon"></i>Home
             </Link>
           )}
-          {isUserLoggedin && isAdmin && (
+          {/* {isUserLoggedin && isAdmin && (
             <Link to="/Admin">
               <i className="home icon"></i>Home
             </Link>
-          )}
-          {isUserLoggedin && !isAdmin && (
+          )} */}
+          {isUserLoggedin && (
             <Link to="/home">
               <i className="home icon"></i>Home
             </Link>
@@ -57,8 +57,6 @@ const Navigation = () => {
           {isUserLoggedin && isAdmin && <Link to="/addbooks">Add-Books</Link>}
           {isUserLoggedin && isAdmin && <Link to="/User">User-Profile</Link>}
           {isUserLoggedin && !isAdmin && <Link to="/RentList">My Books</Link>}
-          {isUserLoggedin &&  !isAdmin && <Link to="/Category">Category</Link>}
-          {isUserLoggedin &&  isAdmin && <Link to="/Category">Category</Link>}
         </nav>
 
         <div className="icons">

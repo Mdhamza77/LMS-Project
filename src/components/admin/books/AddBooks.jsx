@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Form, Button, TextArea } from "semantic-ui-react";
 import { useNavigate } from "react-router-dom";
-import { addBooks } from "../../../../services/book/book.service";
+import { addBooks } from "../../../services/book/book.service";
 import { toast } from "react-toastify";
 
 const AddBooks = () => {
@@ -18,7 +18,7 @@ const AddBooks = () => {
   const [description, setDescription] = useState("");
   const [quantity, setQuantity] = useState("");
   const [price, setPrice] = useState("");
-  const [img ,setImg] = useState("")
+  const [img, setImg] = useState("");
   const [data, setData] = useState("");
 
   const handleSubmit = (e) => {
@@ -28,7 +28,7 @@ const AddBooks = () => {
       Description: description,
       Quantity: quantity,
       price: price,
-      Image : img 
+      Image: img,
     };
 
     e.preventDefault();
@@ -41,13 +41,13 @@ const AddBooks = () => {
         setDescription("");
         setQuantity("");
         setPrice("");
-        setImg("")
+        setImg("");
         toast("Added Successfully");
       })
       .catch((err) => {
         console.log(err.data);
       })
-      .then(navigate("/Admin"));
+      .then(navigate("/home"));
   };
   return (
     <div className="card">
@@ -83,12 +83,14 @@ const AddBooks = () => {
                 />
               </Form.Field>
               <Form.Field>
-                    <label>Book Image</label>
-                    <input type='text' value={img} 
-                       placeholder = 'profile image'
-                       onChange={(e)=>setImg(e.target.value)}
-                    />
-                </Form.Field>
+                <label>Book Image</label>
+                <input
+                  type="text"
+                  value={img}
+                  placeholder="profile image"
+                  onChange={(e) => setImg(e.target.value)}
+                />
+              </Form.Field>
               <Form.Field>
                 <label htmlFor="description">Description</label>
                 <TextArea

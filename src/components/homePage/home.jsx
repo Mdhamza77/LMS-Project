@@ -19,7 +19,7 @@ const Home = () => {
     }
   }, []);
 
-  return <div>{isUserLoggedin && !isAdmin && <BookList />}</div>;
+  return <div>{isUserLoggedin &&  <BookList />}</div>;
 };
 
 export default Home;

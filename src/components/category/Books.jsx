@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
 import { Button, Form } from "semantic-ui-react";
 import { getCategory, deleteBooks } from "./../../services/book/book.service";
 import { useNavigate, useParams } from "react-router-dom";

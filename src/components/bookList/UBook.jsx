@@ -1,10 +1,12 @@
-import React, { useEffect, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { Form, Button } from "semantic-ui-react";
+import { getBooks, deleteBooks } from "../../services/book/book.service";
+import { useParams } from "react-router-dom";
 import { toast } from "react-toastify";
-import { getBooks, deleteBooks } from "../../../../services/book/book.service";
+const UBook = () => {
 
-const BookList = () => {
+
 
   const navigate = useNavigate();
   const { id } = useParams();
@@ -14,14 +16,24 @@ const BookList = () => {
   const [quantity, setQuantity] = useState("");
   const [img, setImg] = useState("");
   const [price, setPrice] = useState("");
+  const Rent = (id) => {
+    navigate(`/Rent/` + id);
+  };
+
   const Delete = (id) => {
-    deleteBooks(id).then(toast("Deleted successfully"), navigate("/Admin"));
+    deleteBooks(id).then(toast("Deleted successfully"), navigate("/home"));
   };
 
   const Edit = (id) => {
     navigate("/EditBooks/" + id);
   };
 
+  const isUserLoggedin = sessionStorage.getItem("isUserLoggedin")
+  ? sessionStorage.getItem("isUserLoggedin")
+  : false;
+const isAdmin = sessionStorage.getItem("isAdmin")
+  ? sessionStorage.getItem("isAdmin")
+  : false;
   useEffect(() => {
     get();
   }, []);
@@ -42,27 +54,28 @@ const BookList = () => {
         console.log(err);
       });
   };
-
   return (
     <div className="Book">
       <div>
         <div className="card">
           <Form>
-            <div className="container black">
-              
-              <img className="book-Img" src= {img} />
+            <div className="container-black">
+              <img className="book-Img" src={img} />
               <h1>Book Name : {bookName}</h1>
               <p>Description : {description}</p>
               <h3>Author Name : {authorName}</h3>
               <p>Quantity : {quantity}</p>
               <p>Price : {price}</p>
-              <p>Book Id : {id}</p>
-              <Button className="blue" id="Button" onClick={() => Edit(id)}>
+              <br />
+           { isUserLoggedin && !isAdmin && ( <Button className="blue" id="Button" onClick={() => Rent(id)}>
+                Rent Book
+              </Button>) }
+            { isUserLoggedin && isAdmin && (<Button className="blue" id="Button" onClick={() => Edit(id)}>
                 Edit Books
-              </Button>
-              <Button className="red" id="Button" onClick={() => Delete(id)}>
+              </Button>  )}
+              { isUserLoggedin && isAdmin && (<Button className="red" id="Button" onClick={() => Delete(id)}>
                 Delete Books
-              </Button>
+              </Button> ) }
             </div>
           </Form>
         </div>
@@ -71,4 +84,4 @@ const BookList = () => {
   );
 };
 
-export default BookList;
+export default UBook;
