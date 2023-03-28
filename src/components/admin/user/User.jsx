@@ -71,7 +71,7 @@ const User = () => {
                           <h3>Last name : {users.lastName}</h3>
                           <h3>Email id : {users.email}</h3>
                           <h3>user Id : {users.id}</h3>
-                          <h3>user Id : {users.id}</h3>
+                         
                           <Button
                             className="blue"
                             onClick={() => MyBook(users.email)}
