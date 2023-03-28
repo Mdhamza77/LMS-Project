@@ -3,8 +3,8 @@ import axios from 'axios' ;
 import MockAdapter from "axios-mock-adapter";
 import { act } from "react-test-renderer"; 
 import UBook from './UBook';  
-import UPosts from './UPosts'
 import * as Router from "react-router-dom";
+import Books from '../category/Books';
 
 const Book = [
     {
@@ -150,7 +150,7 @@ test('api check',async () => {
   mock.onGet(" http://localhost:8080/Books").reply(200, Book); 
   render(
       <Router.MemoryRouter>
-          <UPosts/>
+          <Books/>
          
       </Router.MemoryRouter>
   ) ;
@@ -177,7 +177,7 @@ test('api check',async () => {
   mock.onGet(" http://localhost:8080/Books").networkError(); 
   render(
       <Router.MemoryRouter>
-         <UPosts/>
+         <Books/>
     
       </Router.MemoryRouter>
   ) ;

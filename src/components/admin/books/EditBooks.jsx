@@ -12,6 +12,7 @@ const EditBooks = () => {
   const [quantity, setQuantity] = useState("");
   const [img, setImg] = useState("");
   const [price, setPrice] = useState("");
+  const [category , setCategory] = useState("") ;
 
   const { id } = useParams();
 
@@ -28,7 +29,8 @@ const EditBooks = () => {
           setDescription(resp.data.Description),
           setQuantity(resp.data.Quantity),
           setPrice(resp.data.price),
-          setImg(resp.data.Image)
+          setImg(resp.data.Image) ,
+          setCategory(resp.data.category)
         );
       })
       .catch((err) => {
@@ -43,6 +45,7 @@ const EditBooks = () => {
       Quantity: quantity,
       price,
       Image: img,
+      category  :category 
     };
 
     editBooks(id, book)

@@ -1,17 +1,31 @@
 import React, { useState, useEffect } from "react";
-import { Button, Form } from "semantic-ui-react";
-import { getCategory, deleteBooks } from "./../../services/book/book.service";
+import { getCategory } from "./../../services/book/book.service";
 import { useNavigate, useParams } from "react-router-dom";
+import Pagination from "../pagination/Pagination";
 const Books = () => {
-  const isUserLoggedin = sessionStorage.getItem("isUserLoggedin")
-    ? sessionStorage.getItem("isUserLoggedin")
-    : false;
-  const isAdmin = sessionStorage.getItem("isAdmin")
-    ? sessionStorage.getItem("isAdmin")
-    : false;
-
   const navigate = useNavigate();
   const [data, setData] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [postsPerPage] = useState(8);
+  const indexOfLastPost = currentPage * postsPerPage;
+  const indexOfFirstPost = indexOfLastPost - postsPerPage;
+  const currentPosts = data.slice(indexOfFirstPost, indexOfLastPost);
+
+  const previousPage = () => {
+    if (currentPage !== 1) {
+      setCurrentPage(currentPage - 1);
+    }
+  };
+
+  const nextPage = () => {
+    if (currentPage !== Math.ceil(data.length / postsPerPage)) {
+      setCurrentPage(currentPage + 1);
+    }
+  };
+
+  // Change page
+  const paginate = (pageNumber) => setCurrentPage(pageNumber);
+
   const { category } = useParams();
   const get = async () => {
     return await getCategory(category)
@@ -21,55 +35,62 @@ const Books = () => {
       })
       .catch((err) => console.log(err));
   };
-
   useEffect(() => {
     get();
   }, []);
 
-  const Delete = (id) => {
-    deleteBooks(id).then((res) => console.log(res.data));
+  const handleClick = (id) => {
+    navigate("/category/books/:category/" + id);
   };
 
-  const Edit = (id) => {
-    navigate("/EditBooks/" + id);
-  };
-
-  const Rent = (id) => {
-    navigate(`/Rent/` + id);
-  };
-  return (
-    <div className="">
-      {data
-        .filter((item) => item.category)
-        .map((item) => (
-          <div className="card">
-            <Form>
-              <div className="container">
-                <img className="book-Img" src={item.Image} />
-                <h1>Title : {item.title}</h1>
-                <p>Description : {item.Description}</p>
-                <p> Category : {item.category}</p>
-                <p> AuthorName : {item.AuthorName}</p>
-                <p>Quantity : {item.Quantity}</p>
-                {isUserLoggedin && !isAdmin && (
-                  <Button className="blue" onClick={() => Rent(item.id)}>
-                    Rent
-                  </Button>
-                )}
-                {isUserLoggedin && isAdmin && (
-                  <Button className="blue" onClick={() => Edit(item.id)}>
-                    Edit Books
-                  </Button>
-                )}
-                {isUserLoggedin && isAdmin && (
-                  <Button className="red" onClick={() => Delete(item.id)}>
-                    Delete
-                  </Button>
-                )}
-              </div>
-            </Form>
+  const Posts = ({ data }) => {
+    return (
+      <div className="posts">
+        <div className="ui">
+          <div className="ui link cards">
+            {data
+              .filter((item) => item.category)
+              .map((item) => (
+                <div className="card" key={item.id}>
+                  <div className="image">
+                    <img
+                      src={item.Image}
+                      alt=""
+                      onClick={() => handleClick(item.id)}
+                    />
+                  </div>
+                  <div className="content">
+                    <div className="header">{item.title}</div>
+                    <div className="meta">
+                      <p>"{item.AuthorName}"</p>
+                    </div>
+                    <div className="description">
+                      <b>Price</b>: {item.price}
+                    </div>
+                  </div>
+                  <div className="extra content">
+                    <span className="floated">
+                      <b>Book ID : {item.id}</b>
+                    </span>
+                  </div>
+                </div>
+              ))}
           </div>
-        ))}
+        </div>
+      </div>
+    );
+  };
+
+  return (
+    <div>
+      <Posts data={currentPosts} />
+      <Pagination
+        postsPerPage={postsPerPage}
+        totalPosts={data.length}
+        paginate={paginate}
+        previousPage={previousPage}
+        nextPage={nextPage}
+      />
     </div>
   );
 };

@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import BookList from "../pagination/index";
+import Category from "../category/Category";
 
 const Home = () => {
   const isUserLoggedin = sessionStorage.getItem("isUserLoggedin")
@@ -19,7 +19,7 @@ const Home = () => {
     }
   }, []);
 
-  return <div>{isUserLoggedin &&  <BookList />}</div>;
+  return <div>{isUserLoggedin && <Category />}</div>;
 };
 
 export default Home;

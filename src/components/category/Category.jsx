@@ -3,7 +3,6 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 const Category = () => {
   const [books, getBooks] = useState([]);
-
   const navigate = useNavigate();
   const get = async () => {
     return await axios
@@ -20,8 +19,9 @@ const Category = () => {
   }, []);
 
   const Category = (category) => {
-    navigate("/books/" + category);
+    navigate("/category/books/" + category);
   };
+
   return (
     <div className="cat">
       {" "}
@@ -35,7 +35,7 @@ const Category = () => {
               <div class="image">
                 <img
                   src={post.Img}
-                  alt=""
+                  alt="image"
                   onClick={() => Category(post.category)}
                 />
               </div>

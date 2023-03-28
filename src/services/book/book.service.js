@@ -23,3 +23,11 @@ export const addBooks = async (book) => {
 export const getCategory =async (category) => {
  return await api.get("/Books?category=" + category)
 }
+
+export const getCat =async () => {
+  return await api.get("/Category")
+ }
+
+ export const addCategory = async (category) => {
+  return await  api.post("/Category/" , category)
+ }

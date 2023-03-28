@@ -13,9 +13,9 @@
     {
       "firstName": "Muhaimin",
       "lastName": "Jamal E.N",
+      "img": "https://c4.wallpaperflare.com/wallpaper/379/128/837/cillian-murphy-dark-haired-actor-face-wallpaper-preview.jpg",
       "email": "muhaimin123@gmail.com",
       "password": "Muhaimin@123",
-      "img": "https://c4.wallpaperflare.com/wallpaper/379/128/837/cillian-murphy-dark-haired-actor-face-wallpaper-preview.jpg",
       "id": 2
     },
     {
@@ -40,8 +40,16 @@
       "lastName": "Daddario",
       "email": "alexa007@gmail.com",
       "password": "Alexa@007",
-      "img": "http://t2.gstatic.com/licensed-image?q=tbn:ANd9GcSNc1uAlJZZuO289G_ZRp8Wigfs8mWS69G9xdfn6_ZATlKfpOziAjlg1RHlSiM6WX5O9KGiLhopQD0RkUI",
+      "img": "https://www.emmys.com/sites/default/files/bios/alexandra-daddario-2022-noms-450x600.jpg",
       "id": 5
+    },
+    {
+      "firstName": "Jennifer",
+      "lastName": "Lawrence",
+      "email": "jenny246@gmail.com",
+      "password": "Jenny@246",
+      "img": "https://media.glamourmagazine.co.uk/photos/6364f8e4a4c1f16a3a1892d3/1:1/pass/undefined",
+      "id": 6
     }
   ],
   "Books": [
@@ -51,6 +59,7 @@
       "AuthorName": "Robert Langdon",
       "Quantity": "11",
       "price": "200",
+      "category": "Crime",
       "Image": "https://m.media-amazon.com/images/I/91ZeWa2jVaL.jpg",
       "id": 1
     },
@@ -75,13 +84,33 @@
       "Image": "https://m.media-amazon.com/images/I/71l+w6TvBML.jpg"
     },
     {
+      "title": "Wuthering Heights ",
+      "AuthorName": " Bronte Emily",
+      "Description": "Harper Collins is a fiduciary name amongst bibliophiles. This book is a quality print from H.C. London. The book is printed and bound is the U.K. The pages are quality with the signature light yellow tint of classic literature. The print quality is commendable. The text size is tad smaller than Penguin Classics, nonetheless very legible.",
+      "Quantity": "12",
+      "price": "1140",
+      "category": "Thriller",
+      "Image": "https://rukminim1.flixcart.com/image/832/832/xif0q/book/g/n/c/wuthering-heights-original-imagguh5urjmt5v9.jpeg?q=70",
+      "id": 4
+    },
+    {
+      "title": "Life Switch ",
+      "AuthorName": " Banerjee Madhuri",
+      "Description": " Annie looks at this as a social experiment for a new ad campaign she is creating. She hopes that this will help her beat her rival and put her right at the top of the company. Nandita believes this will make her husband fall in love with her. Their lives begin to get horribly complicated when secrets are revealed. In their bid to have everything, they've set the ball rolling on something that has now pitched them against each other.",
+      "Quantity": "20",
+      "price": "420",
+      "category": "Drama",
+      "Image": "https://rukminim1.flixcart.com/image/832/832/xif0q/book/l/q/c/life-switch-original-imaghkmjfjc2dtvr.jpeg?q=70",
+      "id": 5
+    },
+    {
       "title": "No Plan B",
       "Description": "\nGerrardsville, Colorado. One tragic event. Two witnesses. Two conflicting accounts. One witness sees a woman throw herself in front of a bus - clearly suicide. The other witness is Jack Reacher. And he sees what really happened - a man in grey hoodie and jeans, swift and silent as a shadow, pushing the victim to her death, before grabbing her bag and sauntering away.\n\nReacher follows the killer, not knowing that this was no random act of violence. It is part of something much bigger...a sinister, secret conspiracy, with powerful people on the take, enmeshed in an elaborate plot that leaves no room for error. If any step is compromised, the threat will have to be quickly and permanently removed.\n",
       "AuthorName": "Jack Reacher",
       "category": "Thriller",
       "Quantity": "10",
       "price": "100",
-      "id": 4,
+      "id": 6,
       "Image": "https://m.media-amazon.com/images/I/81EwJoYM6jL.jpg"
     },
     {
@@ -92,17 +121,16 @@
       "category": "Drama",
       "price": "200",
       "Image": "https://m.media-amazon.com/images/I/91JSfRQAhYL.jpg",
-      "id": 5
+      "id": 7
     },
     {
       "title": "The Great Mughals and Their India",
-      "Description": "A definitive, comprehensive and engrossing chronicle of one of the greatest dynasties of the world – the Mughal – from its founderBabur to Bahadur Shah Zafar, the last of the clanThe magnificent Mughal legacy – the world-famous Taj Mahal being the most prominent among countless other examples – is an inexhaustible source of inspiration to historians, writers, moviemakers, artists and ordinary mortals alike.Mughal history abounds with all the ingredients of classical drama: ambition and frustration, hope and despair, grandeur and decline, love and hate and loyalty and betrayal. In other words: it is great to read and offers ample food for thought on the human condition.Much more importantly, Mughal history deserves to be widely read and reflected upon, because of its lasting cultural and socio-political relevance to today’s world in general and the Indian subcontinent in particular.The Mughals have left us with a legacy that cannot be erased. With regard to the eventful reigns of Babur, Humayun, Akbar, Jahangir, Shah Jahan, Aurangzeb and their successors, crucial questions arise: Where did they succeed? Where did they fail? And more importantly, what should we learn from their triumphs and failures?The author believes that history books should be accurate, informative and entertaining. In The Great Mughals and Their India, he has kept these objectives in mind in an attempt to narrate Mughal history from their perspective. At the same time, he does not shy away from dealing with controversial issues.Here is a fascinating and riveting saga that brings alive a spectacular bygone era – authentically and convincingly.",
+      "Description": "A definitive, comprehensive and engrossing chronicle of one of the greatest dynasties of the world – the Mughal – from its founderBabur to Bahadur Shah Zafar, the last of the clanThe magnificent Mughal legacy – the world-famous Taj Mahal being the most prominent among countless other examples – is an inexhaustible source of inspiration to historians, writers, moviemakers, artists and ordinary mortals alike.Mughal history abounds with all the ingredients of classical drama: ambition and frustration, hope and despair, grandeur and decline, love and hate and loyalty and betrayal. In other words: it is great to read and offers ample food for thought on the human condition.Much more importantly, Mughal history deserves to be widely read and reflected upon, because of its lasting cultural and socio-political relevance to today’s world in general and the Indian subcontinent in particular. Where did they succeed? Where did they fail? And more importantly, what should we learn from their triumphs and failures?The author believes that history books should be accurate, informative and entertaining. In The Great Mughals and Their India, he has kept these objectives in mind in an attempt to narrate Mughal history from their perspective. ",
       "AuthorName": " Dirk Collier ",
-      "category": "History",
       "Quantity": "30",
       "price": "450",
-      "id": 6,
-      "Image": "https://m.media-amazon.com/images/I/81Szrt2KiPL.jpg"
+      "Image": "https://m.media-amazon.com/images/I/81Szrt2KiPL.jpg",
+      "id": 8
     },
     {
       "title": "Genghis Khan and the Making of the Modern World",
@@ -111,17 +139,18 @@
       "category": "History",
       "Quantity": "20",
       "price": "400",
-      "id": 7,
+      "id": 9,
       "Image": "https://m.media-amazon.com/images/P/0609809644.01._SCLZZZZZZZ_SX500_.jpg"
     },
     {
       "title": "The Time Machine",
-      "Description": "A compelling science fiction, the Time Machine is a first-hand account of a Time Traveler's journey into the future. a pull of the lever and the machine sends him to the year 802,701, when humanity has split into two bizarre races?the ethereal Eloi and the subterranean Morlocks. Here, his machine is stolen and with the help of Weena, an Eloi he saved from drowning, the traveler is able to retrieve it. Whizzing thirty million years further into the future, he finds a slowly dying earth, where the bloated red sun sits motionless in the sky and the only sign of life is a black blob with tentacles.He returns to the Victorian time, overwhelmed, just three hours after he originally left..Credited with inventing the time machine in this masterpiece, the provocative insight of H. G. Wells continues to enthrall the readers. the Time Machine has since been adapted into many feature films and television series and has inspired many more works of fiction.",
+      "Description": "A compelling science fiction, the Time Machine is a first-hand account of a Time Traveler's journey into the future. a pull of the lever and the machine sends him to the year 802,701, when humanity has split into two bizarre races?the ethereal Eloi and the subterranean Morlocks. Here, his machine is stolen and with the help of Weena, an Eloi he saved from drowning, the traveler is able to retrieve it. Whizzing thirty million years further into the future, he finds a slowly dying earth, where the bloated red sun sits motionless in the sky and the only sign of life is a black blob with tentacles.He returns to the Victorian time, overwhelmed, just three hours after he originally left..",
       "AuthorName": " H. G. Wells",
       "Quantity": "10",
       "price": "450",
-      "id": 8,
-      "Image": "https://m.media-amazon.com/images/I/61kIHuopR0L.jpg"
+      "Image": "https://m.media-amazon.com/images/I/61kIHuopR0L.jpg",
+      "category": "Thriller",
+      "id": 10
     },
     {
       "title": "The Art of War",
@@ -130,7 +159,7 @@
       "Quantity": "20",
       "category": "History",
       "price": "300",
-      "id": 9,
+      "id": 11,
       "Image": "https://m.media-amazon.com/images/I/41-0lBgMGvL.jpg"
     },
     {
@@ -139,8 +168,9 @@
       "AuthorName": "Chris Taylor",
       "Quantity": "10",
       "price": "250",
+      "category": "Thriller",
       "Image": "https://m.media-amazon.com/images/I/51pnprnaZHL._BG0,0,0,0_FMpng_AC_SY320_SX320_.jpg",
-      "id": 10
+      "id": 12
     },
     {
       "title": "Sherlock Holmes",
@@ -149,7 +179,7 @@
       "Quantity": "10",
       "price": "1200",
       "category": "Crime",
-      "id": 11,
+      "id": 13,
       "Image": "https://m.media-amazon.com/images/I/71bhR8QDlPL.jpg"
     },
     {
@@ -158,8 +188,178 @@
       "AuthorName": "Robert Langdon",
       "Quantity": "20",
       "price": "220",
-      "id": 12,
+      "category": "History",
+      "id": 14,
       "Image": "https://m.media-amazon.com/images/P/059305427X.01._SCLZZZZZZZ_SX500_.jpg"
+    },
+    {
+      "title": "The Girl in Room 105 ",
+      "AuthorName": "Chetan Bhagat",
+      "Description": "Chetan writes columns in the Times of India and Dainik Bhaskar, which are amongst the most influential and widely read newspapers in the country. He is also one of the country's leading motivational speakers. Chetan went to college at IIT Delhi and IIM Ahmedabad, after which he worked in investment banking for a decade before quitting his job to become a full-time writer.",
+      "Quantity": "20",
+      "price": "240",
+      "category": "Drama",
+      "Image": "https://rukminim1.flixcart.com/image/832/832/kkec4280/book/2/b/8/the-girl-in-room-105-original-imafzr6nczgggedw.jpeg?q=70",
+      "id": 15
+    },
+    {
+      "title": "The Mysterious Affair At Styles ",
+      "AuthorName": " Christie Agatha",
+      "Description": "\nThe Mysterious Affair at Styles is a detective novel by Agatha Christie. It was written in 1916 and was first published. Styles was Christie's first published novel, introducing Hercule Poirot, Inspector (later, Chief Inspector) Japp, and Lieutenant Hastings (later, Captain). The story is told in first person by Hastings and features many of the elements that have become icons of the Golden Age of Detective Fiction, largely due to Christie's influence.",
+      "Quantity": "15",
+      "price": "349",
+      "category": "Thriller",
+      "Image": "https://rukminim1.flixcart.com/image/832/832/l0vbukw0/book/k/f/t/the-mysterious-affair-at-styles-original-imagcjnby4vfvh9p.jpeg?q=70",
+      "id": 16
+    },
+    {
+      "title": "The Thirteen Problems ",
+      "AuthorName": " Christie Agatha",
+      "Description": "\nA weekly dinner party Ten amateur sleuths The Tuesday Night Club murders On a quiet Tuesday in St Mary Mead, a group of friends gather for dinner. A policeman, a clergyman, a solicitor, an author, an artist, and an unassuming lady with a shrewd gaze - Miss Jane Marple. Conversation naturally turns to crime. Each recounts a seemingly unsolvable mystery. Each thinks they know the answer.",
+      "Quantity": "23",
+      "price": "1250",
+      "category": "History",
+      "Image": "https://rukminim1.flixcart.com/image/832/832/xif0q/book/q/l/m/-original-imagghe7yx7qgzgu.jpeg?q=70",
+      "id": 17
+    },
+    {
+      "title": "The Age of Light ",
+      "AuthorName": " Scharer Whitney",
+      "Description": "The Age of Light is the riveting, vivid and powerful story of the photographer Lee Miller and her lover, Man Ray. Model. Muse. Lover. Artist. Paris, 1929. Lee Miller has abandoned her life in New York and a modelling career at Vogue to pursue her dream of becoming a photographer. When she catches the eye of artist Man Ray she convinces him to hire her as his assistant. Man is an egotistical, charismatic force and they soon embark upon a passionate affair.",
+      "Quantity": "20",
+      "price": "200",
+      "category": "History",
+      "Image": "https://rukminim1.flixcart.com/image/832/832/kzpw2vk0/book/m/f/k/the-age-of-light-original-imagbnsxfzqzfhvs.jpeg?q=70",
+      "id": 18
+    },
+    {
+      "title": "My India",
+      "AuthorName": " Dr. Abdul A.P.J. Abdul Kalam",
+      "Description": "My India: Notes for the Future contains excerpts from Dr A.P. J Adbul Kalam's speeches in his post presidency years. Drawn from Dr Kalam's addresses to parliaments, universities, schools and other institutions in India and abroad, they include his ideas on science, nation building, poverty, compassion and self-confidence. Dr Kalam draws on the lives of stalwarts such as Marie Curie, Dr Vikram Sarabhai to encourage and inspire his young readers.",
+      "Quantity": "30",
+      "price": "1999",
+      "category": "Drama",
+      "Image": "https://rukminim1.flixcart.com/image/832/832/kk2wl8w0/book/x/y/y/my-india-original-imafzhma4cxggged.jpeg?q=70",
+      "id": 19
+    },
+    {
+      "title": "Harry Potter and the Half-Blood Prince ",
+      "Description": "Harry's sixth year at Hogwarts is packed with more great Hufflepuff moments and characters - not least Tonks's rescue of Harry from the Hogwarts Express, and the intense Hufflepuff-Gryffindor Quidditch match.Each Hufflepuff House Edition features vibrant sprayed edges and intricate silver foiling. The stunning cover design has a cameo-style portrait of the Half-Blood Prince as the central icon, framed by beautiful house-themed iconography.",
+      "AuthorName": " Rowling J. K.",
+      "Quantity": "20",
+      "price": "2400",
+      "Image": "https://rukminim1.flixcart.com/image/832/832/l0cr4i80/poster/h/i/i/medium-harry-potter-the-half-blood-prince-dumbledore-print-original-imagc5ygdkjdubzk.jpeg?q=70",
+      "category": "Crime",
+      "id": 20
+    },
+    {
+      "title": "Cinderella Is Dead",
+      "Description": "Kalynn Bayron does more than re-write a fairytale ... She breaks it apart and rebuilds it into a wholly original and captivating story where girls finally decide for themselves who lives happily ever after' - New York Times bestselling author Brigid Kemmerer'A richly diverse and lovely read ... relevant, modern and inclusive' - NetGalley Reviewer'An intense experience, but a captivating one' - Paper Lanterns Magazine t's 200 years since Cinderella found her prince, but the fairytale is over.",
+      "AuthorName": " Bayron Kalynn",
+      "Quantity": "15",
+      "price": "300",
+      "Image": "https://rukminim1.flixcart.com/image/832/832/xif0q/book/1/h/t/cinderella-is-dead-original-imagevgesywvjhv9.jpeg?q=70",
+      "id": 21
+    },
+    {
+      "title": "WINGS OF FIRE",
+      "AuthorName": " Arun Tiwari ,  A. P. J. Abdul Kalam",
+      "Description": "The 'Wings of Fire' is one such autobiography by visionary scientist Dr. APJ Abdul Kalam, who from very humble beginnings rose to be the President of India. The book is full of insights, personal moments and life experiences of Dr. Kalam. It gives us an understanding on his journey of success. Dr. Kalam by narrating his life journey evokes the reader to identify with one’s inner fire and potential, for he was of the firm belief that each one of us was born with the strength and potential to make a tangible change in the world. How he inspired himself to achieve dreams and how he went about accomplishing so much is what the book captures nicely. The book recollects many anecdotes and stories from childhood, his time at school and college. The time spent at the Langley Research Center, NASA and Wallops Flight Facility gets a lot of attention. Personal tragedies have not been left out. The time when he lost his father and how he felt when conferred with many awards like the Padma Bhushan have been written in much detail. ",
+      "Quantity": "50",
+      "price": "2500",
+      "category": "Drama",
+      "Image": "https://m.media-amazon.com/images/I/51wbVQTpTgL._SX339_BO1,204,203,200_.jpg",
+      "id": 22
+    },
+    {
+      "title": "The Power of your Subconscious Mind",
+      "AuthorName": " Joseph Murphy",
+      "Description": "In this book, 'The power of your subconscious mind', the author fuses his spiritual wisdom and scientific research to bring to light how the sub-conscious mind can be a major influence on our daily lives. Once you understand your subconscious mind, you can also control or get rid of the various phobias that you may have in turn opening a brand new world of positive energy.",
+      "Quantity": "20",
+      "price": "1233",
+      "category": "Thriller",
+      "Image": "https://m.media-amazon.com/images/I/81gTwYAhU7L.jpg",
+      "id": 23
+    },
+    {
+      "title": "Digital Fortress",
+      "Description": "When the NSA's invincible code-breaking machine encounters a mysterious code it cannot break, the agency calls its head cryptographer, Susan Fletcher, a brilliant and beautiful mathematician. What she uncovers sends shock waves through the corridors of power. The NSA is being held hostage...not by guns or bombs, but by a code so ingeniously complex that if released it would cripple U.S. intelligence. Caught in an accelerating tempest of secrecy and lies, Susan Fletcher battles to save the agency she believes in. Betrayed on all sides, she finds herself fighting not only for her country but for her life, and in the end, for the life of the man she loves.",
+      "AuthorName": "Dan Brownn",
+      "Quantity": "25",
+      "price": "450",
+      "category": "Crime",
+      "Image": "https://m.media-amazon.com/images/I/71MP+kZmyEL.jpg",
+      "id": 24
+    },
+    {
+      "title": "Portrait of an Unknown Woman",
+      "AuthorName": " Daniel Silva ",
+      "Description": "Legendary spy and art restorer Gabriel Allon has at long last severed ties with Israeli intelligence and settled quietly in Venice, the only place he has ever truly known peace. His beautiful wife, Chiara, has taken over day-to-day management of the Tiepolo Restoration Company, and their two young children are clandestinely enrolled in a neighborhood scuola elementare. For his part, Gabriel spends his days wandering the streets and canals of the watery city, parting company with the demons of his tragic, violent past.\n\nBut when the eccentric London art dealer Julian Isherwood asks Gabriel to investigate the circumstances surrounding the rediscovery and lucrative sale of a centuries-old painting, he is drawn into a deadly game of cat and mouse where nothing is as it seems.",
+      "Quantity": "18",
+      "price": "650",
+      "category": "Drama",
+      "Image": "https://m.media-amazon.com/images/I/51h-YUTXTsL._SX325_BO1,204,203,200_.jpg",
+      "id": 25
+    },
+    {
+      "title": "The Dovic Story : A journey of love and self-discovery",
+      "AuthorName": " Rakhi Kapoor ",
+      "Description": "n the beginning, mankind was like any other life-form, naïve and frail. The creators of the Universe, Ra and Ri had gifted mankind unique and special abilities. If used appropriately, over time, he could evolve to become the most powerful and advanced life-form on Earth. The Creators would then hail themselves over the masterpiece they had created. Ra and Ri also believed that there was always the possibility that man could become arrogant and selfish.  As time passed, their fears came true; man became powerful. He was so full of himself that he began to fight for superiority even amongst his own kind. He began to explore exploit and inhabit every nook and corner of the planet. The creators of the planet earth, Ra and Ri were aware of this possibility. They foretold a prophecy that man was destined to stumble upon a small rock while he leapt higher to reach the stars and the moon. Man inched into unknown parts of the earth which were forbidden. He shook up a tiny, invisible world of life-forms much inferior to him",
+      "Quantity": "35",
+      "price": "999",
+      "category": "Drama",
+      "Image": "https://m.media-amazon.com/images/I/71c+Ap45tfL.jpg",
+      "id": 26
+    },
+    {
+      "title": "Aurora Rising",
+      "AuthorName": " Kaufman Amie",
+      "Description": "Aurora Rising is to sci-fi what Stranger Things is to the cinema of the eighties - a fusion of everything you love about the genre that adds up into something completely fresh.' Samantha Shannon From the New York Times and internationally bestselling authors of The Illuminae Files comes a new science fiction epic... The year is 2380, and the graduating cadets of Aurora Academy are being assigned their first missions. Star pupil Tyler Jones is ready to recruit the squad of his dreams, but his own boneheaded heroism sees him stuck with the dregs nobody else in the Academy would touch: A cocky diplomat with a black belt in sarcasm A sociopath scientist with a fondness for shooting her bunkmates A smart-ass tech-whiz with the galaxy's biggest chip on his shoulder An alien warrior with anger management issues",
+      "Quantity": "20",
+      "price": "22",
+      "Image": "https://rukminim1.flixcart.com/image/832/832/l5ld8y80/book/v/p/b/aurora-rising-the-aurora-cycle-original-imagg7xdf4eku4sp.jpeg?q=70",
+      "category": "Fantasy",
+      "id": 27
+    },
+    {
+      "title": "The Return of the King ",
+      "Description": "The third part of J.R.R. Tolkien's epic adventure THE LORD OF THE RINGS The armies of the Dark Lord are massing as his evil shadow spreads even wider. Men, Dwarves, Elves and Ents unite forces to battle against the Dark. Meanwhile, Frodo and Sam struggle further into Mordor in their heroic quest to destroy the One Ring. The devastating conclusion of J.R.R. Tolkien's classic tale of adventure, begun in The Fellowship of the Ring and The Two Towers.",
+      "AuthorName": "Tolkien J. R. R.",
+      "Quantity": "20",
+      "price": "285",
+      "category": "Drama",
+      "Image": "https://rukminim1.flixcart.com/image/832/832/kzygpzk0/book/a/i/j/the-return-of-the-king-original-imagbuzrgsw8rw5h.jpeg?q=70",
+      "id": 28
+    },
+    {
+      "title": "The Lord of the Rings ",
+      "AuthorName": "J.R.R. Tolkien ",
+      "Description": "One Ring to rule them all, One Ring to find them, One Ring to bring them all and in the darkness bind them.\n\nSauron, the Dark Lord, has gathered to him all the Rings of Power—the means by which he intends to rule Middle-earth. All he lacks in his plans for dominion is the One Ring—the ring that rules them all—which has fallen into the hands of the hobbit, Bilbo Baggins.\n\nIn a sleepy village in the Shire, young Frodo Baggins finds himself faced with an immense task, as his elderly cousin Bilbo entrusts the Ring to his care. Frodo must leave his home and make a perilous journey across Middle-earth to the Cracks of Doom, there to destroy the Ring and foil the Dark Lord in his evil purpose.",
+      "Quantity": "24",
+      "price": "2200",
+      "Image": "https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T2/images/I/51SZ+xIbZnL.jpg",
+      "category": "Fantasy",
+      "id": 29
+    },
+    {
+      "title": "Homecoming: A Portal Cultivation",
+      "AuthorName": " Chris Vines",
+      "Description": "Aiden has emerged victorious, earning the Legacy of the M'Zee and advancing to Seed Core faster than anyone else in history. Now, he must consolidate his gains, learn about the Legacy and what holding it entails, and make his way back home. However, the journey across the ocean is always treacherous, and their desire to explore ancient ruins discovered on their original trip will lead them to find another threat to the world.",
+      "Quantity": "10",
+      "price": "450",
+      "Image": "https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T2/images/I/41IOL3vX9GL.jpg",
+      "category": "Fantasy",
+      "id": 31
+    },
+    {
+      "title": " The Hands of Time",
+      "AuthorName": " Michelle Madow ",
+      "Description": "Months ago, Nicole Cassidy’s life was turned upside-down when she discovered that she was a witch descended from the Greek gods. She and the four other witches gifted with elemental powers fought all over the world—and in another dimension—to battle the supporters of the Titans and fight for the people they love.\n\nNow the Elementals must stop Typhon—the most dangerous monster in the world—from rising, and seal the portal to the dangerous prison world of Kerberos. But they won’t be able to do that without facing their hardest decision yet… a sacrifice so great that it may be one they’re not willing to make.",
+      "Quantity": "28",
+      "price": "1799",
+      "Image": "https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T2/images/I/51TgbWbUa4L.jpg",
+      "category": "Fantasy",
+      "id": 32
     }
   ],
   "Rent": [],
@@ -170,14 +370,9 @@
       "id": 1
     },
     {
-      "User": "Ana de armas",
-      "feed": "All the girls in the world were divided into two classes: one class included all the girls in the world except her, and they had all the usual human feelings and were very ordinary girls; while the other class -herself alone- had no weaknesses and was superior to all humanity.",
-      "id": 2
-    },
-    {
       "User": "armas07@gmail.com",
       "feed": "Academic libraries have for centuries played critically important roles in supporting the education system. A statistically significant correlation between library use and academic productivity has been found. Recently, libraries have not been used at the optimum level. To design library services, user studies are being conducted by many researchers",
-      "id": 3
+      "id": 2
     }
   ],
   "Category": [
@@ -200,6 +395,11 @@
       "id": 4,
       "category": "Drama",
       "Img": "https://m.media-amazon.com/images/I/71l+w6TvBML.jpg"
+    },
+    {
+      "category": "Fantasy",
+      "Img": "https://img.freepik.com/premium-photo/open-magic-book-with-fairy-tales_763713-618.jpg",
+      "id": 5
     }
   ],
   "Cards": [

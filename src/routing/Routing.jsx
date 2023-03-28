@@ -15,6 +15,11 @@ import EditUser from "../components/admin/user/EditUser";
 import EditMyProfile from "../components/user/pages/myProfile/EditMyProfile";
 import Myprofile from "../components/user/pages/myProfile/Myprofile";
 import UBook from "../components/bookList/UBook";
+import Category from '../components/category/Category'
+import Books from "../components/category/Books";
+import EditCategory from "../components/admin/category/EditCategory";
+import AddCategory from "../components/admin/category/AddCategory";
+import Search from "../components/bookList/Search";
 const Routing = () => {
   const isUserLoggedin = sessionStorage.getItem("isUserLoggedin")
     ? sessionStorage.getItem("isUserLoggedin")
@@ -45,7 +50,7 @@ const Routing = () => {
           <Route path="/EditBooks/:id" element={<EditBooks />}></Route>
         )}
         {isUserLoggedin && !isAdmin && (
-          <Route path="/Rent/:id" element={<Rent />}></Route>
+          <Route path="/Rent/:id/" element={<Rent />}></Route>
         )}
         <Route path="*" element={<NoMatch />}></Route>
         {isUserLoggedin && !isAdmin && (
@@ -64,9 +69,28 @@ const Routing = () => {
         {isUserLoggedin && !isAdmin && (
           <Route path="/EditMyProfile/:id" element={<EditMyProfile />}></Route>
         )}
+        {/* { isUserLoggedin && (<Route path="/category/EditCategory/:id" element={<EditCategory/>} /> ) } */}
         {isUserLoggedin && (
           <Route path="/booklist/:id" element={<UBook />}></Route>
-        )}
+        )}   
+          {isUserLoggedin && (
+          <Route path="/category" element={<Category />}></Route>
+        )} 
+          {isUserLoggedin && isAdmin && (
+          <Route path="/add-category" element={<AddCategory/>}></Route>
+        )} 
+          {isUserLoggedin && (
+          <Route path="/category/books/:category/:id" element={<UBook />}></Route>
+        )}  
+          {isUserLoggedin && (
+          <Route path="/category/books/:category" element={<Books />}></Route>
+        )} 
+          {isUserLoggedin && (
+          <Route path="/search/:sr" element={<Search/>}></Route>
+        )} 
+           {isUserLoggedin && isAdmin && (
+          <Route path="/rentlist/:email" element={<RentList />}></Route>
+        )}   
       </Routes>
     </div>
   );

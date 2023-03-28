@@ -1,13 +1,20 @@
 import React, { useState, useEffect } from "react";
 import { Form, Button } from "semantic-ui-react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { toast } from "react-toastify";
 import { getData, returnBook } from "../../../../services/rent/rent.service";
 
 const RentList = () => {
   const [rentedbook, getRentedBooks] = useState([]);
-  const email = sessionStorage.getItem("email");
+  const Semail = sessionStorage.getItem("email");
   const navigate = useNavigate();
+  const { email } = useParams();
+  const isUserLoggedin = sessionStorage.getItem("isUserLoggedin")
+    ? sessionStorage.getItem("isUserLoggedin")
+    : false;
+  const isAdmin = sessionStorage.getItem("isAdmin")
+    ? sessionStorage.getItem("isAdmin")
+    : false;
   useEffect(() => {
     get();
   }, []);
@@ -33,7 +40,11 @@ const RentList = () => {
       {rentedbook.length > 0 ? (
         rentedbook
           .filter((e) => {
-            if (e.email === email) return email;
+            if (e.email === Semail) {
+              return e;
+            } else if (e.email === email) {
+              return e;
+            }
           })
           .map((book) => (
             <div key={book.id}>
@@ -54,12 +65,12 @@ const RentList = () => {
                   <p>
                     <b>Return Date :</b> {book.RentUpto}
                   </p>
-                  <Button
+                { isUserLoggedin && !isAdmin && ( <Button
                     className="ui button blue"
                     onClick={() => Return(book.id)}
                   >
                     Return Book
-                  </Button>
+                  </Button> ) }
                   <Button className="ui red" onClick={() => navigate(-1)}>
                     Go Back
                   </Button>

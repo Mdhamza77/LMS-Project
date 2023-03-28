@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Form, Button, TextArea } from "semantic-ui-react";
 import { useNavigate } from "react-router-dom";
-import { addBooks } from "../../../services/book/book.service";
+import { addBooks, getCat } from "../../../services/book/book.service";
 import { toast } from "react-toastify";
 
 const AddBooks = () => {
@@ -19,8 +19,20 @@ const AddBooks = () => {
   const [quantity, setQuantity] = useState("");
   const [price, setPrice] = useState("");
   const [img, setImg] = useState("");
-  const [data, setData] = useState("");
+  const [category, setCategory] = useState("");
+  const [cat, getCategories] = useState([]);
+  const [setData] = useState("");
 
+  const loadData = async () => {
+    return await getCat()
+      .then((res) => getCategories(res.data))
+
+      .catch((err) => console.log(err));
+  };
+
+  useEffect(() => {
+    loadData();
+  }, []);
   const handleSubmit = (e) => {
     const data = {
       title: bookName,
@@ -29,6 +41,7 @@ const AddBooks = () => {
       Quantity: quantity,
       price: price,
       Image: img,
+      category: category,
     };
 
     e.preventDefault();
@@ -42,6 +55,7 @@ const AddBooks = () => {
         setQuantity("");
         setPrice("");
         setImg("");
+        setCategory("");
         toast("Added Successfully");
       })
       .catch((err) => {
@@ -59,7 +73,7 @@ const AddBooks = () => {
           <div>
             <Form className="ui form" onSubmit={handleSubmit}>
               <Form.Field>
-                <label htmlFor="book">Books Name</label>
+                <label htmlFor="book">Book Name</label>
                 <input
                   type="text"
                   name="name"
@@ -92,6 +106,18 @@ const AddBooks = () => {
                 />
               </Form.Field>
               <Form.Field>
+                <label>Book Category</label>
+
+                <select onChange={(e) => setCategory(e.target.value)}>
+                  {" "}
+                  {cat.map((data) => (
+                    <option key={data.id} value={data.category}>
+                      {data.category}
+                    </option>
+                  ))}
+                </select>
+              </Form.Field>
+              <Form.Field>
                 <label htmlFor="description">Description</label>
                 <TextArea
                   placeholder="Description"
@@ -115,7 +141,7 @@ const AddBooks = () => {
                 />
               </Form.Field>
               <Form.Field>
-                <label htmlFor="price">Books Price</label>
+                <label htmlFor="price">Book Price</label>
                 <input
                   type="number"
                   name="name"

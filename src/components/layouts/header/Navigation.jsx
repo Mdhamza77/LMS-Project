@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
+import { Button } from "semantic-ui-react";
 import "../../../assets/styles/style.css";
 const Navigation = () => {
   const isUserLoggedin = sessionStorage.getItem("isUserLoggedin")
@@ -12,10 +13,11 @@ const Navigation = () => {
     : false;
 
   const navigate = useNavigate();
-
+  const [inpvalue, setInpvalue] = useState("");
   const home = () => {
     navigate("/");
   };
+  
 
   const logout = () => {
     toast("Logging out");
@@ -43,26 +45,47 @@ const Navigation = () => {
               <i className="home icon"></i>Home
             </Link>
           )}
-          {/* {isUserLoggedin && isAdmin && (
-            <Link to="/Admin">
-              <i className="home icon"></i>Home
-            </Link>
-          )} */}
+
           {isUserLoggedin && (
             <Link to="/home">
               <i className="home icon"></i>Home
             </Link>
           )}
 
-          {isUserLoggedin && isAdmin && <Link to="/addbooks">Add-Books</Link>}
-          {isUserLoggedin && isAdmin && <Link to="/User">User-Profile</Link>}
+          {isUserLoggedin && isAdmin && <Link to="/addbooks">Add-Book</Link>}
+          {isUserLoggedin && isAdmin && <Link to="/User">Users</Link>}
+          {isUserLoggedin && isAdmin && (
+            <Link to="/add-category">Category</Link>
+          )}
           {isUserLoggedin && !isAdmin && <Link to="/RentList">My Books</Link>}
+         {isUserLoggedin && ( <> <input
+            style={{
+              width: "12em",
+              height: "1.8em",
+              borderRadius: "4px",
+              border: "2px solid black",
+            }}
+            type="text"
+            placeholder="search"
+            onChange={(e) => {
+              setInpvalue(e.target.value);
+            }}
+          />
+
+          <Button
+            className="ui red"
+            onClick={() => {
+              navigate("/search/" + inpvalue);
+            }}
+          >
+            <i className="search icon"></i>
+          </Button> </> )     }
         </nav>
 
         <div className="icons">
           {isUserLoggedin && (
             <Link className="fas fa-user" to="/profile">
-               MyProfile
+              MyProfile
             </Link>
           )}
           {!isUserLoggedin && (
@@ -75,8 +98,12 @@ const Navigation = () => {
               <i className="add user icon"></i>Signup
             </Link>
           )}
-           
-          {isUserLoggedin &&  <b><Link onClick={logout}>Logout</Link></b>}
+
+          {isUserLoggedin && (
+            <b>
+              <Link onClick={logout}>Logout</Link>
+            </b>
+          )}
           {isUserLoggedin && !isAdmin && <Link to="/feedback">FeedBack</Link>}
         </div>
       </header>

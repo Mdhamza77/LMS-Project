@@ -111,5 +111,18 @@ html {
  
 
 .cat{
-  padding: 2em 2em;
+  padding: 2em 2em; 
+  width: 98em;
+}
+
+.page-number{
+  text-align: center;
+  margin-top: 0;
+  color: green; 
+  float: left;
+  border: 0.5px solid black;
+  padding: 8px 16px;
+  text-decoration: none;
+  cursor: pointer;
+  
 }
