@@ -3,7 +3,6 @@ import { useNavigate, useParams } from "react-router-dom";
 import { getAllBooks } from "../../services/book/book.service";
 import { useState } from "react";
 import { useEffect } from "react";
-import { Button } from "semantic-ui-react";
 import "../../assets/styles/App.css";
 
 const Search = () => {
