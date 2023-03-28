@@ -91,6 +91,9 @@ const Routing = () => {
            {isUserLoggedin && isAdmin && (
           <Route path="/rentlist/:email" element={<RentList />}></Route>
         )}   
+           {isUserLoggedin && (
+          <Route path="/search/:sr/:id" element={<UBook />}></Route>
+        )}  
       </Routes>
     </div>
   );

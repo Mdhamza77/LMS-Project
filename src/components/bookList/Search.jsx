@@ -21,7 +21,7 @@ const Search = () => {
       .catch((err) => console.log(err));
   };
   const handleClick = (id) => {
-    navigate("/category/books/:category/" + id);
+    navigate("/search/:se/" + id);
   };
 
   useEffect(() => {
