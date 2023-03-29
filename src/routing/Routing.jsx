@@ -17,7 +17,6 @@ import Myprofile from "../components/user/pages/myProfile/Myprofile";
 import UBook from "../components/bookList/UBook";
 import Category from '../components/category/Category'
 import Books from "../components/category/Books";
-import EditCategory from "../components/admin/category/EditCategory";
 import AddCategory from "../components/admin/category/AddCategory";
 import Search from "../components/bookList/Search";
 const Routing = () => {
@@ -69,7 +68,7 @@ const Routing = () => {
         {isUserLoggedin && !isAdmin && (
           <Route path="/EditMyProfile/:id" element={<EditMyProfile />}></Route>
         )}
-        {/* { isUserLoggedin && (<Route path="/category/EditCategory/:id" element={<EditCategory/>} /> ) } */}
+ 
         {isUserLoggedin && (
           <Route path="/booklist/:id" element={<UBook />}></Route>
         )}   

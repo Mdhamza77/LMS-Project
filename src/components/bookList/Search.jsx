@@ -32,7 +32,7 @@ const Search = () => {
         <div className="ui link cards">
           {searchBook
             .filter((value) => {
-              if (search == "") {
+              if (search === "") {
                 return value;
               } else if (
                 value.title.toLowerCase().includes(search.toLowerCase()) ||
