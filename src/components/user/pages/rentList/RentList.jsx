@@ -6,6 +6,7 @@ import { getData, returnBook } from "../../../../services/rent/rent.service";
 
 const RentList = () => {
   const [rentedbook, getRentedBooks] = useState([]);
+  const [date] = useState(new Date())
   const Semail = sessionStorage.getItem("email");
   const navigate = useNavigate();
   const { email } = useParams();
@@ -34,6 +35,9 @@ const RentList = () => {
       getRentedBooks();
     });
   };
+
+
+
   return (
     <div className="container">
       <br />
@@ -65,6 +69,7 @@ const RentList = () => {
                   <p>
                     <b>Return Date :</b> {book.RentUpto}
                   </p>
+                {date.toDateString() !== book.RentUpto && date.toDateString() >= book.RentUpto? ( <p style={{color : "red"}} >Rent Date Expired please return book</p> ): ( <p style={{color : "green"}}>No Fine</p> ) }  
                 { isUserLoggedin && !isAdmin && ( <Button
                     className="ui button blue"
                     onClick={() => Return(book.id)}
