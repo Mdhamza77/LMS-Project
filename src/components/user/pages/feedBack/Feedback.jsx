@@ -15,7 +15,7 @@ const Feedback = () => {
       User: user,
       feed: feedback,
     };
-    if (!textArea(feedback)) return <p>enter the input field</p>;
+    if (!textArea(feedback)) return null;
     else
       return await postFeedBack(feed)
         .then((res) => {
