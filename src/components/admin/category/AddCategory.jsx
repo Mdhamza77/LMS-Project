@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import { addCategory } from "../../../services/book/book.service";
 import { Form, Button } from "semantic-ui-react";
+import { useNavigate } from "react-router-dom";
 
 const AddCategory = () => {
   const [category, setCategory] = useState("");
+  const navigate = useNavigate();
   const [Img, setImg] = useState("");
 
   const handleSubmit = (e) => {
@@ -16,6 +18,7 @@ const AddCategory = () => {
         console.log(res)
         setImg("");
         setCategory("");
+        navigate('/home') 
       })
       .catch((err) => console.log(err));
   };
@@ -27,6 +30,8 @@ const AddCategory = () => {
           <input
             type="text"
             required
+            minLength="4"
+            maxLength="10"
             onChange={(e) => setCategory(e.target.value)}
           />
         </Form.Field>
@@ -34,7 +39,7 @@ const AddCategory = () => {
           <label>Category Image</label>
           <input
             type="text"
-            required
+            required 
             onChange={(e) => setImg(e.target.value)}
           />
         </Form.Field>
