@@ -6,7 +6,7 @@ import { getData, returnBook } from "../../../../services/rent/rent.service";
 
 const RentList = () => {
   const [rentedbook, getRentedBooks] = useState([]);
-  const [date] = useState(new Date())
+  const [date] = useState(new Date());
   const Semail = sessionStorage.getItem("email");
   const navigate = useNavigate();
   const { email } = useParams();
@@ -35,8 +35,6 @@ const RentList = () => {
       getRentedBooks();
     });
   };
-
-
 
   return (
     <div className="container">
@@ -69,15 +67,23 @@ const RentList = () => {
                   <p>
                     <b>Return Date :</b> {book.RentUpto}
                   </p>
-               {new Date(book.RentUpto).toLocaleDateString()>new Date().toLocaleDateString() ?<p style={{color : "red"}}>Rent Date Exceeded</p>:new Date(book.RentUpto).toLocaleDateString() < new Date().toLocaleDateString()? <p style={{color: "green"}}>Return book before due date</p> : ""
-}
+                  {new Date(book.RentUpto).toLocaleDateString() >
+                  new Date().toLocaleDateString() ? (
+                    <p style={{ color: "red" }}>Due Date Exceeded</p>
+                  ) : 
+                    <p style={{ color: "green" }}>
+                      Return book before due date
+                    </p>
+                   }
 
-                { isUserLoggedin && !isAdmin && ( <Button
-                    className="ui button blue"
-                    onClick={() => Return(book.id)}
-                  >
-                    Return Book
-                  </Button> ) }
+                  {isUserLoggedin && !isAdmin && (
+                    <Button
+                      className="ui button blue"
+                      onClick={() => Return(book.id)}
+                    >
+                      Return Book
+                    </Button>
+                  )}
                   <Button className="ui red" onClick={() => navigate(-1)}>
                     Go Back
                   </Button>

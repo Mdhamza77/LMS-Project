@@ -374,6 +374,28 @@
       "RentUpto": "29/03/2023",
       "BookId": "4",
       "id": 1
+    },
+    {
+      "title": "The Girl in Room 105 ",
+      "Description": "Chetan writes columns in the Times of India and Dainik Bhaskar, which are amongst the most influential and widely read newspapers in the country. He is also one of the country's leading motivational speakers. Chetan went to college at IIT Delhi and IIM Ahmedabad, after which he worked in investment banking for a decade before quitting his job to become a full-time writer.",
+      "AuthorName": "Chetan Bhagat",
+      "price": 240,
+      "email": "muhaimin123@gmail.com",
+      "RentFrom": "31/03/2023",
+      "RentUpto": "31/03/2023",
+      "BookId": "15",
+      "id": 2
+    },
+    {
+      "title": "The Time Machine",
+      "Description": "A compelling science fiction, the Time Machine is a first-hand account of a Time Traveler's journey into the future. a pull of the lever and the machine sends him to the year 802,701, when humanity has split into two bizarre races?the ethereal Eloi and the subterranean Morlocks. Here, his machine is stolen and with the help of Weena, an Eloi he saved from drowning, the traveler is able to retrieve it. Whizzing thirty million years further into the future, he finds a slowly dying earth, where the bloated red sun sits motionless in the sky and the only sign of life is a black blob with tentacles.He returns to the Victorian time, overwhelmed, just three hours after he originally left..",
+      "AuthorName": " H. G. Wells",
+      "price": 450,
+      "email": "muhaimin123@gmail.com",
+      "RentFrom": "31/03/2023",
+      "RentUpto": "02/04/2023",
+      "BookId": "10",
+      "id": 3
     }
   ],
   "FeedBack": [
