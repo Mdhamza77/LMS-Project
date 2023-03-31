@@ -106,7 +106,6 @@ const EditBooks = () => {
               placeholder="Author name"
               value={authorName}
               id="author"
-              onChange={(e) => setAuthorName(e.target.value)}
               readOnly
             />
           </Form.Field>
