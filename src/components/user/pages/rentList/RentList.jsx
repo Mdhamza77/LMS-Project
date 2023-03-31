@@ -69,7 +69,9 @@ const RentList = () => {
                   <p>
                     <b>Return Date :</b> {book.RentUpto}
                   </p>
-                {date.toDateString() == book.RentUpto && date.toDateString() >= book.RentUpto  ? ( <p style={{color : "red"}} >Rent Date Expired please return book</p> ): ( <p style={{color : "green"}}>No Fine</p> ) }  
+               {new Date(book.RentUpto).toLocaleDateString()>new Date().toLocaleDateString() ?<p style={{color : "red"}}>Rent Date Exceeded</p>:new Date(book.RentUpto).toLocaleDateString() < new Date().toLocaleDateString()? <p style={{color: "green"}}>Return book before due date</p> : ""
+}
+
                 { isUserLoggedin && !isAdmin && ( <Button
                     className="ui button blue"
                     onClick={() => Return(book.id)}

@@ -41,8 +41,8 @@ const RentList = () => {
       AuthorName: authorName,
       price,
       email: email,
-      RentFrom: startDate.toDateString(),
-      RentUpto: endDate.toDateString(),
+      RentFrom: startDate.toLocaleDateString(),
+      RentUpto: endDate.toLocaleDateString(),
       BookId: id,
     };
 
