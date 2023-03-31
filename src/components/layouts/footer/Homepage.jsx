@@ -40,10 +40,10 @@ const Homepage = () => {
   return (
     <div>
       <div>
-        <div className="" id="segment">
+        <div  id="segment">
           {home.map((item) => (
             <div key={item.id}>
-              <img className="img" src={item.img} alt="" />
+              <img className="img" src={item.img} alt="img" />
               <h1>{item.title}</h1>
               <p>{item.About}</p>
               <p className="ui center">{item.sub}</p>
@@ -85,7 +85,7 @@ const Homepage = () => {
               </h1>
 
               <div className="box-container">
-                <div className="">
+                <div>
                   <div className="box">
                     <div className="stars">
                       <i className="fas fa-star"></i>

@@ -28,7 +28,7 @@ const Feedback = () => {
   return (
     <div className="feedback">
       <div className="card">
-        <Form className="">
+        <Form>
           <Form.Field>
             <label>User</label>
             <input

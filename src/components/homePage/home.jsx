@@ -6,9 +6,6 @@ const Home = () => {
   const isUserLoggedin = sessionStorage.getItem("isUserLoggedin")
     ? sessionStorage.getItem("isUserLoggedin")
     : false;
-  const isAdmin = sessionStorage.getItem("isAdmin")
-    ? sessionStorage.getItem("isAdmin")
-    : false;
 
   const navigate = useNavigate();
 

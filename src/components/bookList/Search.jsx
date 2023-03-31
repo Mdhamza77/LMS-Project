@@ -15,7 +15,6 @@ const Search = () => {
     return await getAllBooks()
       .then((res) => {
         setSearchBook(res.data);
-        console.log(res.data);
       })
       .catch((err) => console.log(err));
   };

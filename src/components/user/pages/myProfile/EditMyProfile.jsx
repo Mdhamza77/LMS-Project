@@ -23,8 +23,7 @@ const EditMyProfile = () => {
     }, [])
            
       const get = () => {
-          getUser(id).then( (res) => {
-             console.log(res.data) 
+          getUser(id).then( (res) => { 
              setFirstName(res.data.firstName)
              setLastName(res.data.lastName)
              setImg(res.data.img)
@@ -45,7 +44,6 @@ const EditMyProfile = () => {
              password: password,
         }
         editUser(id , user).then( (res) => {
-            console.log(res.data);
             get();
             navigate('/home')
         }) .catch(err => console.log(err))

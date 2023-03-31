@@ -13,6 +13,7 @@ const AddCategory = () => {
       category: category,
       Img: Img,
     };
+    e.preventDefault();
     addCategory(cat)
       .then((res) => {
         console.log(res)

@@ -14,10 +14,10 @@ const Navigation = () => {
 
   const navigate = useNavigate();
   const [inpvalue, setInpvalue] = useState("");
+
   const home = () => {
     navigate("/");
   };
-  
 
   const logout = () => {
     toast("Logging out");
@@ -58,28 +58,32 @@ const Navigation = () => {
             <Link to="/add-category">Category</Link>
           )}
           {isUserLoggedin && !isAdmin && <Link to="/RentList">My Books</Link>}
-         {isUserLoggedin && ( <> <input
-            style={{
-              width: "12em",
-              height: "1.8em",
-              borderRadius: "4px",
-              border: "2px solid black",
-            }}
-            type="text"
-            placeholder="search"
-            onChange={(e) => {
-              setInpvalue(e.target.value);
-            }}
-          />
-
-          <Button
-            className="ui red"
-            onClick={() => {
-              navigate("/search/" + inpvalue);
-            }}
-          >
-            <i className="search icon"></i>
-          </Button> </> )     }
+          {isUserLoggedin && (
+            <>
+              {" "}
+              <input
+                style={{
+                  width: "12em",
+                  height: "1.8em",
+                  borderRadius: "4px",
+                  border: "2px solid black",
+                }}
+                type="text"
+                placeholder="search"
+                onChange={(e) => {
+                  setInpvalue(e.target.value);
+                }}
+              />
+              <Button
+                className="ui red"
+                onClick={() => {
+                  navigate("/search/" + inpvalue);
+                }}
+              >
+                <i className="search icon"></i>
+              </Button>{" "}
+            </>
+          )}
         </nav>
 
         <div className="icons">
