@@ -67,14 +67,6 @@ const RentList = () => {
                   <p>
                     <b>Return Date :</b> {book.RentUpto}
                   </p>
-                  {new Date(book.RentUpto).toLocaleDateString() >
-                  new Date().toLocaleDateString() ? (
-                    <p style={{ color: "red" }}>Due Date Exceeded</p>
-                  ) : 
-                    <p style={{ color: "green" }}>
-                      Return book before due date
-                    </p>
-                   }
 
                   {isUserLoggedin && !isAdmin && (
                     <Button
