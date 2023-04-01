@@ -6,7 +6,6 @@ import { getData, returnBook } from "../../../../services/rent/rent.service";
 
 const RentList = () => {
   const [rentedbook, getRentedBooks] = useState([]);
-  const [date] = useState(new Date());
   const Semail = sessionStorage.getItem("email");
   const navigate = useNavigate();
   const { email } = useParams();

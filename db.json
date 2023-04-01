@@ -363,7 +363,19 @@
       "id": 32
     }
   ],
-  "Rent": [],
+  "Rent": [
+    {
+      "title": "Genghis Khan and the Making of the Modern World",
+      "Description": "New York Times Bestseller • The startling true history of how one extraordinary man from a remote cornerof the world created an empire that led the world into the modern age.The Mongol army led by Genghis Khan subjugated more lands and people in twenty-five years than the Romans did in four hundred. In nearly every country the Mongols conquered, they brought an unprecedented rise in cultural communication, expanded trade, and a blossoming of civilization. Vastly more progressive than his European or Asian counterparts, Genghis Khan abolished torture, granted universal religious freedom, and smashed feudal systems of aristocratic privilege. From the story of his rise through the tribal culture to the explosion of civilization that the Mongol Empire unleashed, this brilliant work of revisionist history is nothing less than the epic story of how the modern world was made.",
+      "AuthorName": "Jack Weatherford",
+      "price": 400,
+      "email": "muhaimin123@gmail.com",
+      "RentFrom": "01/04/2023",
+      "RentUpto": "04/04/2023",
+      "BookId": "9",
+      "id": 1
+    }
+  ],
   "FeedBack": [
     {
       "User": "James Gunn",
