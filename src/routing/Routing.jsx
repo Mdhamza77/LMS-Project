@@ -15,7 +15,6 @@ import EditUser from "../components/admin/user/EditUser";
 import EditMyProfile from "../components/user/pages/myProfile/EditMyProfile";
 import Myprofile from "../components/user/pages/myProfile/Myprofile";
 import UBook from "../components/bookList/UBook";
-import Category from '../components/category/Category'
 import Books from "../components/category/Books";
 import AddCategory from "../components/admin/category/AddCategory";
 import Search from "../components/bookList/Search";
@@ -41,7 +40,7 @@ const Routing = () => {
           <Route path="/profile" element={<Myprofile />}></Route>
         )}
         <Route path="/home" element={<Home />}></Route>
-      
+
         {isUserLoggedin && isAdmin && (
           <Route path="/editBooks" element={<EditBooks />}></Route>
         )}
@@ -68,31 +67,31 @@ const Routing = () => {
         {isUserLoggedin && !isAdmin && (
           <Route path="/EditMyProfile/:id" element={<EditMyProfile />}></Route>
         )}
- 
+
         {isUserLoggedin && (
           <Route path="/booklist/:id" element={<UBook />}></Route>
-        )}   
-          {isUserLoggedin && (
-          <Route path="/category" element={<Category />}></Route>
-        )} 
-          {isUserLoggedin && isAdmin && (
-          <Route path="/add-category" element={<AddCategory/>}></Route>
-        )} 
-          {isUserLoggedin && (
-          <Route path="/category/books/:category/:id" element={<UBook />}></Route>
-        )}  
-          {isUserLoggedin && (
+        )}
+        {isUserLoggedin && isAdmin && (
+          <Route path="/add-category" element={<AddCategory />}></Route>
+        )}
+        {isUserLoggedin && (
+          <Route
+            path="/category/books/:category/:id"
+            element={<UBook />}
+          ></Route>
+        )}
+        {isUserLoggedin && (
           <Route path="/category/books/:category" element={<Books />}></Route>
-        )} 
-          {isUserLoggedin && (
-          <Route path="/search/:sr" element={<Search/>}></Route>
-        )} 
-           {isUserLoggedin && isAdmin && (
+        )}
+        {isUserLoggedin && (
+          <Route path="/search/:sr" element={<Search />}></Route>
+        )}
+        {isUserLoggedin && isAdmin && (
           <Route path="/rentlist/:email" element={<RentList />}></Route>
-        )}   
-           {isUserLoggedin && (
+        )}
+        {isUserLoggedin && (
           <Route path="/search/:sr/:id" element={<UBook />}></Route>
-        )}  
+        )}
       </Routes>
     </div>
   );
