@@ -365,15 +365,59 @@
   ],
   "Rent": [
     {
+      "title": "The Girl in Room 105 ",
+      "Description": "Chetan writes columns in the Times of India and Dainik Bhaskar, which are amongst the most influential and widely read newspapers in the country. He is also one of the country's leading motivational speakers. Chetan went to college at IIT Delhi and IIM Ahmedabad, after which he worked in investment banking for a decade before quitting his job to become a full-time writer.",
+      "AuthorName": "Chetan Bhagat",
+      "price": 240,
+      "email": "muhaimin123@gmail.com",
+      "RentFrom": "28/03/2023",
+      "RentUpto": "29/03/2023",
+      "BookId": "15",
+      "id": 2
+    },
+    {
       "title": "Genghis Khan and the Making of the Modern World",
       "Description": "New York Times Bestseller • The startling true history of how one extraordinary man from a remote cornerof the world created an empire that led the world into the modern age.The Mongol army led by Genghis Khan subjugated more lands and people in twenty-five years than the Romans did in four hundred. In nearly every country the Mongols conquered, they brought an unprecedented rise in cultural communication, expanded trade, and a blossoming of civilization. Vastly more progressive than his European or Asian counterparts, Genghis Khan abolished torture, granted universal religious freedom, and smashed feudal systems of aristocratic privilege. From the story of his rise through the tribal culture to the explosion of civilization that the Mongol Empire unleashed, this brilliant work of revisionist history is nothing less than the epic story of how the modern world was made.",
       "AuthorName": "Jack Weatherford",
       "price": 400,
       "email": "muhaimin123@gmail.com",
       "RentFrom": "01/04/2023",
-      "RentUpto": "04/04/2023",
+      "RentUpto": "01/04/2023",
       "BookId": "9",
-      "id": 1
+      "id": 3
+    },
+    {
+      "title": "The Dovic Story : A journey of love and self-discovery",
+      "Description": "n the beginning, mankind was like any other life-form, naïve and frail. The creators of the Universe, Ra and Ri had gifted mankind unique and special abilities. If used appropriately, over time, he could evolve to become the most powerful and advanced life-form on Earth. The Creators would then hail themselves over the masterpiece they had created. Ra and Ri also believed that there was always the possibility that man could become arrogant and selfish.  As time passed, their fears came true; man became powerful. He was so full of himself that he began to fight for superiority even amongst his own kind. He began to explore exploit and inhabit every nook and corner of the planet. The creators of the planet earth, Ra and Ri were aware of this possibility. They foretold a prophecy that man was destined to stumble upon a small rock while he leapt higher to reach the stars and the moon. Man inched into unknown parts of the earth which were forbidden. He shook up a tiny, invisible world of life-forms much inferior to him",
+      "AuthorName": " Rakhi Kapoor ",
+      "price": 999,
+      "email": "muhaimin123@gmail.com",
+      "RentFrom": "01/04/2023",
+      "RentUpto": "10/04/2023",
+      "BookId": "26",
+      "id": 4
+    },
+    {
+      "title": "The Thirteen Problems ",
+      "Description": "\nA weekly dinner party Ten amateur sleuths The Tuesday Night Club murders On a quiet Tuesday in St Mary Mead, a group of friends gather for dinner. A policeman, a clergyman, a solicitor, an author, an artist, and an unassuming lady with a shrewd gaze - Miss Jane Marple. Conversation naturally turns to crime. Each recounts a seemingly unsolvable mystery. Each thinks they know the answer.",
+      "AuthorName": " Christie Agatha",
+      "price": 1250,
+      "email": "alexa007@gmail.com",
+      "RentFrom": "01/04/2023",
+      "RentUpto": "07/04/2023",
+      "BookId": "17",
+      "id": 5
+    },
+    {
+      "title": " The Hands of Time",
+      "Description": "Months ago, Nicole Cassidy's life was turned upside-down when she discovered that she was a witch descended from the Greek gods. She and the four other witches gifted with elemental powers fought all over the world—and in another dimension—to battle the supporters of the Titans and fight for the people they love.\n\nNow the Elementals must stop Typhon—the most dangerous monster in the world—from rising, and seal the portal to the dangerous prison world of Kerberos. But they won’t be able to do that without facing their hardest decision yet… a sacrifice so great that it may be one they’re not willing to make.",
+      "AuthorName": " Michelle Madow ",
+      "price": 1799,
+      "email": "alexa007@gmail.com",
+      "RentFrom": "01/04/2023",
+      "RentUpto": "03/04/2023",
+      "BookId": "32",
+      "id": 6
     }
   ],
   "FeedBack": [
