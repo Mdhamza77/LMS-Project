@@ -54,7 +54,7 @@ const User = () => {
             // eslint-disable-next-line
             user
               .filter((e) => {
-                if (e.email !== email) return email;
+                if (e.email !== email) return e;
               })
               .map((users) => (
                 <div key={users.id}>

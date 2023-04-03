@@ -58,7 +58,7 @@ const Homepage = () => {
             {card.map((item) => (
               <div className="card" key={item.id}>
                 <div className="image">
-                  <img src={item.img} alt="" />
+                  <img src={item.img} alt="Img" />
                 </div>
                 <div className="content">
                   <div className="header">{item.title}</div>
@@ -98,7 +98,7 @@ const Homepage = () => {
                     <div className="user">
                       <img
                         src="https://thumbs.dreamstime.com/b/solid-purple-gradient-user-icon-web-mobile-design-interface-ui-ux-developer-app-137467998.jpg"
-                        alt=""
+                        alt="Img"
                       />
                       <div className="user-info">
                         <h3>{feed.User}</h3>

@@ -45,7 +45,7 @@ const Search = () => {
               <div className="image">
                 <img
                   src={item.Image}
-                  alt=""
+                  alt="image"
                   onClick={() => handleClick(item.id)}
                 />
               </div>
