@@ -24,7 +24,7 @@ const AddCategory = () => {
       .catch((err) => console.log(err));
   };
   return (
-    <div>
+    <div className="cat">
       <Form>
         <Form.Field>
           <label>Category Name</label>
