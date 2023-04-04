@@ -63,8 +63,7 @@ const Myprofile = () => {
                     </span>
                     <br/><br/>
                   {isUserLoggedin && !isAdmin && <Button className="blue" onClick={()=>Update(mail.id)}>Update</Button> }
-                  { isUserLoggedin && !isAdmin &&  <Button className="red" onClick={()=>navigate('/')}>Go Back</Button> }
-                  { isUserLoggedin && isAdmin &&  <Button className="red" onClick={()=>navigate('/')}>Go Back</Button> }
+                  { isUserLoggedin && <Button className="red" onClick={()=>navigate('/')}>Go Back</Button> }
                   </div>
                 </div>
               ))}
