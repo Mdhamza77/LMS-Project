@@ -20,7 +20,6 @@ const Navigation = () => {
   };
 
   const logout = () => {
-    toast("Logging out");
     sessionStorage.clear();
     navigate("/login");
     window.location.reload(true);

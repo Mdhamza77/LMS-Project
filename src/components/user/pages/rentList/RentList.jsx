@@ -28,7 +28,7 @@ const RentList = () => {
   };
 
   const Return = (id) => {
-    returnBook(id).then((res) => {
+    returnBook(id).then( () => {
       toast("Returned Book Successfully");
       navigate("/home");
       getRentedBooks();
