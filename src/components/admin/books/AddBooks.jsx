@@ -57,11 +57,11 @@ const AddBooks = () => {
         setImg("");
         setCategory("");
         toast("Added Successfully");
-        navigate("/home");
       })
       .catch((err) => {
         console.log(err.data);
-      });
+      })
+      .then( navigate("/home"));
   };
   return (
     <div className="card">
