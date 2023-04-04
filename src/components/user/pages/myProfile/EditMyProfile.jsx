@@ -44,7 +44,7 @@ const EditMyProfile = () => {
       password: password,
     };
     editUser(id, user)
-      .then((res) => {
+      .then(() => {
         get();
         navigate("/home");
       })

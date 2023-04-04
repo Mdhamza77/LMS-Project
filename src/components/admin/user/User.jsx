@@ -65,7 +65,7 @@ const User = () => {
                           <img
                             className="user-Img"
                             src={users.img}
-                            alt="user Image"
+                            alt="user-Image"
                           />
                           <h3>First name : {users.firstName}</h3>
                           <h3>Last name : {users.lastName}</h3>
