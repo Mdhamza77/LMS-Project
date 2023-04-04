@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1680605773989" clover="3.2.0">
-  <project timestamp="1680605773989" name="All files">
+<coverage generated="1680605894441" clover="3.2.0">
+  <project timestamp="1680605894441" name="All files">
     <metrics statements="15" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="8" coveredmethods="3" elements="23" coveredelements="12" complexity="0" loc="15" ncloc="15" packages="1" files="1" classes="1"/>
     <file name="Category.jsx" path="/home/asplap3277/Desktop/Dummy/Library-MS/src/components/category/Category.jsx">
       <metrics statements="15" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="8" coveredmethods="3"/>
-      <line num="4" count="1" type="stmt"/>
+      <line num="4" count="4" type="stmt"/>
       <line num="5" count="3" type="stmt"/>
       <line num="6" count="3" type="stmt"/>
       <line num="7" count="3" type="stmt"/>
