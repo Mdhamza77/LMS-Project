@@ -1,95 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1680603710060" clover="3.2.0">
-  <project timestamp="1680603710060" name="All files">
-    <metrics statements="74" coveredstatements="52" conditionals="17" coveredconditionals="5" methods="32" coveredmethods="12" elements="123" coveredelements="69" complexity="0" loc="74" ncloc="74" packages="2" files="3" classes="3"/>
-    <package name="bookList">
-      <metrics statements="28" coveredstatements="21" conditionals="13" coveredconditionals="5" methods="11" coveredmethods="4"/>
-      <file name="UBook.jsx" path="/home/asplap3277/Desktop/Dummy/Library-MS/src/components/bookList/UBook.jsx">
-        <metrics statements="28" coveredstatements="21" conditionals="13" coveredconditionals="5" methods="11" coveredmethods="4"/>
-        <line num="7" count="1" type="stmt"/>
-        <line num="8" count="2" type="stmt"/>
-        <line num="9" count="2" type="stmt"/>
-        <line num="10" count="2" type="stmt"/>
-        <line num="11" count="2" type="stmt"/>
-        <line num="12" count="2" type="stmt"/>
-        <line num="13" count="2" type="stmt"/>
-        <line num="14" count="2" type="stmt"/>
-        <line num="15" count="2" type="stmt"/>
-        <line num="16" count="2" type="stmt"/>
-        <line num="17" count="2" type="stmt"/>
-        <line num="18" count="0" type="stmt"/>
-        <line num="21" count="2" type="stmt"/>
-        <line num="22" count="0" type="stmt"/>
-        <line num="25" count="2" type="stmt"/>
-        <line num="26" count="0" type="stmt"/>
-        <line num="29" count="2" type="cond" truecount="1" falsecount="1"/>
-        <line num="32" count="2" type="cond" truecount="1" falsecount="1"/>
-        <line num="35" count="2" type="stmt"/>
-        <line num="36" count="2" type="stmt"/>
-        <line num="40" count="2" type="stmt"/>
-        <line num="41" count="2" type="stmt"/>
-        <line num="43" count="1" type="stmt"/>
-        <line num="54" count="0" type="stmt"/>
-        <line num="57" count="2" type="stmt"/>
-        <line num="73" count="0" type="stmt"/>
-        <line num="78" count="0" type="stmt"/>
-        <line num="83" count="0" type="stmt"/>
-      </file>
-    </package>
-    <package name="category">
-      <metrics statements="46" coveredstatements="31" conditionals="4" coveredconditionals="0" methods="21" coveredmethods="8"/>
-      <file name="Books.jsx" path="/home/asplap3277/Desktop/Dummy/Library-MS/src/components/category/Books.jsx">
-        <metrics statements="31" coveredstatements="22" conditionals="4" coveredconditionals="0" methods="13" coveredmethods="5"/>
-        <line num="5" count="1" type="stmt"/>
-        <line num="6" count="2" type="stmt"/>
-        <line num="7" count="2" type="stmt"/>
-        <line num="8" count="2" type="stmt"/>
-        <line num="9" count="2" type="stmt"/>
-        <line num="10" count="2" type="stmt"/>
-        <line num="11" count="2" type="stmt"/>
-        <line num="12" count="2" type="stmt"/>
-        <line num="14" count="2" type="stmt"/>
-        <line num="15" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="16" count="0" type="stmt"/>
-        <line num="20" count="2" type="stmt"/>
-        <line num="21" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="22" count="0" type="stmt"/>
-        <line num="27" count="2" type="stmt"/>
-        <line num="29" count="2" type="stmt"/>
-        <line num="30" count="2" type="stmt"/>
-        <line num="31" count="2" type="stmt"/>
-        <line num="33" count="1" type="stmt"/>
-        <line num="34" count="1" type="stmt"/>
-        <line num="36" count="0" type="stmt"/>
-        <line num="38" count="2" type="stmt"/>
-        <line num="39" count="2" type="stmt"/>
-        <line num="42" count="2" type="stmt"/>
-        <line num="43" count="0" type="stmt"/>
-        <line num="46" count="2" type="stmt"/>
-        <line num="47" count="2" type="stmt"/>
-        <line num="52" count="0" type="stmt"/>
-        <line num="54" count="0" type="stmt"/>
-        <line num="59" count="0" type="stmt"/>
-        <line num="84" count="2" type="stmt"/>
-      </file>
-      <file name="Category.jsx" path="/home/asplap3277/Desktop/Dummy/Library-MS/src/components/category/Category.jsx">
-        <metrics statements="15" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="8" coveredmethods="3"/>
-        <line num="4" count="1" type="stmt"/>
-        <line num="5" count="3" type="stmt"/>
-        <line num="6" count="3" type="stmt"/>
-        <line num="7" count="3" type="stmt"/>
-        <line num="8" count="3" type="stmt"/>
-        <line num="10" count="0" type="stmt"/>
-        <line num="11" count="0" type="stmt"/>
-        <line num="13" count="0" type="stmt"/>
-        <line num="16" count="3" type="stmt"/>
-        <line num="17" count="3" type="stmt"/>
-        <line num="20" count="3" type="stmt"/>
-        <line num="21" count="0" type="stmt"/>
-        <line num="24" count="3" type="stmt"/>
-        <line num="32" count="0" type="stmt"/>
-        <line num="38" count="0" type="stmt"/>
-      </file>
-    </package>
+<coverage generated="1680605773989" clover="3.2.0">
+  <project timestamp="1680605773989" name="All files">
+    <metrics statements="15" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="8" coveredmethods="3" elements="23" coveredelements="12" complexity="0" loc="15" ncloc="15" packages="1" files="1" classes="1"/>
+    <file name="Category.jsx" path="/home/asplap3277/Desktop/Dummy/Library-MS/src/components/category/Category.jsx">
+      <metrics statements="15" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="8" coveredmethods="3"/>
+      <line num="4" count="1" type="stmt"/>
+      <line num="5" count="3" type="stmt"/>
+      <line num="6" count="3" type="stmt"/>
+      <line num="7" count="3" type="stmt"/>
+      <line num="8" count="3" type="stmt"/>
+      <line num="10" count="0" type="stmt"/>
+      <line num="11" count="0" type="stmt"/>
+      <line num="13" count="0" type="stmt"/>
+      <line num="16" count="3" type="stmt"/>
+      <line num="17" count="3" type="stmt"/>
+      <line num="20" count="3" type="stmt"/>
+      <line num="21" count="0" type="stmt"/>
+      <line num="24" count="3" type="stmt"/>
+      <line num="32" count="0" type="stmt"/>
+      <line num="38" count="0" type="stmt"/>
+    </file>
   </project>
 </coverage>
