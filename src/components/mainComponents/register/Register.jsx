@@ -47,7 +47,7 @@ export default function Register() {
         })
         .then(() => {
           toast("Registered Successfully");
-          navigate("/Login");
+          navigate("/login");
         });
     }
   };
