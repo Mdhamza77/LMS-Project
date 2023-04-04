@@ -91,7 +91,7 @@ const Login = () => {
               </label>
             </Form.Field>
           </div>
-          {err.length > 0 && <p>{err}</p>}
+          {err.length > 0 && <p style={{color :"red"}}>{err}</p>}
           {success.length > 0 && <p>{success}</p>}
           <Button type="submit" className="blue" disabled={!email || !password}>
             Login
