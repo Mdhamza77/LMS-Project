@@ -81,7 +81,6 @@ const RentList = () => {
               <label htmlFor="rentF">Rent Book From</label>
               <DatePicker
                 placeholderText="Rent From"
-                showTimeSelect
                 minDate={startDate}
                 dateFormat="MMMM d, yyyy"
                 selected={startDate}
