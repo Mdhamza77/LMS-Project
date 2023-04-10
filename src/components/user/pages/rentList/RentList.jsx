@@ -28,7 +28,7 @@ const RentList = () => {
   };
 
   const Return = (id) => {
-    returnBook(id).then( () => {
+    returnBook(id).then(() => {
       toast("Returned Book Successfully");
       navigate("/home");
       getRentedBooks();
@@ -66,17 +66,7 @@ const RentList = () => {
                   <p>
                     <b>Return Date :</b> {book.RentUpto}
                   </p>
-                  {new Date(book.RentUpto) < new Date() ? (
-                    <p style={{ color: "red", fontWeight: "bolder" }}>
-                      Today is last Due Date
-                    </p>
-                  ) : new Date(book.RentUpto) > new Date() ? (
-                    <p style={{ color: "green" }}>Return before Due Date</p>
-                  ) : (
-                    <p style={{ color: "red", fontWeight: "bolder" }}>
-                      Due date Exceeded
-                    </p>
-                  )}
+
                   {isUserLoggedin && !isAdmin && (
                     <Button
                       className="ui button blue"

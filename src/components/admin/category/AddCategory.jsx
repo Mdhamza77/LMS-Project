@@ -44,7 +44,7 @@ const AddCategory = () => {
             onChange={(e) => setImg(e.target.value)}
           />
         </Form.Field>
-        <Button onClick={handleSubmit}>Add-Category</Button>
+        <Button onClick={handleSubmit}   disabled={!Img || !category}>Add-Category</Button>
       </Form>
     </div>
   );

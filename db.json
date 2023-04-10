@@ -195,12 +195,12 @@
     },
     {
       "title": "The Girl in Room 105 ",
-      "AuthorName": "Chetan Bhagat",
       "Description": "Chetan writes columns in the Times of India and Dainik Bhaskar, which are amongst the most influential and widely read newspapers in the country. He is also one of the country's leading motivational speakers. Chetan went to college at IIT Delhi and IIM Ahmedabad, after which he worked in investment banking for a decade before quitting his job to become a full-time writer.",
+      "AuthorName": "Chetan Bhagat",
       "Quantity": "20",
-      "price": 240,
-      "category": "Drama",
+      "price": "440",
       "Image": "https://rukminim1.flixcart.com/image/832/832/kkec4280/book/2/b/8/the-girl-in-room-105-original-imafzr6nczgggedw.jpeg?q=70",
+      "category": "Drama",
       "id": 15
     },
     {
@@ -247,7 +247,7 @@
       "title": "Harry Potter and the Half-Blood Prince ",
       "Description": "Harry's sixth year at Hogwarts is packed with more great Hufflepuff moments and characters - not least Tonks's rescue of Harry from the Hogwarts Express, and the intense Hufflepuff-Gryffindor Quidditch match.Each Hufflepuff House Edition features vibrant sprayed edges and intricate silver foiling. The stunning cover design has a cameo-style portrait of the Half-Blood Prince as the central icon, framed by beautiful house-themed iconography.",
       "AuthorName": " Rowling J. K.",
-      "Quantity": "20",
+      "Quantity": "10",
       "price": 2399,
       "Image": "https://rukminim1.flixcart.com/image/832/832/l0cr4i80/poster/h/i/i/medium-harry-potter-the-half-blood-prince-dumbledore-print-original-imagc5ygdkjdubzk.jpeg?q=70",
       "category": "Crime",
@@ -365,48 +365,15 @@
   ],
   "Rent": [
     {
-      "title": "The Girl in Room 105 ",
-      "Description": "Chetan writes columns in the Times of India and Dainik Bhaskar, which are amongst the most influential and widely read newspapers in the country. He is also one of the country's leading motivational speakers. Chetan went to college at IIT Delhi and IIM Ahmedabad, after which he worked in investment banking for a decade before quitting his job to become a full-time writer.",
-      "AuthorName": "Chetan Bhagat",
-      "price": 240,
+      "title": "Sherlock Holmes",
+      "Description": "Sir Arthur Conan Doyle was born in Edinburgh in 1859 and died in 1930. Within those years was crowded a variety of activity and creative work that made him an international figure and inspired the French to give him the epithet 'the good giant'. He was the nephew of 'Dickie Doyle' the artist, and was educated at Stonyhurst, and later studied medicine at Edinburgh University, where the methods of diagnosis of one of the professors provided the idea for the methods of deduction used by Sherlock Holmes.\n\nHe set up as a doctor at Southsea and it was while waiting for patients that he began to write. His growing success as an author enabled him to give up his practice and turn his attention to other subjects. He was a passionate advocate of many causes, ranging from divorce law reform and the Channel Tunnel to the issuing of inflatable life-jackets to sailors. He also campaigned to prove the innocence of individuals, and his work on the Edjalji case was instrumental in the introduction of the Court of Criminal Appeal. He was a volunteer physician in the Boer War and later in life became a convert to spiritualism.",
+      "AuthorName": "Conan Doyle",
+      "price": 1200,
       "email": "muhaimin123@gmail.com",
-      "RentFrom": "28/03/2023",
-      "RentUpto": "29/03/2023",
-      "BookId": "15",
-      "id": 2
-    },
-    {
-      "title": "The Dovic Story : A journey of love and self-discovery",
-      "Description": "n the beginning, mankind was like any other life-form, naïve and frail. The creators of the Universe, Ra and Ri had gifted mankind unique and special abilities. If used appropriately, over time, he could evolve to become the most powerful and advanced life-form on Earth. The Creators would then hail themselves over the masterpiece they had created. Ra and Ri also believed that there was always the possibility that man could become arrogant and selfish.  As time passed, their fears came true; man became powerful. He was so full of himself that he began to fight for superiority even amongst his own kind. He began to explore exploit and inhabit every nook and corner of the planet. The creators of the planet earth, Ra and Ri were aware of this possibility. They foretold a prophecy that man was destined to stumble upon a small rock while he leapt higher to reach the stars and the moon. Man inched into unknown parts of the earth which were forbidden. He shook up a tiny, invisible world of life-forms much inferior to him",
-      "AuthorName": " Rakhi Kapoor ",
-      "price": 999,
-      "email": "muhaimin123@gmail.com",
-      "RentFrom": "01/04/2023",
-      "RentUpto": "10/04/2023",
-      "BookId": "26",
-      "id": 4
-    },
-    {
-      "title": "The Thirteen Problems ",
-      "Description": "\nA weekly dinner party Ten amateur sleuths The Tuesday Night Club murders On a quiet Tuesday in St Mary Mead, a group of friends gather for dinner. A policeman, a clergyman, a solicitor, an author, an artist, and an unassuming lady with a shrewd gaze - Miss Jane Marple. Conversation naturally turns to crime. Each recounts a seemingly unsolvable mystery. Each thinks they know the answer.",
-      "AuthorName": " Christie Agatha",
-      "price": 1250,
-      "email": "alexa007@gmail.com",
-      "RentFrom": "01/04/2023",
-      "RentUpto": "07/04/2023",
-      "BookId": "17",
-      "id": 5
-    },
-    {
-      "title": " The Hands of Time",
-      "Description": "Months ago, Nicole Cassidy's life was turned upside-down when she discovered that she was a witch descended from the Greek gods. She and the four other witches gifted with elemental powers fought all over the world—and in another dimension—to battle the supporters of the Titans and fight for the people they love.\n\nNow the Elementals must stop Typhon—the most dangerous monster in the world—from rising, and seal the portal to the dangerous prison world of Kerberos. But they won’t be able to do that without facing their hardest decision yet… a sacrifice so great that it may be one they’re not willing to make.",
-      "AuthorName": " Michelle Madow ",
-      "price": 1799,
-      "email": "alexa007@gmail.com",
-      "RentFrom": "01/04/2023",
-      "RentUpto": "03/04/2023",
-      "BookId": "32",
-      "id": 6
+      "RentFrom": "10/04/2023",
+      "RentUpto": "16/04/2023",
+      "BookId": "13",
+      "id": 7
     }
   ],
   "FeedBack": [
