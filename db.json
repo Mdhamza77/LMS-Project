@@ -13,10 +13,9 @@
     {
       "firstName": "Muhaimin",
       "lastName": "Jamal E.N",
-      "img": "https://c4.wallpaperflare.com/wallpaper/379/128/837/cillian-murphy-dark-haired-actor-face-wallpaper-preview.jpg",
-      "content": "My Self a wanderer and Explorer of literature and nature of books  and also i have quite a habit of writing poetry",
       "email": "muhaimin123@gmail.com",
       "password": "Muhaimin@123",
+      "img": "https://c4.wallpaperflare.com/wallpaper/379/128/837/cillian-murphy-dark-haired-actor-face-wallpaper-preview.jpg",
       "id": 2
     },
     {
@@ -108,11 +107,11 @@
       "title": "No Plan B",
       "Description": "\nGerrardsville, Colorado. One tragic event. Two witnesses. Two conflicting accounts. One witness sees a woman throw herself in front of a bus - clearly suicide. The other witness is Jack Reacher. And he sees what really happened - a man in grey hoodie and jeans, swift and silent as a shadow, pushing the victim to her death, before grabbing her bag and sauntering away.\n\nReacher follows the killer, not knowing that this was no random act of violence. It is part of something much bigger...a sinister, secret conspiracy, with powerful people on the take, enmeshed in an elaborate plot that leaves no room for error. If any step is compromised, the threat will have to be quickly and permanently removed.\n",
       "AuthorName": "Jack Reacher",
-      "category": "Thriller",
       "Quantity": "10",
-      "price": 100,
-      "id": 6,
-      "Image": "https://m.media-amazon.com/images/I/81EwJoYM6jL.jpg"
+      "price": "300",
+      "Image": "https://m.media-amazon.com/images/I/81EwJoYM6jL.jpg",
+      "category": "Thriller",
+      "id": 6
     },
     {
       "title": "A Passage to India",
@@ -247,7 +246,7 @@
       "title": "Harry Potter and the Half-Blood Prince ",
       "Description": "Harry's sixth year at Hogwarts is packed with more great Hufflepuff moments and characters - not least Tonks's rescue of Harry from the Hogwarts Express, and the intense Hufflepuff-Gryffindor Quidditch match.Each Hufflepuff House Edition features vibrant sprayed edges and intricate silver foiling. The stunning cover design has a cameo-style portrait of the Half-Blood Prince as the central icon, framed by beautiful house-themed iconography.",
       "AuthorName": " Rowling J. K.",
-      "Quantity": "10",
+      "Quantity": "20",
       "price": 2399,
       "Image": "https://rukminim1.flixcart.com/image/832/832/l0cr4i80/poster/h/i/i/medium-harry-potter-the-half-blood-prince-dumbledore-print-original-imagc5ygdkjdubzk.jpeg?q=70",
       "category": "Crime",
@@ -361,6 +360,126 @@
       "Image": "https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T2/images/I/51TgbWbUa4L.jpg",
       "category": "Fantasy",
       "id": 32
+    },
+    {
+      "title": "Once Upon a Spy",
+      "AuthorName": "Vishwamitra Saini",
+      "Description": "YOU DON’T CHOOSE THE WORLD OF ESPIONAGE THE WORLD OF ESPIONAGE CHOOSES YOU. Vishwamitra Saini — a spy, a consummate man and an avid lover — sees the world in black and white. He has his own set of rules that he abides by. But when he falls in love during a mission, a deed which ultimately blows his cover, his superiors decide to put him on the shelf. It is then that he decides he has had enough. He crosses over to Pakistan and defects to the other side, putting all of India’s secrets in jeopardy. At least that is the story that the world knows about him. But has he really defected? Or has he gone rogue? What is the truth? As the hunt for Saini begins, a secret is revealed from the veil about a mysterious informant from the other side, codenamed The Rook, whose agenda is yet obscure.",
+      "Quantity": "15",
+      "price": "200",
+      "Image": "https://m.media-amazon.com/images/I/51nhAYAOnbL._SX319_BO1,204,203,200_.jpg",
+      "category": "Thriller",
+      "id": 33
+    },
+    {
+      "title": "Dark Matter",
+      "AuthorName": "Blake  Crouch",
+      "Description": "'In this world he's woken up to, Jason's life is not the one he knows. His wife is not his wife. His son was never born. And Jason is not an ordinary college physics professor, but a celebrated genius who has achieved something remarkable. Something impossible.Is it this world or the other that's the dream? And even if the home he remembers is real, how can Jason possibly make it back to the family he loves? The answers lie in a journey more wondrous and horrifying than anything he could've imagined ? one that will force him to confront the darkest parts of himself even as he battles a terrifying, seemingly unbeatable foe.",
+      "Quantity": "15",
+      "price": "300",
+      "Image": "https://m.media-amazon.com/images/I/51STjvOwjYL._SX328_BO1,204,203,200_.jpg",
+      "category": "History",
+      "id": 34
+    },
+    {
+      "title": "The Wife Upstairs",
+      "AuthorName": "Rachel Hawkins",
+      "Description": "A wife who just won’t stay buried…But what Jane doesn’t know is that Eddie is keeping a secret – a big secret. And when the truth comes out, the consequences are far more deadly than anyone could ever have imagined…A delicious twist on a Gothic classic, The Wife Upstairs is perfect for fans of Lucy Foley, Ruth Ware and Shari Lapena.‘Really fun update of Jane Eyre that’s also deeply satisfying’Stylist‘A sharp, fresh twist on a classic in this darkly funny, suspenseful story of murder, ambition, and love. Creepy and fast-paced…kept me on the edge of my seat from the first page to the very last’ bestselling author Megan Miranda ‘The Wife Upstairs is everything I’d hoped―sharp, smart, tricky and fast-paced’ Kelly Harms, author of The Overdue Life of Amy Byler‘Lightening paced, twisty, and great fun’ Jessica Knoll, bestselling author of Luckiest Girl AliveWhat readers are saying about The Wife Upstairs‘I couldn’t put this book down! Read it in a day!'‘",
+      "Quantity": "15",
+      "price": "2500",
+      "Image": "https://m.media-amazon.com/images/I/51m3qqBBARL._SX324_BO1,204,203,200_.jpg",
+      "category": "Drama",
+      "id": 35
+    },
+    {
+      "title": "A Nation of Idiots",
+      "AuthorName": "Daksh Tyagi ",
+      "Description": "Intolerant to the debate on intolerance, but tolerant of religious intolerance. We cling onto age-old traditions, but a holiday can alter our accent. To us, caste and community is a badge of trust, religion is a line of control and a godman is an anti-depressant.\nWe won’t stop at a zebra crossing, but we will damn well stop on it. We build things to prove our worth and break things to prove a point. We love the concept of independence, but we need our parents to help raise our kids. And we scripted the Kamasutra. Easy to forget, since we also ruined sex.\nSo how do we tell the real from the farcical? The farcical from the nutty? And the nutty from the downright ridiculous?\nEasy. We just go along.\n",
+      "Quantity": "24",
+      "price": "420",
+      "Image": "https://m.media-amazon.com/images/I/51spSem0HWL._SX314_BO1,204,203,200_.jpg",
+      "category": "History",
+      "id": 36
+    },
+    {
+      "title": "World History ",
+      "AuthorName": "Krishna Reddy",
+      "Description": "The book will aid in analysing the answers to the questions like ‘What happened’, ‘When did it happen’, ‘How did it happen’ and ‘What was the outcome’. Salient Features: 1. Contains comprehensive overview of world history in its modern context right up to the present 2. An in-depth analysis of major contours of the modern world like American, French and Russian Revolutions, the World Wars and the Cold War 3. Historical developments relevant to the international relations such as Fascism, Nazism, Communism and Decolonisation are discussed in detail 4. Contemporary global issues such as the contributions of the UN, relevance of NAM, unending conflict in the Middle East, crisis in EU and the challenges of Global Order are highlighted 5.",
+      "Quantity": "25",
+      "price": "400",
+      "Image": "https://m.media-amazon.com/images/I/510V95dxmyL._SX380_BO1,204,203,200_.jpg",
+      "category": "History",
+      "id": 37
+    },
+    {
+      "title": "BORN A CRIME",
+      "AuthorName": "Trevor Noah",
+      "Description": "Trevor Noah’s unlikely path from apartheid South Africa to the desk of The Daily Show began with a criminal act: his birth. Trevor was born to a white Swiss father and a black Xhosa mother at a time when such a union was punishable by five years in prison. Living proof of his parents’ indiscretion, Trevor was kept mostly indoors for the earliest years of his life, bound by the extreme and often absurd measures his mother took to hide him from a government that could, at any moment, steal him away. Finally liberated by the end of South Africa’s tyrannical white rule, Trevor and his mother set forth on a grand adventure, living openly and freely and embracing the opportunities won by a centuries-long struggle.",
+      "Quantity": "20",
+      "price": "620",
+      "Image": "https://m.media-amazon.com/images/I/51ga38un89L._SX324_BO1,204,203,200_.jpg",
+      "category": "Crime",
+      "id": 38
+    },
+    {
+      "title": "Queens of Crime",
+      "AuthorName": " Kulpreet Yadav",
+      "Description": "Dysfunctional families, sexual abuse, sheer greed and sometimes just a skewed moral compass. These are some of the triggers that drove the women captured in these pages to become lawbreakers. Queens of Crime demonstrates a haunting criminal power that most people do not associate women with. The acts of depravity described in this book will jolt you to the core, ensuring you have sleepless nights for months.Based on painstaking research, these are raw, violent and seemingly unbelievable but true rendition of India's women criminals.",
+      "Quantity": "10",
+      "price": "399",
+      "Image": "https://m.media-amazon.com/images/I/41gG6CqrtrL._SX324_BO1,204,203,200_.jpg",
+      "category": "Crime",
+      "id": 39
+    },
+    {
+      "title": "The Long Cold Winter",
+      "AuthorName": " Colin Conway",
+      "Description": "The thirty-year-old unsolved murder leads to a startling revelation—Nash and his friends saw the victim right before her death. Before he can work the case, though, dispatch sends him to a wintery crime scene.\n\nA snow-covered body lies in an open field, and Nash has no witnesses or immediate suspects.\n\nAmid freezing temperatures and under an oppressive gray sky, can Dallas Nash locate two killers—one of whom has remained hidden for three decades?\n\nThe Long Cold Winter is the second book in the 509 Crime Stories, a series of novels set in Eastern Washington with revolving lead characters. If you like raw emotion and police procedurals, you’ll love this story of a heartbroken detective working his way back from personal tragedy.",
+      "Quantity": "20",
+      "price": "460",
+      "Image": "https://m.media-amazon.com/images/I/41mLlmR0w4L.jpg",
+      "category": "Crime",
+      "id": 40
+    },
+    {
+      "title": "The Highway Murders",
+      "AuthorName": "Sourabh Mukherjee",
+      "Description": "a thirty-nine-year-old policewoman went missing in Tamil Nadu. A month later, her heavily decomposed body was discovered in a drain by a graveyard. She had been brutally violated and killed.\nAs the investigation started, the police detected a pattern in more than a dozen unsolved rape-and-murder cases with mutilated bodies of women turning up in graveyards, drains and empty fields along the highways.\nIt didn’t take the police too long to find out that the perpetrator was a trucker named M Jaishankar.\nWhat followed was a cat-and-mouse game across states, many more gruesome killings, one of the most sensational jailbreaks in the history of the country, and a controversial suicide in a high security cell.\nThe Highway Murders is the breathtaking true story of 'Psycho Shankar', one of India's most notorious serial killers, and one policeman's relentless decade-long battle against the 'terror of the highways'.",
+      "Quantity": "12",
+      "price": "150",
+      "Image": "https://d2i0w0hu6hvxgc.cloudfront.net/B0BQW71339/7d4d8f2c/cover.jpeg",
+      "category": "Crime",
+      "id": 41
+    },
+    {
+      "title": "Twin Crowns",
+      "AuthorName": "Katherine Webber",
+      "Description": "A high-stakes fantasy rom-com about twin princesses separated at birth—one raised as the crown princess, and the other taken as an infant and raised to kidnap her sister, steal the crown, and avenge the parents' murders—the first novel in a new YA duology from bestselling UK authors Catherine Doyle and Katherine Webber. Perfect for fans of The Selection, My Lady Jane, and Caraval.\nWren Greenrock has always known that one day she’d steal her sister’s place on the throne. Trained from birth to return to the palace and avenge her parents’ murder, she’ll do anything to become queen and protect the community of witches who raised her. Or she would, if only a certain guard wasn’t quite so distractingly attractive, and if her reckless magic would stop causing trouble. . . .",
+      "Quantity": "20",
+      "price": "498",
+      "Image": "https://m.media-amazon.com/images/I/51P3NRcaQ1L._SX324_BO1,204,203,200_.jpg",
+      "category": "Fantasy",
+      "id": 42
+    },
+    {
+      "title": "You've Reached Sam",
+      "AuthorName": " Dustin Thao",
+      "Description": "Sam and Julie are meant for each other, destined to meet, destined to be together until the same destiny pulls the tragedy card. Cruel.\nSam is gone, no more to reach out hold hands, to to fight and laugh and go dates with. It’s hollow and dark for Julie. She’s lost, dreams don’t spare her, she blames herself for his death, blames him, she’s angry, frustrated & hidden. She’s losing herself, bit by bit. Feeling hurt and doing the irrational she falls down and then, in hope of getting to talk, she calls.\n\nAnd Sam picks up, he’s picks up and Calls it their last chance at good bye? A compensation to the unfair? What is this connection and how long will it last? Is it even real?",
+      "Quantity": "10",
+      "price": "499",
+      "Image": "https://m.media-amazon.com/images/I/51GLh+vT6LL._SX328_BO1,204,203,200_.jpg",
+      "category": "Fantasy",
+      "id": 43
+    },
+    {
+      "title": "To Kill a Kingdom",
+      "AuthorName": "Alexandra Christo",
+      "Description": "Dark and romantic YA fantasy about the siren with a taste for royal blood and the prince who has sworn to destroy her. Princess Lira is siren royalty and the most lethal of them all. With the hearts of seventeen princes in her collection, she is revered across the sea. Until a twist of fate forces her to kill one of her own. To punish her daughter, the Sea Queen transforms Lira into the one thing they loathe most - a human. Robbed of her song, Lira has until the winter solstice to deliver Prince Elian's heart to the Sea Queen or remain a human forever. The ocean is the only place Prince Elian calls home, even through he is heir to the most powerful kingdom in the world. Hunting sirens is more than an unsavoury hobby - it's his calling. When he rescues a drowning woman in the ocean, she's more than what she appears. ",
+      "Quantity": "30",
+      "price": "400",
+      "Image": "https://m.media-amazon.com/images/I/51xzQJ+uPcL._SX323_BO1,204,203,200_.jpg",
+      "category": "Fantasy",
+      "id": 44
     }
   ],
   "Rent": [
