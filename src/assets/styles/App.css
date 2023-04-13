@@ -15,15 +15,21 @@
 }
 
 .posts{
-  margin-top: 4em;
+  margin-top: 6em;
 }
 
-.book-Image {
-  width: 5em;
-  height: 10em;
-}
+
 .cat{
   margin-top: 4em;
   margin-left: 4em;
   margin-right: 2em;
+}
+
+.Id{
+  margin-top: 10em;
+  display: flex;
+  align-items: center;
+  left: 10em;
+  border-radius: 1em;
+  border: 0.5em solid black;
 }
