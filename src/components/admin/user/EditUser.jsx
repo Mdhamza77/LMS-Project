@@ -6,7 +6,8 @@ import showPwdImg from "../../../assets/icons/show-password.svg";
 import hidePwdImg from "../../../assets/icons/hide-password.svg";
 import { Form, Button , TextArea } from "semantic-ui-react";
 import { getUser, editUser } from "../../../services/user/user.service";
-
+import {passwordValidator , emailValidator} from '../../../utils/validation/RegexValidator'
+ 
 const EditUser = () => {
   const navigate = useNavigate();
   const [firstName, setFirstName] = useState("");
@@ -15,7 +16,8 @@ const EditUser = () => {
   const [password, setPassword] = useState("");
   const [img ,setImg] = useState("")
   const [content , setContent] = useState("");
-  const [isRevealPwd, setIsRevealPwd] = useState(false);
+  const [isRevealPwd, setIsRevealPwd] = useState(false); 
+  const [err , setErr] = useState("")
   const { id } = useParams();
 
   useEffect(() => {
@@ -45,6 +47,12 @@ const EditUser = () => {
       password: password,
       img : img 
     };
+    if( !emailValidator(email)) {
+      return  setErr("not validated")
+    }else if(!passwordValidator(password)){
+      return   setErr("not validated")
+    }
+    else {
     editUser(id, user)
       .then((res) => {
         console.log(res.data);
@@ -54,13 +62,13 @@ const EditUser = () => {
       })
       .catch((err) => {
         console.log(err.data);
-      });
+      }); 
+    }
   };
 
   return (
     <div className="Forms">
       <div className="card">
-        <br />
         <h1 className="">Edit User</h1>
         <Form className="container">
           <Form.Field>
@@ -142,6 +150,7 @@ const EditUser = () => {
           <Button className="red" onClick={() => navigate("/User")}>
             Go Back
           </Button>
+          { err.length > 0 && <p>{err}</p> }
         </Form>
       </div>
     </div>

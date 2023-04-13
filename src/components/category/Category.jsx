@@ -8,9 +8,8 @@ const Category = () => {
     return await getCat()
       .then((res) => {
         getBooks(res.data);
-        console.log(res.data);
       })
-      .catch((err) => console.log(err.data));
+      .catch((err) => console.log(err));
   };
 
   useEffect(() => {
@@ -24,9 +23,6 @@ const Category = () => {
   return (
     <div className="cat">
       {" "}
-      <br />
-      <br />
-      <br />
       <div className="ui four column grid">
         {books.map((post) => (
           <div className="column" key={post.id}>

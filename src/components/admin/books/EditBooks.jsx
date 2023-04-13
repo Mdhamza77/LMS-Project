@@ -12,7 +12,7 @@ const EditBooks = () => {
   const [quantity, setQuantity] = useState("");
   const [img, setImg] = useState("");
   const [price, setPrice] = useState("");
-  const [category , setCategory] = useState("") ;
+  const [category, setCategory] = useState("");
 
   const { id } = useParams();
 
@@ -29,7 +29,7 @@ const EditBooks = () => {
           setDescription(resp.data.Description),
           setQuantity(resp.data.Quantity),
           setPrice(resp.data.price),
-          setImg(resp.data.Image) ,
+          setImg(resp.data.Image),
           setCategory(resp.data.category)
         );
       })
@@ -45,7 +45,7 @@ const EditBooks = () => {
       Quantity: quantity,
       price,
       Image: img,
-      category  :category 
+      category: category,
     };
 
     editBooks(id, book)
@@ -85,7 +85,7 @@ const EditBooks = () => {
               placeholder="Book name"
               id="book"
               value={bookName}
-              onChange={(e) => setBookName(e.target.value)}
+              readOnly
             />
           </Form.Field>
           <Form.Field>
@@ -94,6 +94,8 @@ const EditBooks = () => {
               placeholder="Description"
               style={{ minHeight: 100 }}
               value={description}
+              minLength="10"
+              maxLength="200"
               id="description"
               onChange={(e) => setDescription(e.target.value)}
             />
@@ -124,6 +126,8 @@ const EditBooks = () => {
               type="number"
               name="name"
               placeholder="Books Quantity"
+              min="1"
+              max="50"
               value={quantity}
               id="quantity"
               onChange={(e) => setQuantity(e.target.value)}
@@ -135,6 +139,8 @@ const EditBooks = () => {
               type="number"
               name="name"
               placeholder="Book Price"
+              min="100"
+              max="3000"
               value={price}
               id="price"
               onChange={(e) => setPrice(e.target.value)}

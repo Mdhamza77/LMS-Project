@@ -10,13 +10,11 @@ import { userValidate } from "./../../../services/user/user.service";
 import showPwdImg from "../../../assets/icons/show-password.svg";
 import hidePwdImg from "../../../assets/icons/hide-password.svg";
 
-
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [isRevealPwd, setIsRevealPwd] = useState(false);
   const [err, setErr] = useState("");
-  const [success, setSuccess] = useState("");
   const navigate = useNavigate();
 
   const handleSubmit = () => {
@@ -27,8 +25,6 @@ const Login = () => {
       userValidate(email, password)
         .then((e) => {
           let Admin = false;
-          console.log(e.data);
-
           if (e.data.length < 0) {
             console.log("invalid");
           } else if (e.data[0].email === email) {
@@ -48,7 +44,8 @@ const Login = () => {
             }
           }
         })
-        .catch(() => {
+        .catch((err) => {
+          console.log(err);
           toast("invalid login");
         });
     }
@@ -91,8 +88,7 @@ const Login = () => {
               </label>
             </Form.Field>
           </div>
-          {err.length > 0 && <p style={{color :"red"}}>{err}</p>}
-          {success.length > 0 && <p>{success}</p>}
+          {err.length > 0 && <p style={{ color: "red" }}>{err}</p>}
           <Button type="submit" className="blue" disabled={!email || !password}>
             Login
           </Button>

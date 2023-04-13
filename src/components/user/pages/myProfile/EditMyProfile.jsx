@@ -77,7 +77,6 @@ const EditMyProfile = () => {
             id="email"
             type="email"
             value={email}
-            required
             readOnly
           />
         </Form.Field>

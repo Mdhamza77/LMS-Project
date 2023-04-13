@@ -28,16 +28,17 @@ const RentList = () => {
   };
 
   const Return = (id) => {
-    returnBook(id).then(() => {
-      toast("Returned Book Successfully");
-      navigate("/home");
-      getRentedBooks();
-    });
+    returnBook(id)
+      .then(() => {
+        toast("Returned Book Successfully");
+        navigate("/home");
+        getRentedBooks();
+      })
+      .catch((err) => console.log(err));
   };
 
   return (
     <div className="container">
-      <br />
       {rentedbook.length > 0 ? (
         rentedbook
           .filter((e) => {

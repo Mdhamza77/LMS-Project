@@ -5,8 +5,6 @@ const Home = () => {
   return (
     <div>
       <Navigation />
-      <br />
-      <br />
       <Routing />
     </div>
   );

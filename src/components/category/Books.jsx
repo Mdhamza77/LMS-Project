@@ -30,7 +30,6 @@ const Books = () => {
   const get = async () => {
     return await getCategory(category)
       .then((resp) => {
-        console.log(resp.data);
         setData(resp.data);
       })
       .catch((err) => console.log(err));

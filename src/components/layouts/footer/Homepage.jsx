@@ -17,16 +17,17 @@ const Homepage = () => {
   };
 
   const getFeed = async () => {
-    return await getFeedBack().then((res) => {
-      getFeedB(res.data);
-    });
+    return await getFeedBack()
+      .then((res) => {
+        getFeedB(res.data);
+      })
+      .catch((err) => console.log(err));
   };
 
   const getCardss = async () => {
     return await getCards()
       .then((res) => {
         getCard(res.data);
-        console.log(res.data);
       })
       .catch((err) => console.log(err.data));
   };
@@ -40,14 +41,13 @@ const Homepage = () => {
   return (
     <div>
       <div>
-        <div  id="segment">
+        <div id="segment">
           {home.map((item) => (
             <div key={item.id}>
               <img className="img" src={item.img} alt="img" />
               <h1>{item.title}</h1>
               <p>{item.About}</p>
               <p className="ui center">{item.sub}</p>
-              <br />
             </div>
           ))}
         </div>
@@ -73,7 +73,6 @@ const Homepage = () => {
               </div>
             ))}
           </div>
-          <br />
         </div>
 
         {feedback.map((feed) => (

@@ -12,14 +12,16 @@ const UBook = () => {
   const [description, setDescription] = useState("");
   const [quantity, setQuantity] = useState("");
   const [img, setImg] = useState("");
-  const [price, setPrice] = useState(""); 
-  const [category , setCategory] = useState("") ;
+  const [price, setPrice] = useState("");
+  const [category, setCategory] = useState("");
   const Rent = (id) => {
     navigate(`/Rent/` + id);
   };
 
   const Delete = (id) => {
-    deleteBooks(id).then(toast("Deleted successfully"), navigate("/home"));
+    deleteBooks(id)
+      .then(toast("Deleted successfully"), navigate("/home"))
+      .catch((err) => console.log(err));
   };
 
   const Edit = (id) => {
@@ -33,9 +35,8 @@ const UBook = () => {
     ? sessionStorage.getItem("isAdmin")
     : false;
   useEffect(() => {
-    get(); 
+    get();
   }, []);
-
 
   const get = () => {
     getBooks(id)
@@ -46,7 +47,7 @@ const UBook = () => {
           setDescription(resp.data.Description),
           setQuantity(resp.data.Quantity),
           setPrice(resp.data.price),
-          setImg(resp.data.Image) ,
+          setImg(resp.data.Image),
           setCategory(resp.data.category)
         );
       })
@@ -68,7 +69,7 @@ const UBook = () => {
               <p>Quantity : {quantity}</p>
               <p>Price : {price}</p>
               <br />
-            
+
               {isUserLoggedin && !isAdmin && (
                 <Button className="blue" id="Button" onClick={() => Rent(id)}>
                   Rent Book

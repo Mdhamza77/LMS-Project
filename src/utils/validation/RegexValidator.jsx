@@ -1,5 +1,5 @@
 export const emailValidator = (email) => {
-  const emailRegex = /^[^\s@]+@[^\s@]+$/;
+  const emailRegex = /^[a-z0-9._:$!%-]+@[a-z0-9.-]+.[a-zA-Z]$/;
   return emailRegex.test(email);
 };
 
@@ -10,6 +10,16 @@ export const passwordValidator = (password) => {
 };
 
 export const textArea = (text) => {
-  const textRegex = /^\s*(?:\S\s*){10,100}$/ ;
-  return textRegex.test(text)
-}
+  const textRegex = /^\s*(?:\S\s*){10,200}$/;
+  return textRegex.test(text);
+};
+
+export const BookName = (name) => {
+  const bookName = /^[a-zA-Z]{5,7}$/;
+  return bookName.test(name);
+};
+
+export const AuthorName = (name) => {
+  const authorName = /^[a-zA-Z]{5,20}$/;
+  return authorName.test(name);
+};

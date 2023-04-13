@@ -12,7 +12,6 @@ const RentList = () => {
   const [bookName, setBookName] = useState("");
   const [authorName, setAuthorName] = useState("");
   const [description, setDescription] = useState("");
-  const [getquantity, setGetQuantity] = useState("");
   const [price, setPrice] = useState("");
   const [startDate, setStartDate] = useState(new Date());
   const [endDate, setEndDate] = useState(new Date());
@@ -26,7 +25,6 @@ const RentList = () => {
           resp.data.title,
           setAuthorName(resp.data.AuthorName),
           setDescription(resp.data.Description),
-          setGetQuantity(resp.data.Quantity),
           setPrice(resp.data.price)
         );
       })
@@ -60,7 +58,6 @@ const RentList = () => {
   return (
     <>
       <div className="container">
-        <br />
         <div className="card">
           <Form className="ui form">
             <h1>Book Name: {bookName}</h1>
@@ -110,7 +107,6 @@ const RentList = () => {
           </Form>
         </div>
       </div>
-      <br />
     </>
   );
 };

@@ -20,9 +20,9 @@ const Feedback = () => {
       return await postFeedBack(feed)
         .then((res) => {
           setFeedback(res.data);
+          navigate("/home")
         })
         .catch((err) => console.log(err.data))
-        .then(navigate("/home"));
   };
 
   return (

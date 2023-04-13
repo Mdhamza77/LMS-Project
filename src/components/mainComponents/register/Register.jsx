@@ -15,9 +15,7 @@ export default function Register() {
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [data, setData] = useState(null);
   const [err, setErr] = useState("");
-  const [success, setSuccess] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -32,22 +30,17 @@ export default function Register() {
     } else if (!passwordValidator(password)) {
       setErr("Enter validated password");
     } else {
-      setSuccess("successfully validated");
-
       addUser(data)
-        .then((res) => {
-          setData(res.data);
+        .then(() => {
           setFirstName("");
           setLastName("");
           setEmail("");
           setPassword("");
+          toast("Registered Successfully");
+          navigate("/login");
         })
         .catch((err) => {
           console.log(err.data);
-        })
-        .then(() => {
-          toast("Registered Successfully");
-          navigate("/login");
         });
     }
   };
@@ -108,7 +101,7 @@ export default function Register() {
             />
           </Form.Field>
           {err.length > 0 && <p>{err}</p>}
-          {success.length > 0 && <p>{success}</p>}
+
           <Button
             className="blue"
             type="submit"
