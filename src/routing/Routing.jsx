@@ -12,7 +12,6 @@ import Homepage from "../components/layouts/footer/Homepage";
 import User from "../components/admin/user/User";
 import Feedback from "../components/user/pages/feedBack/Feedback";
 import EditUser from "../components/admin/user/EditUser";
-import EditMyProfile from "../components/user/pages/myProfile/EditMyProfile";
 import Myprofile from "../components/user/pages/myProfile/Myprofile";
 import UBook from "../components/bookList/UBook";
 import Books from "../components/category/Books";
@@ -61,11 +60,8 @@ const Routing = () => {
         {isUserLoggedin && !isAdmin && (
           <Route path="feedback" element={<Feedback />}></Route>
         )}
-        {isUserLoggedin && isAdmin && (
+        {isUserLoggedin &&  (
           <Route path="/EditUser/:id" element={<EditUser />}></Route>
-        )}
-        {isUserLoggedin && !isAdmin && (
-          <Route path="/EditMyProfile/:id" element={<EditMyProfile />}></Route>
         )}
 
         {isUserLoggedin && (

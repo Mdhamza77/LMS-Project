@@ -22,7 +22,7 @@ const Myprofile = () => {
   };
 
   const Update = (id) => {
-     navigate('/EditMyProfile/'+ id)
+     navigate('/EditUser/'+ id)
   }
 
   useEffect(() => {

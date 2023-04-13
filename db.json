@@ -503,6 +503,17 @@
       "RentUpto": "16/04/2023",
       "BookId": "13",
       "id": 7
+    },
+    {
+      "title": "The Girl in Room 105 ",
+      "Description": "Chetan writes columns in the Times of India and Dainik Bhaskar, which are amongst the most influential and widely read newspapers in the country. He is also one of the country's leading motivational speakers. Chetan went to college at IIT Delhi and IIM Ahmedabad, after which he worked in investment banking for a decade before quitting his job to become a full-time writer.",
+      "AuthorName": "Chetan Bhagat",
+      "price": "440",
+      "email": "alexa007@gmail.com",
+      "RentFrom": "13/04/2023",
+      "RentUpto": "18/04/2023",
+      "BookId": "15",
+      "id": 8
     }
   ],
   "FeedBack": [

@@ -147,7 +147,7 @@ const EditUser = () => {
           <Button className="blue" onClick={handleSubmit}>
             Save
           </Button>
-          <Button className="red" onClick={() => navigate("/User")}>
+          <Button className="red" onClick={() => navigate("/home")}>
             Go Back
           </Button>
           { err.length > 0 && <p>{err}</p> }
