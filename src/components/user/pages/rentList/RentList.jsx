@@ -51,8 +51,7 @@ const RentList = () => {
           .map((book) => (
             <div key={book.id}>
               <div className="card">
-                <h1>My Books</h1>
-                <Form>
+                <Form className="rent">
                   <h1>BookName : {book.title}</h1>
                   <p>
                     <b>Description :</b> {book.Description}
