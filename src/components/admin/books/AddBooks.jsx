@@ -15,8 +15,8 @@ const AddBooks = () => {
   const [category, setCategory] = useState("");
   const [cat, getCategories] = useState([]);
 
-  const loadData = async () => {
-    return await getCat()
+  const loadData = () => {
+     getCat()
       .then((res) => getCategories(res.data))
 
       .catch((err) => console.log(err));

@@ -7,8 +7,8 @@ const User = () => {
   const [user, getUser] = useState([]);
   const email = sessionStorage.getItem("email");
   const navigate = useNavigate();
-  const getData = async () => {
-    return await getAll()
+  const getData =  () => {
+     getAll()
       .then((res) => {
         getUser(res.data);
       })

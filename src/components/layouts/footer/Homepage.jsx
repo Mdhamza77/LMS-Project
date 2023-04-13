@@ -10,22 +10,22 @@ const Homepage = () => {
   const [card, getCard] = useState([]);
   const [home, getHom] = useState([]);
 
-  const get = async () => {
-    return await getHomeData()
+  const get = () => {
+    getHomeData()
       .then((res) => getHom(res.data))
       .catch((err) => console.log(err));
   };
 
-  const getFeed = async () => {
-    return await getFeedBack()
+  const getFeed =  () => {
+    getFeedBack()
       .then((res) => {
         getFeedB(res.data);
       })
       .catch((err) => console.log(err));
   };
 
-  const getCardss = async () => {
-    return await getCards()
+  const getCardss =  () => {
+    getCards()
       .then((res) => {
         getCard(res.data);
       })

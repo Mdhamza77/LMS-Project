@@ -27,8 +27,8 @@ const Books = () => {
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
   const { category } = useParams();
-  const get = async () => {
-    return await getCategory(category)
+  const get =  () => {
+     getCategory(category)
       .then((resp) => {
         setData(resp.data);
       })

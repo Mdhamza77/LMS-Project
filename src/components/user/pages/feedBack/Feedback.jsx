@@ -10,14 +10,14 @@ const Feedback = () => {
   let user = sessionStorage.getItem("email");
   const [feedback, setFeedback] = useState("");
 
-  const Post = async () => {
+  const Post =  () => {
     const feed = {
       User: user,
       feed: feedback,
     };
     if (!textArea(feedback)) return null;
     else
-      return await postFeedBack(feed)
+      postFeedBack(feed)
         .then((res) => {
           setFeedback(res.data);
           navigate("/home")

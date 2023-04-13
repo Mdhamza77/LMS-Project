@@ -15,8 +15,8 @@ const Myprofile = () => {
     : false;
 
 
-  const get = async () => {
-    return await getAll()
+  const get =  () => {
+     getAll()
       .then((res) => getData(res.data))
       .catch((err) => console.log(err));
   };

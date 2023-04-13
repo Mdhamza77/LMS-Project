@@ -4,8 +4,8 @@ import { useNavigate } from "react-router-dom";
 const Category = () => {
   const [books, getBooks] = useState([]);
   const navigate = useNavigate();
-  const get = async () => {
-    return await getCat()
+  const get =  () => {
+     getCat()
       .then((res) => {
         getBooks(res.data);
       })

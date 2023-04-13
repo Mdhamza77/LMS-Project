@@ -11,8 +11,8 @@ const Search = () => {
   const params = useParams();
 
   const search = params.sr;
-  const laodData = async () => {
-    return await getAllBooks()
+  const laodData = () => {
+    getAllBooks()
       .then((res) => {
         setSearchBook(res.data);
       })
