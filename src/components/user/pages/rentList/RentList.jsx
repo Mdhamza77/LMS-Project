@@ -49,7 +49,7 @@ const RentList = () => {
             }
           })
           .map((book) => (
-            <div key={book.id}>
+            <div className="data" key={book.id}>
               <div className="card">
                 <Form className="rent">
                   <h1>BookName : {book.title}</h1>

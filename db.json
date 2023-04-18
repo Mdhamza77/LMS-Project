@@ -494,17 +494,6 @@
   ],
   "Rent": [
     {
-      "title": "Sherlock Holmes",
-      "Description": "Sir Arthur Conan Doyle was born in Edinburgh in 1859 and died in 1930. Within those years was crowded a variety of activity and creative work that made him an international figure and inspired the French to give him the epithet 'the good giant'. He was the nephew of 'Dickie Doyle' the artist, and was educated at Stonyhurst, and later studied medicine at Edinburgh University, where the methods of diagnosis of one of the professors provided the idea for the methods of deduction used by Sherlock Holmes.\n\nHe set up as a doctor at Southsea and it was while waiting for patients that he began to write. His growing success as an author enabled him to give up his practice and turn his attention to other subjects. He was a passionate advocate of many causes, ranging from divorce law reform and the Channel Tunnel to the issuing of inflatable life-jackets to sailors. He also campaigned to prove the innocence of individuals, and his work on the Edjalji case was instrumental in the introduction of the Court of Criminal Appeal. He was a volunteer physician in the Boer War and later in life became a convert to spiritualism.",
-      "AuthorName": "Conan Doyle",
-      "price": 1200,
-      "email": "muhaimin123@gmail.com",
-      "RentFrom": "10/04/2023",
-      "RentUpto": "16/04/2023",
-      "BookId": "13",
-      "id": 7
-    },
-    {
       "title": "The Girl in Room 105 ",
       "Description": "Chetan writes columns in the Times of India and Dainik Bhaskar, which are amongst the most influential and widely read newspapers in the country. He is also one of the country's leading motivational speakers. Chetan went to college at IIT Delhi and IIM Ahmedabad, after which he worked in investment banking for a decade before quitting his job to become a full-time writer.",
       "AuthorName": "Chetan Bhagat",
@@ -514,6 +503,17 @@
       "RentUpto": "18/04/2023",
       "BookId": "15",
       "id": 8
+    },
+    {
+      "title": "Wuthering Heights ",
+      "Description": "Harper Collins is a fiduciary name amongst bibliophiles. This book is a quality print from H.C. London. The book is printed and bound is the U.K. The pages are quality with the signature light yellow tint of classic literature. The print quality is commendable. The text size is tad smaller than Penguin Classics, nonetheless very legible.",
+      "AuthorName": " Bronte Emily",
+      "price": 1140,
+      "email": "muhaimin123@gmail.com",
+      "RentFrom": "17/04/2023",
+      "RentUpto": "24/04/2023",
+      "BookId": "4",
+      "id": 9
     }
   ],
   "FeedBack": [

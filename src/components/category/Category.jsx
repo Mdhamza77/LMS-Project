@@ -14,7 +14,7 @@ const Category = () => {
 
   useEffect(() => {
     get();
-  }, []);
+  },[]);
 
   const Category = (category) => {
     navigate("/category/books/" + category);
