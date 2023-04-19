@@ -16,7 +16,8 @@
       "email": "muhaimin123@gmail.com",
       "password": "Muhaimin@123",
       "img": "https://c4.wallpaperflare.com/wallpaper/379/128/837/cillian-murphy-dark-haired-actor-face-wallpaper-preview.jpg",
-      "id": 2
+      "id": 2,
+      "content": "Hi welcome"
     },
     {
       "firstName": "Mohmmed",
@@ -50,6 +51,14 @@
       "password": "Jenny@246",
       "img": "https://media.glamourmagazine.co.uk/photos/6364f8e4a4c1f16a3a1892d3/1:1/pass/undefined",
       "id": 6
+    },
+    {
+      "firstName": "Ryan",
+      "lastName": "Nattamkar",
+      "email": "ryan123@gmail.com",
+      "password": "Fucj@123",
+      "id": 8,
+      "img": "https://media.gettyimages.com/id/496080108/photo/alexandra-daddario-attends-the-7th-annual-night-of-generosity-gala-benefiting-generosity-org.jpg?s=612x612&w=gi&k=20&c=NSGzFi-AmyMEMGCCa-0UWdq4pA1kNEWCIqqcrwQCUNU="
     }
   ],
   "Books": [
@@ -57,10 +66,10 @@
       "title": "Origin",
       "Description": "Edmond Kirsch, a billionaire philanthropist, computer scientist, futurist, and strident atheist, attends a meeting at the Santa Maria de Montserrat Abbey in Catalonia (Spain) with Roman Catholic Bishop Antonio Valdespino,[4] Jewish Rabbi Yehuda Köves, and Muslim Imam Syed al-Fadl, members of the Parliament of the World's Religions. He informs them that he has made a revolutionary discovery that he plans to release to the public in a month. He has informed them out of respect, despite his hatred of organized religion, which he blames for his mother's death. The three learn that he is presenting it in three days' time, prompting Valdespino to demand that he stop.\n\nKirsch hosts an event at the Guggenheim Museum in Bilbao. Among those in attendance are Kirsch's former teacher, Robert Langdon, and the Guggenheim's curator Ambra Vidal, the fiancée of the future King of Spain, Prince Julián. The guests receive a headset through which they communicate with a voice named Winston, which reveals to Langdon that it is an artificial intelligence invented by Kirsch. Winston leads Langdon to a private meeting with Kirsch, who claims that his presentation will reveal humanity's origins and future.",
       "AuthorName": "Robert Langdon",
-      "Quantity": "11",
-      "price": 200,
-      "category": "Crime",
+      "Quantity": "10",
+      "price": "400",
       "Image": "https://m.media-amazon.com/images/I/91ZeWa2jVaL.jpg",
+      "category": "Crime",
       "id": 1
     },
     {
@@ -505,14 +514,14 @@
       "id": 8
     },
     {
-      "title": "Wuthering Heights ",
-      "Description": "Harper Collins is a fiduciary name amongst bibliophiles. This book is a quality print from H.C. London. The book is printed and bound is the U.K. The pages are quality with the signature light yellow tint of classic literature. The print quality is commendable. The text size is tad smaller than Penguin Classics, nonetheless very legible.",
-      "AuthorName": " Bronte Emily",
-      "price": 1140,
+      "title": "The Dovic Story : A journey of love and self-discovery",
+      "Description": "n the beginning, mankind was like any other life-form, naïve and frail. The creators of the Universe, Ra and Ri had gifted mankind unique and special abilities. If used appropriately, over time, he could evolve to become the most powerful and advanced life-form on Earth. The Creators would then hail themselves over the masterpiece they had created. Ra and Ri also believed that there was always the possibility that man could become arrogant and selfish.  As time passed, their fears came true; man became powerful. He was so full of himself that he began to fight for superiority even amongst his own kind. He began to explore exploit and inhabit every nook and corner of the planet. The creators of the planet earth, Ra and Ri were aware of this possibility. They foretold a prophecy that man was destined to stumble upon a small rock while he leapt higher to reach the stars and the moon. Man inched into unknown parts of the earth which were forbidden. He shook up a tiny, invisible world of life-forms much inferior to him",
+      "AuthorName": " Rakhi Kapoor ",
+      "price": 999,
       "email": "muhaimin123@gmail.com",
-      "RentFrom": "17/04/2023",
-      "RentUpto": "24/04/2023",
-      "BookId": "4",
+      "RentFrom": "19/04/2023",
+      "RentUpto": "23/04/2023",
+      "BookId": "26",
       "id": 9
     }
   ],

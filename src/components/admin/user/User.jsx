@@ -1,19 +1,21 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
+import { deleteuser, loadUsers } from "../../../redux/Action/Action";
 import { Button, Form } from "semantic-ui-react";
 import { useNavigate } from "react-router-dom";
-import { toast } from "react-toastify";
-import { getAll, deleteUser } from "../../../services/user/user.service";
+
 const User = () => {
-  const [user, getUser] = useState([]);
+  let dispatch = useDispatch();
+
+  const { users } = useSelector((state) => state.data);
+
+  useEffect(() => {
+    dispatch(loadUsers());
+  }, []);
+
   const email = sessionStorage.getItem("email");
   const navigate = useNavigate();
-  const getData =  () => {
-     getAll()
-      .then((res) => {
-        getUser(res.data);
-      })
-      .catch((err) => console.log(err.data));
-  };
 
   const Edit = (id) => {
     navigate("/EditUser/" + id);
@@ -24,18 +26,8 @@ const User = () => {
   };
 
   const Delete = (id) => {
-    deleteUser(id)
-      .then(() => {
-        toast("Deleted User Successfully");
-        getData();
-      })
-      .catch((err) => console.log(err.data));
+    if (window.confirm("are you sure ")) dispatch(deleteuser(id));
   };
-
-  useEffect(() => {
-    getData();
-    Delete();
-  }, []);
 
   return (
     <div>
@@ -43,7 +35,7 @@ const User = () => {
         <h1>User Dashboard Details</h1>
         {
           // eslint-disable-next-line
-          user
+          users
             .filter((e) => {
               if (e.email !== email) return e;
             })

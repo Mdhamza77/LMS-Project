@@ -1,68 +1,57 @@
-
 import React, { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { toast } from "react-toastify";
+import { useDispatch, useSelector } from "react-redux";
 import showPwdImg from "../../../assets/icons/show-password.svg";
 import hidePwdImg from "../../../assets/icons/hide-password.svg";
-import { Form, Button , TextArea } from "semantic-ui-react";
-import { getUser, editUser } from "../../../services/user/user.service";
-import {passwordValidator , emailValidator} from '../../../utils/validation/RegexValidator'
- 
+import { Form, Button, TextArea } from "semantic-ui-react";
+
+import { edituser, singleuser } from "../../../redux/Action/Action";
+
+import {
+  passwordValidator,
+  emailValidator,
+} from "../../../utils/validation/RegexValidator";
+
 const EditUser = () => {
   const navigate = useNavigate();
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [img ,setImg] = useState("")
-  const [content , setContent] = useState("");
-  const [isRevealPwd, setIsRevealPwd] = useState(false); 
-  const [err , setErr] = useState("")
-  const { id } = useParams();
+  const [data, setData] = useState({
+    firstName: "",
+    lastName: "",
+    content: "",
+    email: "",
+    img: "",
+    password: "",
+  });
+  const { firstName, lastName, email, img, password, content } = data;
+  const [isRevealPwd, setIsRevealPwd] = useState(false);
+  const [err, setErr] = useState("");
+  const { user } = useSelector((state) => state.data);
 
+  const dispatch = useDispatch();
+  const { id } = useParams();
+  const handleChange = (e) => {
+    let { name, value } = e.target;
+    setData({ ...data, [name]: value });
+  };
   useEffect(() => {
-    get();
+    dispatch(singleuser(id));
   }, []);
 
-  const get = () => {
-    getUser(id)
-      .then((resp) => {
-        setFirstName(resp.data.firstName);
-        setLastName(resp.data.lastName);
-        setEmail(resp.data.email);
-        setPassword(resp.data.password);
-        setImg(resp.data.img) ;
-        setContent(resp.data.content);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  };
+  useEffect(() => {
+    if (user) {
+      setData({ ...user });
+    }
+  }, [user]);
   const handleSubmit = (e) => {
     e.preventDefault();
-    const user = {
-      firstName: firstName,
-      lastName: lastName,
-      email: email,
-      password: password,
-      img : img 
-    };
-    if( !emailValidator(email)) {
-      return  setErr("not validated")
-    }else if(!passwordValidator(password)){
-      return   setErr("not validated")
-    }
-    else {
-    editUser(id, user)
-      .then((res) => {
-        console.log(res.data);
-        get();
-        toast("Updated Sucessfully");
-        navigate("/home");
-      })
-      .catch((err) => {
-        console.log(err.data);
-      }); 
+    
+    if (!emailValidator(email)) {
+      return setErr("not validated");
+    } else if (!passwordValidator(password)) {
+      return setErr("not validated");
+    } else {
+      dispatch(edituser(id ,data));
+      navigate("/");
     }
   };
 
@@ -77,10 +66,11 @@ const EditUser = () => {
               placeholder="First Name"
               id="firstN"
               type="text"
+              name="firstName"
               value={firstName}
               required
               maxLength="10"
-              onChange={(e) => setFirstName(e.target.value)}
+              onChange={handleChange}
             />
           </Form.Field>
 
@@ -90,11 +80,12 @@ const EditUser = () => {
               placeholder="Last Name"
               id="lastN"
               type="text"
+              name="lastName"
               value={lastName}
               required
               minLength="2"
               maxLength="10"
-              onChange={(e) => setLastName(e.target.value)}
+              onChange={handleChange}
             />
           </Form.Field>
 
@@ -104,45 +95,53 @@ const EditUser = () => {
               placeholder="Email"
               id="email"
               type="email"
+              name = "email"
               value={email}
               required
-              onChange={(e) => setEmail(e.target.value)}
+              onChange={handleChange}
             />
           </Form.Field>
 
-          <Form.Field className='pwd-container'>
-            <label htmlFor="password">Password
-            <input
-              placeholder="Password"
-              id="password"
-              type={isRevealPwd ? "text" : "password"}
-              value={password}
-              required
-              onChange={(e) => setPassword(e.target.value)}
-            />
-             <img
-                  title={isRevealPwd ? "Hide password" : "Show password"}
-                  src={isRevealPwd ? hidePwdImg : showPwdImg}
-                  onClick={() => setIsRevealPwd((prevState) => !prevState)}
-                />
-                </label>
+          <Form.Field className="pwd-container">
+            <label htmlFor="password">
+              Password
+              <input
+                placeholder="Password"
+                id="password"
+                type={isRevealPwd ? "text" : "password"}
+                value={password}
+                required
+                onChange={handleChange}
+              />
+              <img
+                title={isRevealPwd ? "Hide password" : "Show password"}
+                src={isRevealPwd ? hidePwdImg : showPwdImg}
+                onClick={() => setIsRevealPwd((prevState) => !prevState)}
+              />
+            </label>
           </Form.Field>
           <Form.Field>
-                    <label>Profile Image</label>
-                    <input type='text' value={img} 
-                       placeholder = 'profile image'
-                       onChange={(e)=>setImg(e.target.value)}
-                    />
-                </Form.Field>
-                <Form.Field>
-                    <label>About you</label>
-                    <TextArea type='text' value={content} 
-                       placeholder = 'Tell us About you'
-                       min = "20"
-                       max= "150"
-                       onChange={(e)=>setContent(e.target.value)}
-                    />
-                </Form.Field>
+            <label>Profile Image</label>
+            <input
+              type="text"
+              value={img}
+              name="img"
+              placeholder="profile image"
+              onChange={handleChange}
+            />
+          </Form.Field>
+          <Form.Field>
+            <label>About you</label>
+            <TextArea
+              type="text"
+              value={content}
+              name = "content"
+              placeholder="Tell us About you"
+              min="20"
+              max="150"
+              onChange={handleChange}
+            />
+          </Form.Field>
 
           <Button className="blue" onClick={handleSubmit}>
             Save
@@ -150,7 +149,7 @@ const EditUser = () => {
           <Button className="red" onClick={() => navigate("/home")}>
             Go Back
           </Button>
-          { err.length > 0 && <p>{err}</p> }
+          {err.length > 0 && <p>{err}</p>}
         </Form>
       </div>
     </div>

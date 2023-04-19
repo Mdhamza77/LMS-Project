@@ -31,6 +31,7 @@ const Routing = () => {
         {isUserLoggedin && isAdmin && (
           <Route path="/addBooks" element={<AddBooks />}></Route>
         )}
+
         {!isUserLoggedin && <Route path="/login" element={<Login />}></Route>}
         {!isUserLoggedin && (
           <Route path="/register" element={<Register />}></Route>
@@ -60,7 +61,7 @@ const Routing = () => {
         {isUserLoggedin && !isAdmin && (
           <Route path="feedback" element={<Feedback />}></Route>
         )}
-        {isUserLoggedin &&  (
+        {isUserLoggedin && (
           <Route path="/EditUser/:id" element={<EditUser />}></Route>
         )}
 

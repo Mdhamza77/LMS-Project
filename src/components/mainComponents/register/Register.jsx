@@ -6,42 +6,44 @@ import {
   passwordValidator,
 } from "../../../utils/validation/RegexValidator";
 import "../../../assets/styles/Home.css";
-import { toast } from "react-toastify";
-import { addUser } from "./../../../services/user/user.service";
+import { useDispatch } from "react-redux";
+import { adduser } from "../../../redux/Action/Action";
+
 export default function Register() {
   const navigate = useNavigate();
+  const [data, setData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    password: "",
+  });
 
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
   const [err, setErr] = useState("");
+
+  const { firstName, lastName, email, password } = data;
+  const dispatch = useDispatch();
+
+  const handleChange = (e) => {
+    let { name, value } = e.target;
+    setData({ ...data, [name]: value });
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const data = {
-      firstName: firstName,
-      lastName: lastName,
-      email: email,
-      password: password,
-    };
     if (!emailValidator(email)) {
       setErr("Enter valid email Id");
     } else if (!passwordValidator(password)) {
       setErr("Enter validated password");
     } else {
-      addUser(data)
-        .then(() => {
-          setFirstName("");
-          setLastName("");
-          setEmail("");
-          setPassword("");
-          toast("Registered Successfully");
-          navigate("/login");
-        })
-        .catch((err) => {
-          console.log(err.data);
-        });
+      dispatch(adduser(data));
+      setData({
+        firstName: "",
+        lastName: "",
+        email: "",
+        img: "",
+        password: "",
+      });
+      navigate("/login");
     }
   };
 
@@ -56,10 +58,11 @@ export default function Register() {
               placeholder="First Name"
               id="firstN"
               type="text"
+              name="firstName"
               value={firstName}
               required
               maxLength="10"
-              onChange={(e) => setFirstName(e.target.value)}
+              onChange={handleChange}
             />
           </Form.Field>
 
@@ -69,11 +72,12 @@ export default function Register() {
               placeholder="Last Name"
               id="lastN"
               type="text"
+              name="lastName"
               value={lastName}
               required
               minLength="2"
               maxLength="10"
-              onChange={(e) => setLastName(e.target.value)}
+              onChange={handleChange}
             />
           </Form.Field>
 
@@ -83,9 +87,10 @@ export default function Register() {
               placeholder="Email"
               id="email"
               type="email"
+              name="email"
               value={email}
               required
-              onChange={(e) => setEmail(e.target.value)}
+              onChange={handleChange}
             />
           </Form.Field>
 
@@ -95,12 +100,13 @@ export default function Register() {
               placeholder="Password"
               id="password"
               type="password"
+              name="password"
               value={password}
               required
-              onChange={(e) => setPassword(e.target.value)}
+              onChange={handleChange}
             />
           </Form.Field>
-          {err.length > 0 && <p>{err}</p>}
+          {err.length > 0 && <p style={{ color: "red" }}>{err}</p>}
 
           <Button
             className="blue"
