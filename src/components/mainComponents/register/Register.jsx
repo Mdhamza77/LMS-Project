@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Form, Button } from "semantic-ui-react";
 import { useNavigate } from "react-router-dom";
+import FormInput from "../../FormComponent/FormInput";
 import {
   emailValidator,
   passwordValidator,
@@ -54,7 +55,7 @@ export default function Register() {
         <Form onSubmit={handleSubmit} className="container">
           <Form.Field>
             <label htmlFor="firstN">First Name</label>
-            <input
+            <FormInput
               placeholder="First Name"
               id="firstN"
               type="text"
@@ -68,7 +69,7 @@ export default function Register() {
 
           <Form.Field>
             <label htmlFor="lastN">Last Name</label>
-            <input
+            <FormInput
               placeholder="Last Name"
               id="lastN"
               type="text"
@@ -83,7 +84,7 @@ export default function Register() {
 
           <Form.Field>
             <label htmlFor="email">Email</label>
-            <input
+            <FormInput
               placeholder="Email"
               id="email"
               type="email"
@@ -96,7 +97,7 @@ export default function Register() {
 
           <Form.Field>
             <label htmlFor="password">Password</label>
-            <input
+            <FormInput
               placeholder="Password"
               id="password"
               type="password"

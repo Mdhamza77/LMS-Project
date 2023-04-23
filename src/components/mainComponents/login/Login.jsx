@@ -4,6 +4,7 @@ import {
   emailValidator,
   passwordValidator,
 } from "../../../utils/validation/RegexValidator";
+import FormInput from "../../FormComponent/FormInput";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { userValidate } from "./../../../services/user/user.service";
@@ -58,7 +59,7 @@ const Login = () => {
         <Form onSubmit={handleSubmit} className="container">
           <Form.Field>
             <label htmlFor="email">Email</label>
-            <input
+            <FormInput
               placeholder="Email"
               id="email"
               type="email"
@@ -71,7 +72,7 @@ const Login = () => {
             <Form.Field>
               <label htmlFor="password">
                 Password
-                <input
+                <FormInput
                   placeholder="Password"
                   id="password"
                   type={isRevealPwd ? "text" : "password"}
