@@ -16,7 +16,7 @@ const AddBooks = () => {
   const [cat, getCategories] = useState([]);
 
   const loadData = () => {
-     getCat()
+    getCat()
       .then((res) => getCategories(res.data))
 
       .catch((err) => console.log(err));
@@ -37,25 +37,22 @@ const AddBooks = () => {
       category: category,
     };
 
-   
     addBooks(data)
       .then((res) => {
-        console.log(res.data)
-        setBookName("") ;
-        setAuthorName("") ;
-        setCategory("") ;
-        setDescription("") ;
-        setQuantity("") ;
-        setImg("") ;
-        setPrice("")
-        toast("Added Successfully")
+        console.log(res.data);
+        setBookName("");
+        setAuthorName("");
+        setCategory("");
+        setDescription("");
+        setQuantity("");
+        setImg("");
+        setPrice("");
+        toast("Added Successfully");
         navigate("/home");
       })
       .catch((err) => {
         console.log(err);
-      });  
-  
-
+      });
   };
   return (
     <div className="card">
@@ -83,7 +80,7 @@ const AddBooks = () => {
                 type="text"
                 name="name"
                 placeholder="Author name"
-                id="author" 
+                id="author"
                 minLength="5"
                 maxLength="30"
                 value={authorName}
@@ -118,9 +115,9 @@ const AddBooks = () => {
                 placeholder="Description"
                 style={{ minHeight: 100 }}
                 value={description}
-                id="description" 
-                minLength = "10"
-                maxLength = "200"
+                id="description"
+                minLength="10"
+                maxLength="200"
                 onChange={(e) => setDescription(e.target.value)}
                 required
               />
@@ -132,7 +129,7 @@ const AddBooks = () => {
                 name="name"
                 placeholder="Books Quantity"
                 value={quantity}
-                min ="1"
+                min="1"
                 max="50"
                 id="quantity"
                 onChange={(e) => setQuantity(e.target.value)}
@@ -146,7 +143,7 @@ const AddBooks = () => {
                 name="name"
                 placeholder="Book Price"
                 value={price}
-                min = "100"
+                min="100"
                 max="3000"
                 id="price"
                 onChange={(e) => setPrice(e.target.value)}
