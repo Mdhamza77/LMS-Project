@@ -16,7 +16,7 @@ const Homepage = () => {
       .catch((err) => console.log(err));
   };
 
-  const getFeed =  () => {
+  const getFeed = () => {
     getFeedBack()
       .then((res) => {
         getFeedB(res.data);
@@ -24,7 +24,7 @@ const Homepage = () => {
       .catch((err) => console.log(err));
   };
 
-  const getCardss =  () => {
+  const getCardss = () => {
     getCards()
       .then((res) => {
         getCard(res.data);
@@ -51,7 +51,6 @@ const Homepage = () => {
             </div>
           ))}
         </div>
-        <br />
 
         <div className="ui">
           <div className="ui link cards">

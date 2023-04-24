@@ -77,8 +77,6 @@ const User = () => {
               </div>
             ))
         }
-
-        <br />
         <div className="uis">
           <Button className="red" onClick={() => navigate("/home")}>
             Go Back

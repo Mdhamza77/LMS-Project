@@ -68,8 +68,6 @@ const UBook = () => {
               <p>Category : {category}</p>
               <p>Quantity : {quantity}</p>
               <p>Price : {price}</p>
-              <br />
-
               {isUserLoggedin && !isAdmin && (
                 <Button className="blue" id="Button" onClick={() => Rent(id)}>
                   Rent Book

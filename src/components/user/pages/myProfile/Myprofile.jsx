@@ -42,7 +42,7 @@ const Myprofile = () => {
                 .map((mail) => (
                   <div className="card" key={mail.id}>
                     <div className="image">
-                      <img src={mail.img} alt="" />
+                      <img src={mail.img} alt="profile-img" />
                     </div>
                     <div className="content">
                       <div className="header">
@@ -59,8 +59,7 @@ const Myprofile = () => {
                       <span className="floated">
                         <b>User ID : {mail.id}</b>
                       </span>
-                      <br />
-                      <br />
+
                       {isUserLoggedin && !isAdmin && (
                         <Button
                           className="blue"
@@ -79,7 +78,6 @@ const Myprofile = () => {
                 ))
             }
           </div>
-          <br />
         </div>
       </div>
     </div>

@@ -27,8 +27,8 @@ const Books = () => {
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
   const { category } = useParams();
-  const get =  () => {
-     getCategory(category)
+  const get = () => {
+    getCategory(category)
       .then((resp) => {
         setData(resp.data);
       })
@@ -54,7 +54,7 @@ const Books = () => {
                   <div className="image">
                     <img
                       src={item.Image}
-                      alt=""
+                      alt="image"
                       onClick={() => handleClick(item.id)}
                     />
                   </div>

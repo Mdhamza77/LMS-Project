@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
-import { Button } from "semantic-ui-react";
+import { Button, Search } from "semantic-ui-react";
 import "../../../assets/styles/style.css";
 const Navigation = () => {
   const isUserLoggedin = sessionStorage.getItem("isUserLoggedin")
@@ -78,6 +78,7 @@ const Navigation = () => {
                 onClick={() => {
                   navigate("/search/" + inpvalue);
                 }}
+                disabled={!inpvalue}
               >
                 <i className="search icon"></i>
               </Button>{" "}

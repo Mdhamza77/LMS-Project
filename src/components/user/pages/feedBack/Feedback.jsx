@@ -9,20 +9,21 @@ const Feedback = () => {
 
   let user = sessionStorage.getItem("email");
   const [feedback, setFeedback] = useState("");
+  const [err, setErr] = useState("");
 
-  const Post =  () => {
+  const Post = () => {
     const feed = {
       User: user,
       feed: feedback,
     };
-    if (!textArea(feedback)) return null;
+    if (!textArea(feedback)) return setErr("Enter Validated textarea");
     else
       postFeedBack(feed)
         .then((res) => {
           setFeedback(res.data);
-          navigate("/home")
+          navigate("/home");
         })
-        .catch((err) => console.log(err.data))
+        .catch((err) => console.log(err.data));
   };
 
   return (
@@ -50,7 +51,7 @@ const Feedback = () => {
               onChange={(e) => setFeedback(e.target.value)}
             />
           </Form.Field>
-
+          {err.length > 0 && <p style={{ color: "red" }}>{err}</p>}
           <Button className="blue" onClick={Post}>
             Submit
           </Button>

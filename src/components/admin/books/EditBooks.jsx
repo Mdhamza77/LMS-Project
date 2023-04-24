@@ -63,7 +63,6 @@ const EditBooks = () => {
   return (
     <div>
       <div className="container">
-        <br />
         <h1 className="">Edit Books</h1>
         <Form className="ui form">
           <Form.Field>

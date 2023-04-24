@@ -33,7 +33,6 @@ const Login = () => {
             if (Admin === true) {
               sessionStorage.setItem("email", email);
               sessionStorage.setItem("isAdmin", true);
-              sessionStorage.setItem("user", "Admin");
               sessionStorage.setItem("isUserLoggedin", true);
               navigate("/home");
               window.location.reload(true);
