@@ -39,11 +39,11 @@ const FormInput = ({
   FormInput.propTypes = {
     name: PropTypes.string,
     type: PropTypes.string,
-    placeholder: PropTypes.string.isRequired,
+    placeholder: PropTypes.string,
     type: PropTypes.oneOf(['text', 'number', 'password','email']),
     className: PropTypes.string,
     value: PropTypes.any,
-    onChange: PropTypes.func.isRequired
+    onChange: PropTypes.func
   }
 
  export default FormInput ; 
