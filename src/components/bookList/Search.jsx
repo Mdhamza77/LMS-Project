@@ -25,6 +25,7 @@ const Search = () => {
   useEffect(() => {
     laodData();
   }, []);
+  
   return (
     <div className="posts">
       <div className="ui">

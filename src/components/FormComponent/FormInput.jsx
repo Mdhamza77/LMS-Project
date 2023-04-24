@@ -37,7 +37,7 @@ const FormInput = ({
   }
   
   FormInput.propTypes = {
-    name: PropTypes.string.isRequired,
+    name: PropTypes.string,
     type: PropTypes.string,
     placeholder: PropTypes.string.isRequired,
     type: PropTypes.oneOf(['text', 'number', 'password','email']),
