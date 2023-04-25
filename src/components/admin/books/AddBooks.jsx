@@ -3,6 +3,11 @@ import { Form, Button, TextArea } from "semantic-ui-react";
 import { useNavigate } from "react-router-dom";
 import { addBooks, getCat } from "../../../services/book/book.service";
 import { toast } from "react-toastify";
+import {
+  BookName,
+  AuthorName,
+  textArea,
+} from "../../../utils/validation/RegexValidator";
 
 const AddBooks = () => {
   const navigate = useNavigate();
@@ -14,12 +19,16 @@ const AddBooks = () => {
   const [img, setImg] = useState("");
   const [category, setCategory] = useState("");
   const [cat, getCategories] = useState([]);
+  const [err, setErr] = useState("");
 
   const loadData = () => {
     getCat()
       .then((res) => getCategories(res.data))
 
-      .catch((err) => console.log(err));
+      .catch((err) => {
+        console.log(err);
+        toast(`Cannot Fetch data from api axios error`);
+      });
   };
 
   useEffect(() => {
@@ -36,24 +45,31 @@ const AddBooks = () => {
       Image: img,
       category: category,
     };
-
-    addBooks(data)
-      .then((res) => {
-        console.log(res.data);
-        setBookName("");
-        setAuthorName("");
-        setCategory("");
-        setDescription("");
-        setQuantity("");
-        setImg("");
-        setPrice("");
-        toast("Added Successfully");
-        navigate("/home");
-      })
-      .catch((err) => {
-        console.log(err);
-        toast(`Add Books api error`)
-      });
+    if (!BookName(bookName)) {
+      return setErr("Enter validated Book Name");
+    } else if (!AuthorName(authorName)) {
+      return setErr("Enter validated User Name");
+    } else if (!textArea(description)) {
+      return setErr("Enter the Validated Books Description");
+    } else {
+      addBooks(data)
+        .then((res) => {
+          console.log(res.data);
+          setBookName("");
+          setAuthorName("");
+          setCategory("");
+          setDescription("");
+          setQuantity("");
+          setImg("");
+          setPrice("");
+          toast("Added Successfully");
+          navigate("/home");
+        })
+        .catch((err) => {
+          console.log(err);
+          toast(`Add Books api error`);
+        });
+    }
   };
   return (
     <div className="card">
@@ -68,8 +84,7 @@ const AddBooks = () => {
                 name="name"
                 placeholder="Book name"
                 id="book"
-                minLength="5"
-                maxLength="30"
+               
                 value={bookName}
                 onChange={(e) => setBookName(e.target.value)}
                 required
@@ -82,8 +97,7 @@ const AddBooks = () => {
                 name="name"
                 placeholder="Author name"
                 id="author"
-                minLength="5"
-                maxLength="30"
+               
                 value={authorName}
                 onChange={(e) => setAuthorName(e.target.value)}
                 required
@@ -151,7 +165,7 @@ const AddBooks = () => {
                 required
               />
             </Form.Field>
-
+            {err.length > 0 && <p style={{ color: "red" }}>{err}</p>}
             <Button className="ui button blue">Add</Button>
             <Button className="ui button red" onClick={() => navigate(-1)}>
               Go Back

@@ -10,16 +10,16 @@ export const passwordValidator = (password) => {
 };
 
 export const textArea = (text) => {
-  const textRegex = /^\s*(?:\S\s*){10,200}$/;
+  const textRegex = /^\s*(?:\S\s*){10,400}$/;
   return textRegex.test(text);
 };
 
 export const BookName = (name) => {
-  const bookName = /^[a-zA-Z]{5,7}$/;
+  const bookName =  /^[a-zA-Z]+( [a-zA-Z]+)+$/;
   return bookName.test(name);
 };
 
 export const AuthorName = (name) => {
-  const authorName = /^[a-zA-Z]{5,20}$/;
+  const authorName = /^[a-zA-Z]{2,}(?: [a-zA-Z]+){0,2}$/;
   return authorName.test(name);
 };

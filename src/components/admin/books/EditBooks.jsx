@@ -3,6 +3,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { toast } from "react-toastify";
 import { TextArea, Form, Button } from "semantic-ui-react";
 import { editBooks, getBooks } from "../../../services/book/book.service";
+import { textArea , AuthorName } from "../../../utils/validation/RegexValidator";
 
 const EditBooks = () => {
   const navigate = useNavigate();
@@ -13,6 +14,7 @@ const EditBooks = () => {
   const [img, setImg] = useState("");
   const [price, setPrice] = useState("");
   const [category, setCategory] = useState("");
+  const [err,setErr] = useState("")
 
   const { id } = useParams();
 
@@ -35,7 +37,7 @@ const EditBooks = () => {
       })
       .catch((err) => {
         console.log(err);
-        toast(`Cannot edit the book`)
+        toast(`Cannot fetch the data`)
       });
   };
   const handleSubmit = () => {
@@ -48,7 +50,9 @@ const EditBooks = () => {
       Image: img,
       category: category,
     };
-
+    if (!textArea(description)) {
+      return setErr("Enter the Validated Books Description");
+    } else {
     editBooks(id, book)
       .then((resp) => {
         console.log(resp.data);
@@ -57,8 +61,10 @@ const EditBooks = () => {
         navigate("/home");
       })
       .catch((err) => {
-        console.log(err.data);
-      });
+        console.log(err);
+        toast(`Cannot edit the book`)
+      }); 
+    }
   };
 
   return (
@@ -94,8 +100,7 @@ const EditBooks = () => {
               placeholder="Description"
               style={{ minHeight: 100 }}
               value={description}
-              minLength="10"
-              maxLength="200"
+              
               id="description"
               onChange={(e) => setDescription(e.target.value)}
             />
@@ -146,7 +151,7 @@ const EditBooks = () => {
               onChange={(e) => setPrice(e.target.value)}
             />
           </Form.Field>
-
+          {err.length > 0 && <p style={{color : "red"}} >{err}</p>}  
           <Button className="ui button blue" onClick={handleSubmit}>
             Save
           </Button>
