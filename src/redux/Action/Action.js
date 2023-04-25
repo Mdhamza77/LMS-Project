@@ -6,6 +6,7 @@ import {
   editUser,
   addUser,
 } from "../../services/user/user.service";
+import { toast } from "react-toastify";
 
 const getUsers = (users) => ({
   type: types.GET_USERS,
@@ -38,6 +39,7 @@ export const loadUsers = () => {
       })
       .catch((err) => {
         console.log(err);
+        toast(`Cannot fetch data from api`);
       });
   };
 };
@@ -52,6 +54,7 @@ export const deleteuser = (id) => {
       })
       .catch((err) => {
         console.log(err);
+        toast(`Cannot delete user api error`);
       });
   };
 };
@@ -64,6 +67,7 @@ export const singleuser = (id) => {
       })
       .catch((err) => {
         console.log(err);
+        toast(`Cannot fetch data from api`);
       });
   };
 };
@@ -78,6 +82,7 @@ export const adduser = (user) => {
       })
       .catch((err) => {
         console.log(err);
+        toast(`Cannot add user data to api`);
       });
   };
 };
@@ -92,6 +97,7 @@ export const edituser = (id, user) => {
       })
       .catch((err) => {
         console.log(err);
+        toast(`Cannot fetch and edit data from api`);
       });
   };
 };
