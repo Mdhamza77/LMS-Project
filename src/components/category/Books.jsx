@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { getCategory } from "./../../services/book/book.service";
 import { useNavigate, useParams } from "react-router-dom";
 import Pagination from "../pagination/Pagination";
+import { toast } from "react-toastify";
 const Books = () => {
   const navigate = useNavigate();
   const [data, setData] = useState([]);
@@ -32,7 +33,9 @@ const Books = () => {
       .then((resp) => {
         setData(resp.data);
       })
-      .catch((err) => console.log(err));
+      .catch((err) => { console.log(err)
+         toast(`cannot load books data api error`)
+      });
   };
   useEffect(() => {
     get();

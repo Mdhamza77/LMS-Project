@@ -52,6 +52,7 @@ const AddBooks = () => {
       })
       .catch((err) => {
         console.log(err);
+        toast(`Add Books api error`)
       });
   };
   return (

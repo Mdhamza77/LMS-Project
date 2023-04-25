@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { Form, Button, TextArea } from "semantic-ui-react";
 import { postFeedBack } from "./../../../../services/home/home.service";
 import { textArea } from "../../../../utils/validation/RegexValidator";
+import { toast } from "react-toastify";
 
 const Feedback = () => {
   const navigate = useNavigate();
@@ -23,7 +24,9 @@ const Feedback = () => {
           setFeedback(res.data);
           navigate("/home");
         })
-        .catch((err) => console.log(err.data));
+        .catch((err) => { console.log(err.data) 
+           toast(`Cannot display data 404 error`)  
+        });
   };
 
   return (

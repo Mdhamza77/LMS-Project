@@ -28,6 +28,7 @@ const Login = () => {
           let Admin = false;
           if (e.data.length < 0) {
             console.log("invalid");
+            toast(`invalid`)
           } else if (e.data[0].email === email) {
             Admin = e.data[0].type === "Admin" ? true : false;
             if (Admin === true) {

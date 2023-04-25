@@ -53,6 +53,7 @@ const UBook = () => {
       })
       .catch((err) => {
         console.log(err);
+        toast('cannot load book data')
       });
   };
   return (

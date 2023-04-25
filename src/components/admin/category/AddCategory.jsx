@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { addCategory } from "../../../services/book/book.service";
 import { Form, Button } from "semantic-ui-react";
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const AddCategory = () => {
   const [category, setCategory] = useState("");
@@ -21,7 +22,10 @@ const AddCategory = () => {
         setCategory("");
         navigate('/home') 
       })
-      .catch((err) => console.log(err));
+      .catch((err) => { 
+        console.log(err) 
+        toast(`cannot add the category`) 
+      });
   };
   return (
     <div className="cat">

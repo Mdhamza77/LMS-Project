@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { getCat } from "../../services/book/book.service";
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 const Category = () => {
   const [books, getBooks] = useState([]);
   const navigate = useNavigate();
@@ -9,7 +10,9 @@ const Category = () => {
       .then((res) => {
         getBooks(res.data);
       })
-      .catch((err) => console.log(err));
+      .catch((err) => {console.log(err)
+        toast(`cannot display book list`)
+      });
   };
 
   useEffect(() => {

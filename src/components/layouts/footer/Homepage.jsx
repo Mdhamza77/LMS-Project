@@ -5,6 +5,7 @@ import {
   getCards,
   getFeedBack,
 } from "./../../../services/home/home.service";
+import { toast } from "react-toastify";
 const Homepage = () => {
   const [feedback, getFeedB] = useState([]);
   const [card, getCard] = useState([]);
@@ -13,7 +14,10 @@ const Homepage = () => {
   const get = () => {
     getHomeData()
       .then((res) => getHom(res.data))
-      .catch((err) => console.log(err));
+      .catch((err) => {
+        console.log(err);
+        toast(`request data failed`);
+      });
   };
 
   const getFeed = () => {
@@ -21,7 +25,10 @@ const Homepage = () => {
       .then((res) => {
         getFeedB(res.data);
       })
-      .catch((err) => console.log(err));
+      .catch((err) => {
+        console.log(err);
+        toast(`request data failed`);
+      });
   };
 
   const getCardss = () => {
@@ -29,7 +36,10 @@ const Homepage = () => {
       .then((res) => {
         getCard(res.data);
       })
-      .catch((err) => console.log(err.data));
+      .catch((err) => {
+        console.log(err.data);
+        toast(`request data failed`);
+      });
   };
 
   useEffect(() => {

@@ -24,7 +24,10 @@ const RentList = () => {
       .then((res) => {
         getRentedBooks(res.data);
       })
-      .catch((err) => console.log(err));
+      .catch((err) => {
+        console.log(err);
+        toast(`Cannot display data 404 error`);
+      });
   };
 
   const Return = (id) => {
@@ -34,7 +37,9 @@ const RentList = () => {
         navigate("/home");
         getRentedBooks();
       })
-      .catch((err) => console.log(err));
+      .catch((err) => { console.log(err) 
+        toast(`Cannot return data error`);
+      });
   };
 
   return (

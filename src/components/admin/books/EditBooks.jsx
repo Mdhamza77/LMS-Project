@@ -35,6 +35,7 @@ const EditBooks = () => {
       })
       .catch((err) => {
         console.log(err);
+        toast(`Cannot edit the book`)
       });
   };
   const handleSubmit = () => {

@@ -16,7 +16,10 @@ const Search = () => {
       .then((res) => {
         setSearchBook(res.data);
       })
-      .catch((err) => console.log(err));
+      .catch((err) => {
+        console.log(err);
+        toast("search data error");
+      });
   };
   const handleClick = (id) => {
     navigate("/search/:se/" + id);
@@ -25,7 +28,7 @@ const Search = () => {
   useEffect(() => {
     laodData();
   }, []);
-  
+
   return (
     <div className="posts">
       <div className="ui">
@@ -43,28 +46,28 @@ const Search = () => {
             })
             .map((item) => (
               <div className="card" key={item.id}>
-              <div className="image">
-                <img
-                  src={item.Image}
-                  alt="image"
-                  onClick={() => handleClick(item.id)}
-                />
-              </div>
-              <div className="content">
-                <div className="header">{item.title}</div>
-                <div className="meta">
-                  <p>"{item.AuthorName}"</p>
+                <div className="image">
+                  <img
+                    src={item.Image}
+                    alt="image"
+                    onClick={() => handleClick(item.id)}
+                  />
                 </div>
-                <div className="description">
-                  <b>Price</b>: {item.price}
+                <div className="content">
+                  <div className="header">{item.title}</div>
+                  <div className="meta">
+                    <p>"{item.AuthorName}"</p>
+                  </div>
+                  <div className="description">
+                    <b>Price</b>: {item.price}
+                  </div>
+                </div>
+                <div className="extra content">
+                  <span className="floated">
+                    <b>Book ID : {item.id}</b>
+                  </span>
                 </div>
               </div>
-              <div className="extra content">
-                <span className="floated">
-                  <b>Book ID : {item.id}</b>
-                </span>
-              </div>
-            </div>
             ))}
         </div>
       </div>

@@ -52,6 +52,7 @@ const RentList = () => {
       })
       .catch((err) => {
         console.log(err.data);
+        toast(`Cannot display data 404 error`)
       });
   };
 
