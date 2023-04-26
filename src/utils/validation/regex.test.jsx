@@ -31,22 +31,3 @@ describe("Email Regex Validator", (password) => {
   });
 });
 
-describe("login check", (email) => {
-  it("login", () => {
-    if (!EmailValidator(email)) {
-      return <p>No Match</p>;
-    } else {
-      return <p>Render From Api</p>;
-    }
-  });
-});
-
-describe("password check", (password) => {
-  it("login", () => {
-    if (!PasswordValidator(password)) {
-      return <p>No Match</p>;
-    } else {
-      return <p>Render From Api</p>;
-    }
-  });
-});
