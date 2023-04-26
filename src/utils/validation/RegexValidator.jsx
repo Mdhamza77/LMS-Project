@@ -23,3 +23,8 @@ export const AuthorName = (name) => {
   const authorName = /^[a-zA-Z]{2,}(?: [a-zA-Z]+){0,2}$/;
   return authorName.test(name);
 };
+
+export const CategoryName = (category) => {
+    const cat = /^[a-zA-Z]{4,15}$/ ;    
+    return cat.test(category)
+}
