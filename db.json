@@ -384,8 +384,8 @@
     },
     {
       "title": "The Wife Upstairs",
+      "Description": "A wife who just won’t stay buried…But what Jane doesn’t know is that Eddie is keeping a secret – a big secret. And when the truth comes out, the consequences are far more deadly than anyone could ever have imagined",
       "AuthorName": "Rachel Hawkins",
-      "Description": "A wife who just won’t stay buried…But what Jane doesn’t know is that Eddie is keeping a secret – a big secret. And when the truth comes out, the consequences are far more deadly than anyone could ever have imagined…A delicious twist on a Gothic classic, The Wife Upstairs is perfect for fans of Lucy Foley, Ruth Ware and Shari Lapena.‘Really fun update of Jane Eyre that’s also deeply satisfying’Stylist‘A sharp, fresh twist on a classic in this darkly funny, suspenseful story of murder, ambition, and love. Creepy and fast-paced…kept me on the edge of my seat from the first page to the very last’ bestselling author Megan Miranda ‘The Wife Upstairs is everything I’d hoped―sharp, smart, tricky and fast-paced’ Kelly Harms, author of The Overdue Life of Amy Byler‘Lightening paced, twisty, and great fun’ Jessica Knoll, bestselling author of Luckiest Girl AliveWhat readers are saying about The Wife Upstairs‘I couldn’t put this book down! Read it in a day!'‘",
       "Quantity": "15",
       "price": "2500",
       "Image": "https://m.media-amazon.com/images/I/51m3qqBBARL._SX324_BO1,204,203,200_.jpg",
@@ -495,17 +495,6 @@
   ],
   "Rent": [
     {
-      "title": "The Girl in Room 105 ",
-      "Description": "Chetan writes columns in the Times of India and Dainik Bhaskar, which are amongst the most influential and widely read newspapers in the country. He is also one of the country's leading motivational speakers. Chetan went to college at IIT Delhi and IIM Ahmedabad, after which he worked in investment banking for a decade before quitting his job to become a full-time writer.",
-      "AuthorName": "Chetan Bhagat",
-      "price": "440",
-      "email": "alexa007@gmail.com",
-      "RentFrom": "13/04/2023",
-      "RentUpto": "18/04/2023",
-      "BookId": "15",
-      "id": 8
-    },
-    {
       "title": "The Lost Symbol",
       "Description": "Renowned Harvard symbologist Robert Langdon is invited to give a lecture at the United States Capitol, at the invitation apparently from his mentor, a 33rd degree Mason named Peter Solomon, who is the head of the Smithsonian Institution. Solomon has also asked him to bring a small, sealed package which he had entrusted to Langdon years earlier. When Langdon arrives at the Capitol, however, he learns that the invitation he received was not from Solomon, but from Solomon's kidnapper, Mal'akh posing as Solomon's assistant, who has left Solomon's severed right hand in the middle of the Capitol Rotunda in a recreation of the Hand of Mysteries. Mal'akh then contacts Langdon, charging him with finding both the Mason's Pyramid, which Masons believe is hidden somewhere in Washington, D.C., and the Lost Word, lest Solomon be murdered.\n\nLangdon meets Inoue Sato, the head of the CIA's Office of Security. Sato claims that Mal'akh poses a threat to the national security of the U.S. and that his capture is more important than Peter's rescue, although she refuses to elaborate. ",
       "AuthorName": "Robert Langdon",
@@ -513,9 +502,19 @@
       "email": "muhaimin123@gmail.com",
       "RentFrom": "24/04/2023",
       "RentUpto": "01/05/2023",
-      "BookId": "14"
-      ,
+      "BookId": "14",
       "id": 9
+    },
+    {
+      "title": "The Age of Light ",
+      "Description": "The Age of Light is the riveting, vivid and powerful story of the photographer Lee Miller and her lover, Man Ray. Model. Muse. Lover. Artist. Paris, 1929. Lee Miller has abandoned her life in New York and a modelling career at Vogue to pursue her dream of becoming a photographer. When she catches the eye of artist Man Ray she convinces him to hire her as his assistant. Man is an egotistical, charismatic force and they soon embark upon a passionate affair.",
+      "AuthorName": " Scharer Whitney",
+      "price": 200,
+      "email": "alexa007@gmail.com",
+      "RentFrom": "26/04/2023",
+      "RentUpto": "02/05/2023",
+      "BookId": "18",
+      "id": 10
     }
   ],
   "FeedBack": [

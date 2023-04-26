@@ -17,7 +17,7 @@ const RentList = () => {
     : false;
   useEffect(() => {
     get();
-  }, []);
+  }, [email]);
 
   const get = () => {
     getData()
@@ -44,7 +44,7 @@ const RentList = () => {
 
   return (
     <div className="container">
-      {rentedbook.length > 0 ? (
+      {rentedbook.length > 0 && rentedbook.some((e) => e.email === Semail || e.email === email) ? (
         rentedbook
           .filter((e) => {
             if (e.email === Semail) {
