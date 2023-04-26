@@ -84,7 +84,6 @@ const AddBooks = () => {
                 name="name"
                 placeholder="Book name"
                 id="book"
-               
                 value={bookName}
                 onChange={(e) => setBookName(e.target.value)}
                 required
@@ -97,7 +96,6 @@ const AddBooks = () => {
                 name="name"
                 placeholder="Author name"
                 id="author"
-               
                 value={authorName}
                 onChange={(e) => setAuthorName(e.target.value)}
                 required
@@ -114,9 +112,13 @@ const AddBooks = () => {
             </Form.Field>
             <Form.Field>
               <label>Book Category</label>
-
-              <select onChange={(e) => setCategory(e.target.value)}>
-                {" "}
+              <select
+                onChange={(e) => setCategory(e.target.value)}
+                defaultValue="default"
+              >
+                <option value="default" disabled>
+                  Select a category
+                </option>
                 {cat.map((data) => (
                   <option key={data.id} value={data.category}>
                     {data.category}
