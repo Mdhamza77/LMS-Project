@@ -3,8 +3,8 @@ import { Form, Button } from "semantic-ui-react";
 import { useNavigate } from "react-router-dom";
 import FormInput from "../../FormComponent/FormInput";
 import {
-  emailValidator,
-  passwordValidator,
+  EmailValidator,
+  PasswordValidator,
 } from "../../../utils/validation/RegexValidator";
 import "../../../assets/styles/Home.css";
 import { useDispatch } from "react-redux";
@@ -31,9 +31,9 @@ export default function Register() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!emailValidator(email)) {
+    if (!EmailValidator(email)) {
       setErr("Enter valid email Id");
-    } else if (!passwordValidator(password)) {
+    } else if (!PasswordValidator(password)) {
       setErr("Enter validated password");
     } else {
       dispatch(adduser(data));

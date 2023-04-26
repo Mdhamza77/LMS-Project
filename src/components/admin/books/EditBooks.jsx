@@ -3,7 +3,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { toast } from "react-toastify";
 import { TextArea, Form, Button } from "semantic-ui-react";
 import { editBooks, getBooks } from "../../../services/book/book.service";
-import { textArea , AuthorName } from "../../../utils/validation/RegexValidator";
+import { Textarea , AuthorName } from "../../../utils/validation/RegexValidator";
 
 const EditBooks = () => {
   const navigate = useNavigate();
@@ -50,7 +50,7 @@ const EditBooks = () => {
       Image: img,
       category: category,
     };
-    if (!textArea(description)) {
+    if (!Textarea(description)) {
       return setErr("Enter the Validated Books Description");
     } else {
     editBooks(id, book)

@@ -8,8 +8,8 @@ import { Form, Button, TextArea } from "semantic-ui-react";
 import { edituser, singleuser } from "../../../redux/Action/Action";
 
 import {
-  passwordValidator,
-  emailValidator,
+PasswordValidator,
+  EmailValidator,
 } from "../../../utils/validation/RegexValidator";
 
 const EditUser = () => {
@@ -45,9 +45,9 @@ const EditUser = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     
-    if (!emailValidator(email)) {
+    if (!EmailValidator(email)) {
       return setErr("not validated");
-    } else if (!passwordValidator(password)) {
+    } else if (!PasswordValidator(password)) {
       return setErr("not validated");
     } else {
       dispatch(edituser(id ,data));

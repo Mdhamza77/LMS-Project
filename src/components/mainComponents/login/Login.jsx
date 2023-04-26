@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Form, Button } from "semantic-ui-react";
 import {
-  emailValidator,
-  passwordValidator,
+  EmailValidator,
+  PasswordValidator,
 } from "../../../utils/validation/RegexValidator";
 import FormInput from "../../FormComponent/FormInput";
 import { useNavigate } from "react-router-dom";
@@ -19,8 +19,8 @@ const Login = () => {
   const navigate = useNavigate();
 
   const handleSubmit = () => {
-    if (!emailValidator(email)) return setErr("Enter valid email Id");
-    else if (!passwordValidator(password))
+    if (!EmailValidator(email)) return setErr("Enter valid email Id");
+    else if (!PasswordValidator(password))
       return setErr("Enter validated password");
     else {
       userValidate(email, password)

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Form, Button, TextArea } from "semantic-ui-react";
 import { postFeedBack } from "./../../../../services/home/home.service";
-import { textArea } from "../../../../utils/validation/RegexValidator";
+import { Textarea } from "../../../../utils/validation/RegexValidator";
 import { toast } from "react-toastify";
 
 const Feedback = () => {
@@ -17,7 +17,7 @@ const Feedback = () => {
       User: user,
       feed: feedback,
     };
-    if (!textArea(feedback)) return setErr("Enter Validated textarea");
+    if (!Textarea(feedback)) return setErr("Enter Validated textarea");
     else
       postFeedBack(feed)
         .then((res) => {

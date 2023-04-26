@@ -1,12 +1,12 @@
 import { render } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
-import { emailValidator, passwordValidator } from "./RegexValidator";
+import { EmailValidator, PasswordValidator } from "./RegexValidator";
 
 describe("Email Regex Validator", (email) => {
   it("email Api valdator", () => {
     render(
       <MemoryRouter>
-        <emailValidator />
+        <EmailValidator />
       </MemoryRouter>
     );
 
@@ -20,7 +20,7 @@ describe("Email Regex Validator", (password) => {
   it("email Api valdator", () => {
     render(
       <MemoryRouter>
-        <passwordValidator />
+        <PasswordValidator />
       </MemoryRouter>
     );
 
@@ -33,7 +33,7 @@ describe("Email Regex Validator", (password) => {
 
 describe("login check", (email) => {
   it("login", () => {
-    if (!emailValidator(email)) {
+    if (!EmailValidator(email)) {
       return <p>No Match</p>;
     } else {
       return <p>Render From Api</p>;
@@ -41,9 +41,9 @@ describe("login check", (email) => {
   });
 });
 
-describe("", (password) => {
+describe("password check", (password) => {
   it("login", () => {
-    if (!passwordValidator(password)) {
+    if (!PasswordValidator(password)) {
       return <p>No Match</p>;
     } else {
       return <p>Render From Api</p>;

@@ -6,7 +6,7 @@ import { toast } from "react-toastify";
 import {
   BookName,
   AuthorName,
-  textArea,
+  Textarea,
 } from "../../../utils/validation/RegexValidator";
 
 const AddBooks = () => {
@@ -49,7 +49,7 @@ const AddBooks = () => {
       return setErr("Enter validated Book Name");
     } else if (!AuthorName(authorName)) {
       return setErr("Enter validated User Name");
-    } else if (!textArea(description)) {
+    } else if (!Textarea(description)) {
       return setErr("Enter the Validated Books Description");
     } else {
       addBooks(data)

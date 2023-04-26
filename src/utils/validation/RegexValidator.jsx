@@ -1,15 +1,15 @@
-export const emailValidator = (email) => {
+export const EmailValidator = (email) => {
   const emailRegex = /^[a-z0-9._:$!%-]+@[a-z0-9.-]+.[a-zA-Z]$/;
   return emailRegex.test(email);
 };
 
-export const passwordValidator = (password) => {
+export const PasswordValidator = (password) => {
   const passwordRegex =
     /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#@!?$%^&*-]).{8,}$/;
   return passwordRegex.test(password);
 };
 
-export const textArea = (text) => {
+export const Textarea = (text) => {
   const textRegex = /^\s*(?:\S\s*){10,400}$/;
   return textRegex.test(text);
 };
