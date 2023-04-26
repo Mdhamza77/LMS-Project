@@ -3,6 +3,7 @@ import { Form, Button } from "semantic-ui-react";
 import { useNavigate, useParams } from "react-router-dom";
 import { toast } from "react-toastify";
 import { getData, returnBook } from "../../../../services/rent/rent.service";
+import NoDataImage from "../../../noData/NoDataImage";
 
 const RentList = () => {
   const [rentedbook, getRentedBooks] = useState([]);
@@ -37,14 +38,16 @@ const RentList = () => {
         navigate("/home");
         getRentedBooks();
       })
-      .catch((err) => { console.log(err) 
+      .catch((err) => {
+        console.log(err);
         toast(`Cannot return data error`);
       });
   };
 
   return (
     <div className="container">
-      {rentedbook.length > 0 && rentedbook.some((e) => e.email === Semail || e.email === email) ? (
+      {rentedbook.length > 0 &&
+      rentedbook.some((e) => e.email === Semail || e.email === email) ? (
         rentedbook
           .filter((e) => {
             if (e.email === Semail) {
@@ -88,13 +91,7 @@ const RentList = () => {
             </div>
           ))
       ) : (
-        <div>
-          <img
-            src="https://img.freepik.com/free-vector/no-data-concept-illustration_114360-536.jpg"
-            alt="no data"
-            style={{marginTop : "5em" , marginLeft : "20em" , marginRight : "4em" , width : "60em" , height : "40em"}}
-          />
-        </div>
+        <NoDataImage />
       )}
     </div>
   );
