@@ -131,8 +131,6 @@ const AddBooks = () => {
                 style={{ minHeight: 100 }}
                 value={description}
                 id="description"
-                minLength="10"
-                maxLength="200"
                 onChange={(e) => setDescription(e.target.value)}
                 required
               />

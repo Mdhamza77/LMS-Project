@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { getCategory } from "./../../services/book/book.service";
 import { useNavigate, useParams } from "react-router-dom";
 import Pagination from "../pagination/Pagination";
+import { PaginationContext } from "../contextApi/PaginationContext";
 import { toast } from "react-toastify";
 const Books = () => {
   const navigate = useNavigate();
@@ -33,8 +34,9 @@ const Books = () => {
       .then((resp) => {
         setData(resp.data);
       })
-      .catch((err) => { console.log(err)
-         toast(`cannot load books data api error`)
+      .catch((err) => {
+        console.log(err);
+        toast(`cannot load books data api error`);
       });
   };
   useEffect(() => {
@@ -85,14 +87,26 @@ const Books = () => {
 
   return (
     <div>
-      <Posts data={currentPosts} />
-      <Pagination
-        postsPerPage={postsPerPage}
-        totalPosts={data.length}
-        paginate={paginate}
-        previousPage={previousPage}
-        nextPage={nextPage}
-      />
+      <PaginationContext.Provider
+        value={{
+          postsPerPage,
+          totalPosts: data.length,
+          paginate,
+          previousPage,
+          nextPage,
+        }}
+      >
+        <div>
+          <Posts data={currentPosts} />
+          <Pagination
+            postsPerPage={postsPerPage}
+            totalPosts={data.length}
+            paginate={paginate}
+            previousPage={previousPage}
+            nextPage={nextPage}
+          />
+        </div>
+      </PaginationContext.Provider>
     </div>
   );
 };

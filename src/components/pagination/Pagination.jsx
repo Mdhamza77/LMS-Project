@@ -1,20 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-
 import "../../assets/styles/style.css";
+import { usePagination } from "../contextApi/PaginationContext";
 
-const Pagination = ({
-  postsPerPage,
-  totalPosts,
-  paginate,
-  previousPage,
-  nextPage,
-}) => {
-  const pageNumbers = [];
-
-  for (let i = 1; i <= Math.ceil(totalPosts / postsPerPage); i++) {
-    pageNumbers.push(i);
-  }
+const Pagination = () => {
+  const { pageNumbers, paginate, previousPage, nextPage } = usePagination();
   return (
     <div className="div">
       <ul className="pagination">
