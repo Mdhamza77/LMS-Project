@@ -58,11 +58,11 @@ const Login = () => {
         <h1>Login</h1>
         <Form onSubmit={handleSubmit} className="container">
           <Form.Field>
-            <label htmlFor="email">Email</label>
             <FormInput
-              placeholder="Email"
-              id="email"
+              label="Email"
+              name="email"
               type="email"
+              placeholder="Email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
@@ -70,23 +70,21 @@ const Login = () => {
           </Form.Field>
           <div className="pwd-container">
             <Form.Field>
-              <label htmlFor="password">
-                Password
-                <FormInput
-                  placeholder="Password"
-                  id="password"
-                  type={isRevealPwd ? "text" : "password"}
-                  value={password}
-                  required
-                  onChange={(e) => setPassword(e.target.value)}
-                  message=" Enter input details"
-                />
-                <img
-                  title={isRevealPwd ? "Hide password" : "Show password"}
-                  src={isRevealPwd ? hidePwdImg : showPwdImg}
-                  onClick={() => setIsRevealPwd((prevState) => !prevState)}
-                />
-              </label>
+              <FormInput
+                label="Password"
+                name="password"
+                type={isRevealPwd ? "text" : "password"}
+                placeholder="Password"
+                value={password}
+                required
+                onChange={(e) => setPassword(e.target.value)}
+                message=" Enter input details"
+              />
+              <img
+                title={isRevealPwd ? "Hide password" : "Show password"}
+                src={isRevealPwd ? hidePwdImg : showPwdImg}
+                onClick={() => setIsRevealPwd((prevState) => !prevState)}
+              />
             </Form.Field>
           </div>
           {err.length > 0 && <p style={{ color: "red" }}>{err}</p>}
