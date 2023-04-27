@@ -55,7 +55,7 @@ const Login = () => {
   return (
     <div className="Forms" id="Login">
       <div className="card">
-        <h1>Login</h1>
+        <h1>SignIn</h1>
         <Form onSubmit={handleSubmit} className="container">
           <Form.Field>
             <FormInput
