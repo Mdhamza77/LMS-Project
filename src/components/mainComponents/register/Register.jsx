@@ -54,10 +54,9 @@ export default function Register() {
         <h1>Register</h1>
         <Form onSubmit={handleSubmit} className="container">
           <Form.Field>
-            <label htmlFor="firstN">First Name</label>
             <FormInput
               placeholder="First Name"
-              id="firstN"
+              label="First Name"
               type="text"
               name="firstName"
               value={firstName}
@@ -68,10 +67,9 @@ export default function Register() {
           </Form.Field>
 
           <Form.Field>
-            <label htmlFor="lastN">Last Name</label>
             <FormInput
               placeholder="Last Name"
-              id="lastN"
+              label="Last Name"
               type="text"
               name="lastName"
               value={lastName}
@@ -83,10 +81,9 @@ export default function Register() {
           </Form.Field>
 
           <Form.Field>
-            <label htmlFor="email">Email</label>
             <FormInput
               placeholder="Email"
-              id="email"
+              label="Email"
               type="email"
               name="email"
               value={email}
@@ -96,10 +93,9 @@ export default function Register() {
           </Form.Field>
 
           <Form.Field>
-            <label htmlFor="password">Password</label>
             <FormInput
               placeholder="Password"
-              id="password"
+              label="Password"
               type="password"
               name="password"
               value={password}
