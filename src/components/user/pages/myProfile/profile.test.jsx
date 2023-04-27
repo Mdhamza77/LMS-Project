@@ -1,8 +1,12 @@
 import { render, screen, waitFor, fireEvent } from "@testing-library/react";
-
 import Myprofile from "./Myprofile";
-
+import { Provider } from "react-redux";
+import RootReducer from "../../../../redux/root-reducer/RootReducer";
+import { configureStore } from "@reduxjs/toolkit";
 import { getAll } from "../../../../services/user/user.service";
+const store = configureStore({
+  reducer: RootReducer,
+});
 jest.mock("react-router-dom", () => ({
   ...jest.requireActual("react-router-dom"),
   useNavigate: () => jest.fn(),
@@ -10,7 +14,11 @@ jest.mock("react-router-dom", () => ({
 
 describe("My Profile", () => {
   it("rendering My Profile component", () => {
-    render(<Myprofile />);
+    render(
+      <Provider store={store}>
+        <Myprofile />
+      </Provider>
+    );
     const isUserLoggedin = sessionStorage.getItem("isUserLoggedin")
       ? sessionStorage.getItem("isUserLoggedin")
       : false;
@@ -28,7 +36,11 @@ describe("Mocking axios Api Request ", () => {
       .then((res) => getData(res.data))
       .catch((err) => console.log(err));
 
-    render(<Myprofile />);
+    render(
+      <Provider store={store}>
+        <Myprofile />
+      </Provider>
+    );
   });
   waitFor(() => {
     expect(screen.getByText("/value from the api")).toBeInTheDocument();
@@ -45,3 +57,5 @@ describe("Mocking axios Api Request ", () => {
     };
   });
 });
+
+
