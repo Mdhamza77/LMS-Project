@@ -102,8 +102,9 @@ const AddBooks = () => {
               />
             </Form.Field>
             <Form.Field>
-              <label>Book Image</label>
+              <label htmlFor="book">Book Image</label>
               <input
+                id="book"
                 type="text"
                 value={img}
                 placeholder="profile image"
@@ -111,8 +112,9 @@ const AddBooks = () => {
               />
             </Form.Field>
             <Form.Field>
-              <label>Book Category</label>
+              <label htmlFor="category">Book Category</label>
               <select
+                id="category"
                 onChange={(e) => setCategory(e.target.value)}
                 defaultValue="default"
               >
