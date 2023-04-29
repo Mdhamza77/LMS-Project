@@ -70,7 +70,7 @@ const EditBooks = () => {
   return (
     <div>
       <div className="container">
-        <h1 className="">Edit Books</h1>
+        <h1 className="">Edit Book</h1>
         <Form className="ui form">
           <Form.Field>
             <label htmlFor="id">Books ID</label>
@@ -84,7 +84,7 @@ const EditBooks = () => {
             />
           </Form.Field>
           <Form.Field>
-            <label htmlFor="book">Books Name</label>
+            <label htmlFor="book">Book Name</label>
             <input
               type="text"
               name="name"
@@ -117,9 +117,10 @@ const EditBooks = () => {
             />
           </Form.Field>
           <Form.Field>
-            <label>Profile Image</label>
+            <label htmlFor="image">Book Image</label>
             <input
               type="text"
+              id="image"
               value={img}
               placeholder="profile image"
               onChange={(e) => setImg(e.target.value)}
@@ -139,7 +140,7 @@ const EditBooks = () => {
             />
           </Form.Field>
           <Form.Field>
-            <label htmlFor="price">Books Price</label>
+            <label htmlFor="price">Book Price</label>
             <input
               type="number"
               name="name"
