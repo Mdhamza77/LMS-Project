@@ -36,16 +36,18 @@ const AddCategory = () => {
     <div className="cat">
       <Form>
         <Form.Field>
-          <label>Category Name</label>
+          <label htmlFor="catname">Category Name</label>
           <input
             type="text"
+            id="catname"
             required
             onChange={(e) => setCategory(e.target.value)}
           />
         </Form.Field>
         <Form.Field>
-          <label>Category Image</label>
+          <label htmlFor="catImg">Category Image</label>
           <input
+            id="catImg"
             type="text"
             required 
             onChange={(e) => setImg(e.target.value)}
