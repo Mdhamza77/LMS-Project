@@ -502,20 +502,20 @@
       "price": 200,
       "email": "alexa007@gmail.com",
       "RentFrom": "26/04/2023",
-      "RentUpto": "02/05/2023",
+      "RentUpto": "01/05/2023",
       "BookId": "18",
       "id": 10
     },
     {
-      "title": "The Echo of Old Books",
-      "Description": "Ashlyn is caught up in a decades-old literary mystery, beckoned by two hearts in ruins, whoever they were, wherever they are. Determined to learn the truth behind the doomed lovers’ tale, she reads on, following a trail of broken promises and seemingly unforgivable betrayals. ",
-      "AuthorName": "Barbara Davis",
-      "price": "2200",
+      "title": "Portrait of an Unknown Woman",
+      "Description": "Legendary spy and art restorer Gabriel Allon has at long last severed ties with Israeli intelligence and settled quietly in Venice, the only place he has ever truly known peace. His beautiful wife, Chiara, has taken over day-to-day management of the Tiepolo Restoration Company, and their two young children are clandestinely enrolled in a neighborhood scuola elementare. For his part, Gabriel spends his days wandering the streets and canals of the watery city, parting company with the demons of his tragic, violent past.\n\nBut when the eccentric London art dealer Julian Isherwood asks Gabriel to investigate the circumstances surrounding the rediscovery and lucrative sale of a centuries-old painting, he is drawn into a deadly game of cat and mouse where nothing is as it seems.",
+      "AuthorName": " Daniel Silva ",
+      "price": 650,
       "email": "muhaimin123@gmail.com",
       "RentFrom": "02/05/2023",
-      "RentUpto": "09/05/2023",
-      "BookId": "45",
-      "id": 11
+      "RentUpto": "16/05/2023",
+      "BookId": "25",
+      "id": 12
     }
   ],
   "FeedBack": [

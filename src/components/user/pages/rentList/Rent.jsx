@@ -52,7 +52,7 @@ const RentList = () => {
       })
       .catch((err) => {
         console.log(err.data);
-        toast(`Cannot display data 404 error`)
+        toast(`Cannot display data 404 error`);
       });
   };
 
@@ -80,6 +80,7 @@ const RentList = () => {
               <DatePicker
                 placeholderText="Rent From"
                 minDate={startDate}
+                maxDate={startDate}
                 dateFormat="MMMM d, yyyy"
                 selected={startDate}
                 selectsStart
@@ -93,6 +94,9 @@ const RentList = () => {
                 placeholderText="Rent Upto"
                 dateFormat="MMMM d, yyyy"
                 selected={endDate}
+                maxDate={
+                  new Date(startDate.getTime() + 14 * 24 * 60 * 60 * 1000)  //calculates the total number of milliseconds that have passed 
+                }
                 endDate={endDate}
                 minDate={startDate}
                 onChange={(date) => setEndDate(date)}
