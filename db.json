@@ -505,6 +505,17 @@
       "RentUpto": "02/05/2023",
       "BookId": "18",
       "id": 10
+    },
+    {
+      "title": "The Echo of Old Books",
+      "Description": "Ashlyn is caught up in a decades-old literary mystery, beckoned by two hearts in ruins, whoever they were, wherever they are. Determined to learn the truth behind the doomed lovers’ tale, she reads on, following a trail of broken promises and seemingly unforgivable betrayals. ",
+      "AuthorName": "Barbara Davis",
+      "price": "2200",
+      "email": "muhaimin123@gmail.com",
+      "RentFrom": "02/05/2023",
+      "RentUpto": "09/05/2023",
+      "BookId": "45",
+      "id": 11
     }
   ],
   "FeedBack": [
