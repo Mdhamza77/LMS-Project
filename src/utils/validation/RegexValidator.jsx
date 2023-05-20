@@ -25,6 +25,6 @@ export const AuthorName = (name) => {
 };
 
 export const CategoryName = (category) => {
-    const cat = /^[a-zA-Z]{4,15}$/ ;    
+    const cat = /^[a-zA-Z]+( [a-zA-Z]+)+$/ ;    
     return cat.test(category)
 }

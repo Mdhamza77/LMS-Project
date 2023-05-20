@@ -146,7 +146,8 @@ body{
 }
 
 div .ui {
-   margin-left: 15rem;
+   margin-left: 20rem;
+   
 }
 
 div h1{
@@ -231,7 +232,7 @@ button:hover{
 }
 
 #segment img{
-   width: 100em;
+   width: 126em;
    image-rendering: crisp-edges;
 }
 

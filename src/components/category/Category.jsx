@@ -26,12 +26,13 @@ const Category = () => {
   return (
     <div className="cat">
       {" "}
-      <div className="ui four column grid">
+      <div className="ui five column grid" style={{marginLeft : "-1em" , marginTop : "4em" , width : "120em" ,border :"0.5em solid cornflowerblue"  }}>
         {books.map((post) => (
-          <div className="column" key={post.id}>
+          <div className="column" key={post.id} >
             <div className="ui fluid card">
               <div className="image">
                 <img
+                  style={{height : "35em"}}
                   src={post.Img}
                   alt="image"
                   onClick={() => Category(post.category)}

@@ -11,24 +11,24 @@ const AddCategory = () => {
   const [err, setErr] = useState("")
 
   const handleSubmit = (e) => {
+    e.preventDefault();
     const cat = {
       category: category,
       Img: Img,
     };
-    e.preventDefault();
-    if(!CategoryName(addCategory)){
+    if(!CategoryName(category)){
          return setErr("Enter validated category name")
     }else {
     addCategory(cat)
       .then((res) => {
-        console.log(res)
+        console.log(res.data)
         setImg("");
         setCategory("");
         navigate('/home') 
       })
       .catch((err) => { 
         console.log(err) 
-        toast(`cannot add the category`) 
+        toast(`cannot get api data`) 
       });
     }
   };

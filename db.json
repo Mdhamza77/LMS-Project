@@ -544,6 +544,11 @@
       "category": "Fantasy",
       "Img": "https://img.freepik.com/premium-photo/open-magic-book-with-fairy-tales_763713-618.jpg",
       "id": 5
+    },
+    {
+      "category": "Magazine cover",
+      "Img": "https://images3.alphacoders.com/723/thumb-1920-72397.jpg",
+      "id": 6
     }
   ],
   "Cards": [
@@ -578,6 +583,14 @@
       "published": "Published in 2019",
       "img": "https://m.media-amazon.com/images/I/51p6gYEJmTL._SX315_BO1,204,203,200_.jpg",
       "id": 4
+    },
+    {
+      "title": "Wuthering Heights ",
+      "author": "Bronte Emily",
+      "content": "Harper Collins is a fiduciary name amongst bibliophiles. This book is a quality print from H.C. London. The text size is tad smaller than Penguin Classics, nonetheless very legible.",
+      "img": "https://rukminim1.flixcart.com/image/832/832/xif0q/book/g/n/c/wuthering-heights-original-imagguh5urjmt5v9.jpeg?q=70",
+      "published": "Published in 2019",
+      "id": 5
     }
   ],
   "getData": [
