@@ -4,10 +4,11 @@ import { Button } from "semantic-ui-react";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 import { loadUsers } from "../../../../redux/Action/Action";
+
 const Myprofile = () => {
   const email = sessionStorage.getItem("email");
   const navigate = useNavigate();
-  let dispatch = useDispatch();
+  const dispatch = useDispatch();
 
   const { users } = useSelector((state) => state.data);
 
@@ -26,6 +27,30 @@ const Myprofile = () => {
     navigate("/EditUser/" + id);
   };
 
+  const randomColor = "#" + Math.floor(Math.random() * 16777215).toString(16);
+
+  const initialsStyle = {
+    backgroundColor: randomColor,
+    height: "100px",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    fontSize: "24px",
+    fontWeight: "bold",
+  };
+  const getProfileImage = (user) => {
+    if (user.img) {
+      return <img src={user.img} alt="profile-img" />;
+    } else {
+      const initials = user.firstName[0].toUpperCase();
+      return (
+        <div className="initials-profile" style={initialsStyle}>
+          {initials}
+        </div>
+      );
+    }
+  };
+
   return (
     <div className="profile">
       <div className="container">
@@ -41,9 +66,7 @@ const Myprofile = () => {
                 })
                 .map((mail) => (
                   <div className="card" key={mail.id}>
-                    <div className="image">
-                      <img src={mail.img} alt="profile-img" />
-                    </div>
+                    <div className="image">{getProfileImage(mail)}</div>
                     <div className="content">
                       <div className="header">
                         {mail.firstName + " " + mail.lastName}

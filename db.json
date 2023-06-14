@@ -51,6 +51,14 @@
       "password": "Jenny@246",
       "img": "https://media.glamourmagazine.co.uk/photos/6364f8e4a4c1f16a3a1892d3/1:1/pass/undefined",
       "id": 6
+    },
+    {
+      "firstName": "lana ",
+      "lastName": "Rhoades",
+      "email": "lana1212@gmail.com",
+      "password": "Lana@123",
+      "id": 7,
+      "img": ""
     }
   ],
   "Books": [
