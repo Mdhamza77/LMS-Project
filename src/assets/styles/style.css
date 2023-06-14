@@ -90,12 +90,12 @@ ul {
 }
 .user-Img {
   width: 12em;
-  height: 12em;
+  height: 12.5em;
   float: left;
   display: flex;
   position: relative;
   left: -100px;
-  padding: 12px 10px;
+  padding: 12px 10px; 
 }
 
 .cat {
