@@ -35,8 +35,8 @@ const Myprofile = () => {
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    fontSize: "24px",
-    fontWeight: "bold",
+    fontSize: "40px",
+    fontWeight : "bolder",
   };
   const getProfileImage = (user) => {
     if (user.img) {

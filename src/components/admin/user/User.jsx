@@ -29,6 +29,30 @@ const User = () => {
     if (window.confirm("are you sure ")) dispatch(deleteuser(id));
   };
 
+  const randomColor = "#" + Math.floor(Math.random() * 16777215).toString(16);
+
+  const initialsStyle = {
+    backgroundColor: randomColor,
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    fontSize: "1em",
+    fontWeight: "bold",
+  };
+  const getProfileImage = (user) => {
+    if (user.img) {
+      return <img className="user-Img" src={user.img} alt="profile-img" />;
+    } else {
+      const initials = user.firstName.toUpperCase();
+      return (
+        <div className="user-Img" style={initialsStyle}>
+          {initials}
+        </div>
+      );
+    }
+  };
+
+
   return (
     <div>
       <div>
@@ -45,11 +69,7 @@ const User = () => {
                   <Form>
                     <div className="container black">
                       <p>
-                        <img
-                          className="user-Img"
-                          src={users.img}
-                          alt="user-Image"
-                        />
+                        {getProfileImage(users)}
                         <h3>First name : {users.firstName}</h3>
                         <h3>Last name : {users.lastName}</h3>
                         <h3>Email id : {users.email}</h3>
