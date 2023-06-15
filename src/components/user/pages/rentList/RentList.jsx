@@ -74,7 +74,11 @@ const RentList = () => {
                   <p>
                     <b>Return Date :</b> {book.RentUpto}
                   </p>
-
+                  <p>
+                    {new Date(book.RentUpto) <= new Date()
+                      ? "Fine"
+                      : "Return book before due date"}
+                  </p>
                   {isUserLoggedin && !isAdmin && (
                     <Button
                       className="ui button blue"

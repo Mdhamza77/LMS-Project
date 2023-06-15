@@ -7,6 +7,7 @@ import { useParams } from "react-router-dom";
 import { toast } from "react-toastify";
 import { getBooks } from "../../../../services/book/book.service";
 import { rentBooks } from "../../../../services/rent/rent.service";
+
 const RentList = () => {
   const navigate = useNavigate();
   const [bookName, setBookName] = useState("");
@@ -21,17 +22,16 @@ const RentList = () => {
   useEffect(() => {
     getBooks(id)
       .then((resp) => {
-        setBookName(
-          resp.data.title,
-          setAuthorName(resp.data.AuthorName),
-          setDescription(resp.data.Description),
-          setPrice(resp.data.price)
-        );
+        setBookName(resp.data.title);
+        setAuthorName(resp.data.AuthorName);
+        setDescription(resp.data.Description);
+        setPrice(resp.data.price);
       })
       .catch((err) => {
         console.log(err);
       });
   }, []);
+
   const handleSubmit = () => {
     const rent = {
       title: bookName,
@@ -39,8 +39,8 @@ const RentList = () => {
       AuthorName: authorName,
       price,
       email: email,
-      RentFrom: startDate.toLocaleDateString(),
-      RentUpto: endDate.toLocaleDateString(),
+      RentFrom: startDate.toISOString().slice(0, 10), // Format as "yyyy-MM-dd"
+      RentUpto: endDate.toISOString().slice(0, 10), // Format as "yyyy-MM-dd"
       BookId: id,
     };
 
@@ -55,6 +55,10 @@ const RentList = () => {
         toast(`Cannot display data 404 error`);
       });
   };
+  const filterDate = (date) => {
+    return date > startDate; // Disable dates that are less than or equal to the selected start date
+  };
+
 
   return (
     <>
@@ -81,7 +85,6 @@ const RentList = () => {
                 placeholderText="Rent From"
                 minDate={startDate}
                 maxDate={startDate}
-                dateFormat="MMMM d, yyyy"
                 selected={startDate}
                 selectsStart
                 startDate={startDate}
@@ -92,13 +95,13 @@ const RentList = () => {
               <label htmlFor="rentU">Rent Book Upto Days</label>
               <DatePicker
                 placeholderText="Rent Upto"
-                dateFormat="MMMM d, yyyy"
                 selected={endDate}
                 maxDate={
-                  new Date(startDate.getTime() + 14 * 24 * 60 * 60 * 1000)  //calculates the total number of milliseconds that have passed 
+                  new Date(startDate.getTime() + 7 * 24 * 60 * 60 * 1000) // Calculates the total number of milliseconds that have passed
                 }
                 endDate={endDate}
                 minDate={startDate}
+                filterDate={filterDate}
                 onChange={(date) => setEndDate(date)}
               />
             </Form.Field>
