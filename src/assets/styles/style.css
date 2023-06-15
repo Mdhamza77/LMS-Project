@@ -2,6 +2,8 @@ html {
   height: auto;
   font-size: 62%;
 }
+
+/* Common styles */
 header {
   position: fixed;
   top: 0;
@@ -38,6 +40,44 @@ header .icons a:hover {
   color: #333;
   text-decoration: underline;
 }
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+  /* Mobile styles */
+  header {
+    padding: 1rem 2%;
+  }
+
+  header .navbar a {
+    font-size: 1.5rem;
+    padding: 0 0.5rem;
+    display: block;
+  }
+
+  header .icons a {
+    font-size: 1.5rem;
+    margin-left: 0.5rem;
+  }
+}
+
+@media (min-width: 769px) {
+  /* Desktop styles */
+  header {
+    padding: 1rem 9%;
+  }
+
+  header .navbar a {
+    font-size: 2rem;
+    padding: 0 1.5rem;
+    display: inline-block;
+  }
+
+  header .icons a {
+    font-size: 2rem;
+    margin-left: 1.5rem;
+  }
+}
+
 
 .card h1 {
   text-align: center;

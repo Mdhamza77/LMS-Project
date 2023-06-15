@@ -56,7 +56,7 @@ const RentList = () => {
       });
   };
   const filterDate = (date) => {
-    return date > startDate; // Disable dates that are less than or equal to the selected start date
+    return date > startDate; 
   };
 
 
