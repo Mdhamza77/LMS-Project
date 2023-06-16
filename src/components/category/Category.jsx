@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { getCat } from "../../services/book/book.service";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
+import { cleanup } from "@testing-library/react";
 const Category = () => {
   const [books, getBooks] = useState([]);
   const navigate = useNavigate();
@@ -17,6 +18,7 @@ const Category = () => {
 
   useEffect(() => {
     get();
+    return cleanup()
   },[]);
 
   const Category = (category) => {
