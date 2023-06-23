@@ -76,8 +76,8 @@ const RentList = () => {
                   </p>
                   <p>
                     {new Date(book.RentUpto) <= new Date()
-                      ? "Fine"
-                      : "Return book before due date"}
+                      ? <p style={{color : "red" , fontWeight : "bolder"}}>Fine</p>
+                      : <p style={{color : "green" , fontWeight : "bolder"}}>Return book before due date</p>  }
                   </p>
                   {isUserLoggedin && !isAdmin && (
                     <Button
