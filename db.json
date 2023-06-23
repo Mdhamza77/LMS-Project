@@ -527,6 +527,17 @@
       "RentUpto": "2023-06-15",
       "BookId": "11",
       "id": 13
+    },
+    {
+      "title": "Wuthering Heights ",
+      "Description": "Harper Collins is a fiduciary name amongst bibliophiles. This book is a quality print from H.C. London. The book is printed and bound is the U.K. The pages are quality with the signature light yellow tint of classic literature. The print quality is commendable. The text size is tad smaller than Penguin Classics, nonetheless very legible.",
+      "AuthorName": " Bronte Emily",
+      "price": 1140,
+      "email": "muhaimin123@gmail.com",
+      "RentFrom": "2023-06-18",
+      "RentUpto": "2023-06-20",
+      "BookId": "4",
+      "id": 15
     }
   ],
   "FeedBack": [
